@@ -1,0 +1,1770 @@
+<!doctype html>
+<html lang="ur" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Miftah-ul-Irab — Arabic Grammar Academy | مفتاح الإعراب</title>
+    <meta name="description" content="مفتاح الإعراب — عربی عبارت حل کرنے، صرف و نحو اور اعراب سیکھنے کی آن لائن اکیڈمی۔ بانی: Abdullah Attari۔ نصاب: اہلِ سنت و جماعت، بریلوی حنفی۔" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Marcellus&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        --bg:#ffffff;
+        --bg-soft:#f4f6fa;
+        --surface:#ffffff;
+        --surface-2:#eef2f8;
+        --ink:#0b1220;
+        --ink-soft:#33404f;
+        --muted:#64748b;
+        --brand:#0f172a;
+        --brand-deep:#04060b;
+        --brand-bright:#2563eb;
+        --gold:#2563eb;
+        --gold-deep:#1e40af;
+        --gold-soft:#bfdbfe;
+        --line:#dbe3ee;
+        --line-strong:#b8c6da;
+        --ok:#0a7a4c;
+        --bad:#b23a2e;
+        --chip:#e8effe;
+        --shadow:0 10px 30px rgba(15,23,42,.10);
+        --shadow-sm:0 4px 14px rgba(15,23,42,.08);
+        --radius:14px;
+      }
+      @media (prefers-color-scheme: dark){
+        :root{
+          --bg:#05080f;
+          --bg-soft:#090e18;
+          --surface:#0d1424;
+          --surface-2:#121c31;
+          --ink:#eef2fb;
+          --ink-soft:#c2cede;
+          --muted:#8fa0b8;
+          --brand:#16233c;
+          --brand-deep:#02040a;
+          --brand-bright:#5b93ff;
+          --gold:#5b93ff;
+          --gold-deep:#9db9f5;
+          --gold-soft:#274b8f;
+          --line:#22314f;
+          --line-strong:#31456e;
+          --ok:#3ecf8e;
+          --bad:#ff8a7a;
+          --chip:#14243f;
+          --shadow:0 10px 30px rgba(0,0,0,.45);
+          --shadow-sm:0 4px 14px rgba(0,0,0,.35);
+        }
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;background:var(--bg);color:var(--ink);
+        font-family:"Noto Naskh Arabic","Segoe UI",Tahoma,sans-serif;
+        font-size:17px;line-height:1.75;
+      }
+      ::selection{background:var(--gold-soft);color:var(--brand-deep)}
+      .ar{font-family:"Amiri",serif}
+      .urdu{font-family:"Noto Naskh Arabic",sans-serif}
+      .nastaliq{font-family:"Noto Nastaliq Urdu",serif;line-height:2.1}
+      .lat{font-family:"Marcellus",serif;letter-spacing:.04em}
+      a{color:var(--brand-bright)}
+      button{font-family:inherit;cursor:pointer}
+      input,textarea,select{font-family:inherit}
+
+      /* ---------- top bismillah bar ---------- */
+      .topbar{
+        background:var(--brand-deep);color:var(--gold-soft);
+        text-align:center;padding:.45rem 1rem;font-size:1.05rem;
+        border-bottom:2px solid var(--gold);
+      }
+      .topbar .ar{font-size:1.3rem}
+
+      /* ---------- header ---------- */
+      header.site{
+        position:sticky;top:0;z-index:50;
+        background:color-mix(in srgb, var(--surface) 92%, transparent);
+        backdrop-filter:blur(10px);
+        border-bottom:1px solid var(--line);
+      }
+      .head-in{
+        max-width:1180px;margin:0 auto;padding:.55rem 1rem;
+        display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;
+      }
+      .brandmark{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--ink)}
+      .brandmark svg{flex:none}
+      .brandmark .bt-ar{font-family:"Amiri",serif;font-weight:700;font-size:1.45rem;line-height:1.15;color:var(--brand)}
+      .brandmark .bt-en{font-family:"Marcellus",serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep)}
+      nav.main{margin-inline-start:auto;display:flex;gap:.25rem;flex-wrap:wrap}
+      nav.main a{
+        text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:.95rem;
+        padding:.4rem .7rem;border-radius:999px;
+      }
+      nav.main a:hover{background:var(--chip);color:var(--brand)}
+      .founder-chip{
+        display:flex;align-items:center;gap:.5rem;background:var(--brand);color:#fff;
+        border-radius:999px;padding:.3rem .85rem .3rem .35rem;font-size:.88rem;font-weight:600;
+      }
+      .founder-chip .mono{
+        width:30px;height:30px;border-radius:50%;background:var(--gold);color:var(--brand-deep);
+        display:grid;place-items:center;font-family:"Amiri",serif;font-weight:700;font-size:1.05rem;
+      }
+
+      /* ---------- hero ---------- */
+      .hero{
+        background:
+          radial-gradient(900px 480px at 88% 32%, rgba(37,99,235,.32), transparent 62%),
+          linear-gradient(180deg,#05070d,#02040a);
+        color:#fff;position:relative;overflow:hidden;
+      }
+      .hero::before{
+        content:"";position:absolute;inset:-12% -6%;pointer-events:none;opacity:.45;
+        background:linear-gradient(112deg, transparent 62%, rgba(37,99,235,.5) 68%, rgba(191,219,254,.9) 71%, rgba(37,99,235,.5) 74%, transparent 83%);
+        filter:blur(7px);
+      }
+      .hero::after{
+        content:"";position:absolute;inset:-12% -6%;pointer-events:none;opacity:.55;
+        background:linear-gradient(112deg, transparent 68%, rgba(219,234,254,.8) 71%, transparent 74.5%);
+        filter:blur(1.5px);
+      }
+      .hero-in{max-width:1180px;margin:0 auto;padding:3.4rem 1rem 2.8rem;position:relative;z-index:2;text-align:center}
+      .hero .kicker{
+        display:block;color:#4d9fff;font-size:.95rem;font-weight:700;letter-spacing:.05em;
+      }
+      .hero h1{font-family:"Amiri",serif;font-weight:700;font-size:clamp(3rem,8vw,5.3rem);margin:.55rem 0 .15rem;line-height:1.3;color:#fff}
+      .hero h1 .gold{color:#2f7bff}
+      .hero .h-en{font-family:"Segoe UI",Arial,sans-serif;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:clamp(.85rem,2.4vw,1.05rem);color:#fff}
+      .hero .h-en .blu{color:#2f7bff}
+      .hero p.lead{max-width:760px;margin:1rem auto 0;font-size:1.08rem;color:#aebdd2}
+      .hero-cta{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
+      .btn{
+        display:inline-block;text-decoration:none;border:none;border-radius:8px;
+        padding:.72rem 1.7rem;font-weight:700;font-size:1rem;transition:transform .15s ease, box-shadow .15s ease;
+      }
+      .btn:hover{transform:translateY(-2px)}
+      .btn-gold{background:#247cff;color:#fff;box-shadow:0 10px 26px rgba(36,124,255,.35)}
+      .btn-ghost{background:rgba(255,255,255,.05);color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+      .hero-steps{
+        display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;
+      }
+      .hero-steps span{
+        background:rgba(255,255,255,.07);border:1px solid rgba(147,197,253,.35);
+        padding:.35rem .95rem;border-radius:999px;font-size:.92rem;color:#dbeafe;
+      }
+      .hero-steps b{color:#93c5fd}
+      .hero-stats{
+        display:flex;gap:2.2rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem;
+        border-top:1px solid rgba(147,197,253,.28);padding-top:1.4rem;
+      }
+      .hero-stats .st{text-align:center}
+      .hero-stats .n{font-family:"Amiri",serif;font-size:1.9rem;color:#fff;line-height:1.2}
+      .hero-stats .t{font-size:.88rem;color:#94a3b8}
+
+      /* ---------- layout ---------- */
+      main{max-width:1180px;margin:0 auto;padding:0 1rem 3rem}
+      section.block{padding:3rem 0 0}
+      .sec-head{text-align:center;max-width:760px;margin:0 auto 1.8rem}
+      .sec-head .ar-t{font-family:"Amiri",serif;font-size:2rem;color:var(--brand);margin:0;line-height:1.5}
+      .sec-head h2{font-family:"Noto Nastaliq Urdu",serif;font-size:1.7rem;margin:.15rem 0 .3rem;line-height:2;color:var(--ink)}
+      .sec-head p{color:var(--muted);margin:0}
+      .gold-rule{width:88px;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:.4rem auto 0;border-radius:2px}
+
+      .card{
+        background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+        box-shadow:var(--shadow-sm);padding:1.4rem;
+      }
+
+      /* ---------- solver ---------- */
+      .solver textarea{
+        width:100%;min-height:120px;resize:vertical;
+        border:1.5px solid var(--line-strong);border-radius:12px;background:var(--bg);
+        color:var(--ink);padding:1rem 1.1rem;font-family:"Amiri",serif;font-size:1.55rem;line-height:2;
+      }
+      .solver textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+      .sample-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0 1rem;align-items:center}
+      .sample-row .lbl{font-weight:700;color:var(--ink-soft);font-size:.92rem}
+      .chip-btn{
+        border:1px solid var(--line-strong);background:var(--surface-2);color:var(--ink);
+        border-radius:999px;padding:.3rem .9rem;font-family:"Amiri",serif;font-size:1.08rem;
+      }
+      .chip-btn:hover{border-color:var(--gold);background:var(--chip)}
+      .solver .actions{display:flex;gap:.6rem;flex-wrap:wrap}
+      .btn-brand{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+      .btn-line{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+      .sentence-type{
+        margin-top:1.2rem;border-radius:12px;padding:.8rem 1.1rem;font-weight:700;
+        background:var(--chip);border:1px solid var(--line);display:none;
+      }
+      .sentence-type .ar{font-size:1.25rem;color:var(--brand)}
+      .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.9rem;margin-top:1rem}
+      .word-card{
+        border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;
+        background:var(--surface);padding:.95rem 1rem;box-shadow:var(--shadow-sm);
+      }
+      .word-card .w{font-family:"Amiri",serif;font-size:1.7rem;line-height:1.5;color:var(--ink)}
+      .word-card .w .endmark{color:var(--bad);font-weight:700}
+      .tags{display:flex;gap:.35rem;flex-wrap:wrap;margin:.35rem 0 .5rem}
+      .tag{font-size:.78rem;font-weight:700;border-radius:999px;padding:.08rem .6rem;background:var(--chip);color:var(--brand);border:1px solid var(--line)}
+      .tag.state{background:#dbeafe;color:var(--gold-deep);border-color:#93c5fd}
+      @media (prefers-color-scheme: dark){ .tag.state{background:#172554;color:#bfdbfe;border-color:#1d4ed8} }
+      .word-card p{margin:.25rem 0;font-size:.95rem;color:var(--ink-soft);line-height:1.8}
+      .word-card p b{color:var(--ink)}
+      .note-line{margin-top:1rem;color:var(--muted);font-size:.92rem}
+
+      /* ---------- sarf ---------- */
+      .sarf-controls{display:flex;gap:.8rem;flex-wrap:wrap;align-items:end;margin-bottom:1rem}
+      .field{display:flex;flex-direction:column;gap:.3rem}
+      .field label{font-weight:700;font-size:.92rem;color:var(--ink-soft)}
+      .field input,.field select{
+        border:1.5px solid var(--line-strong);border-radius:10px;background:var(--bg);color:var(--ink);
+        padding:.55rem .8rem;font-size:1.15rem;
+      }
+      .field input.ar-in{font-family:"Amiri",serif;font-size:1.5rem;width:170px;text-align:center}
+      .root-chips{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:1.1rem}
+      .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+      table.gardan{border-collapse:collapse;width:100%;min-width:640px;background:var(--surface)}
+      table.gardan th,table.gardan td{border-bottom:1px solid var(--line);padding:.5rem .7rem;text-align:center}
+      table.gardan thead th{background:var(--brand);color:#fff;font-weight:700;font-size:.95rem}
+      table.gardan td.ar,table.gardan th.ar{font-family:"Amiri",serif}
+      table.gardan td.form{font-family:"Amiri",serif;font-size:1.28rem;color:var(--ink)}
+      table.gardan td.pron{font-family:"Amiri",serif;font-size:1.15rem;color:var(--brand);white-space:nowrap}
+      table.gardan td.mean{font-size:.88rem;color:var(--muted);white-space:nowrap}
+      table.gardan tbody tr:hover{background:var(--chip)}
+      .derived{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.9rem;margin-top:1rem}
+      .derived .d{border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;background:var(--surface-2);text-align:center}
+      .derived .d .dl{font-weight:700;color:var(--ink-soft);font-size:.9rem}
+      .derived .d .dv{font-family:"Amiri",serif;font-size:1.6rem;color:var(--brand)}
+      .bab-table{width:100%;border-collapse:collapse;min-width:560px}
+      .bab-table th,.bab-table td{border-bottom:1px solid var(--line);padding:.5rem .7rem;text-align:center}
+      .bab-table thead th{background:var(--brand-deep);color:var(--gold-soft)}
+      .bab-table td.ar{font-family:"Amiri",serif;font-size:1.3rem}
+
+      /* ---------- tarkeeb library ---------- */
+      .trk-tabs{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.2rem}
+      .trk-tab{
+        border:1.5px solid var(--line-strong);background:var(--surface);color:var(--ink);
+        border-radius:999px;padding:.45rem 1.1rem;font-weight:700;font-size:.95rem;
+      }
+      .trk-tab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+      .trk-sentence{
+        text-align:center;font-family:"Amiri",serif;font-size:clamp(1.6rem,4.5vw,2.3rem);line-height:2;
+        color:var(--ink);background:var(--surface-2);border:1px dashed var(--line-strong);border-radius:12px;padding:1rem;
+      }
+      .trk-meta{text-align:center;color:var(--muted);margin:.7rem 0 1.1rem;font-size:.95rem}
+      .trk-table{width:100%;border-collapse:collapse;min-width:620px}
+      .trk-table th,.trk-table td{border-bottom:1px solid var(--line);padding:.6rem .75rem;text-align:right;vertical-align:top}
+      .trk-table thead th{background:var(--brand);color:#fff;font-size:.95rem}
+      .trk-table td.wcell{font-family:"Amiri",serif;font-size:1.45rem;color:var(--brand);white-space:nowrap}
+      .trk-table td.icell{font-weight:700;white-space:nowrap}
+      .trk-table td.dcell{color:var(--ink-soft);font-size:.95rem;line-height:1.9}
+
+      /* ---------- rules ---------- */
+      .search-box{display:flex;gap:.6rem;max-width:560px;margin:0 auto 1.4rem}
+      .search-box input{
+        flex:1;border:1.5px solid var(--line-strong);border-radius:999px;background:var(--surface);
+        color:var(--ink);padding:.6rem 1.2rem;font-size:1rem;
+      }
+      .search-box input:focus{outline:2px solid var(--gold)}
+      .rule-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
+      .rule-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:1.15rem 1.25rem;box-shadow:var(--shadow-sm)}
+      .rule-card h3{margin:0 0 .2rem;font-size:1.12rem;color:var(--ink)}
+      .rule-card .term{font-family:"Amiri",serif;font-size:1.3rem;color:var(--brand)}
+      .rule-card p{margin:.45rem 0;color:var(--ink-soft);font-size:.97rem;line-height:1.9}
+      .rule-card .ex{
+        margin-top:.6rem;background:var(--surface-2);border-radius:10px;padding:.55rem .85rem;
+        font-family:"Amiri",serif;font-size:1.25rem;color:var(--ink);text-align:center;line-height:1.9;
+      }
+      .rule-card .ex small{display:block;font-family:"Noto Naskh Arabic",sans-serif;font-size:.85rem;color:var(--muted)}
+      .empty-msg{text-align:center;color:var(--muted);padding:1.5rem;display:none}
+
+      /* ---------- quiz ---------- */
+      .quiz-progress{height:10px;background:var(--surface-2);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+      .quiz-progress i{display:block;height:100%;background:linear-gradient(90deg,var(--brand-bright),var(--gold));width:0;transition:width .3s ease}
+      .quiz-q{font-size:1.08rem;font-weight:600;margin:1.1rem 0 .4rem}
+      .quiz-q .ar{font-size:1.45rem;color:var(--brand)}
+      .quiz-opts{display:grid;gap:.6rem;margin-top:.8rem}
+      .quiz-opt{
+        text-align:right;border:1.5px solid var(--line-strong);background:var(--surface);
+        border-radius:12px;padding:.7rem 1rem;font-size:1.02rem;color:var(--ink);transition:border-color .15s, background .15s;
+      }
+      .quiz-opt .ar{font-family:"Amiri",serif;font-size:1.3rem}
+      .quiz-opt:hover{border-color:var(--gold)}
+      .quiz-opt.correct{border-color:var(--ok);background:color-mix(in srgb, var(--ok) 10%, var(--surface))}
+      .quiz-opt.wrong{border-color:var(--bad);background:color-mix(in srgb, var(--bad) 9%, var(--surface))}
+      .quiz-opt:disabled{cursor:default;opacity:.92}
+      .quiz-explain{display:none;margin-top:1rem;border-radius:12px;padding:.85rem 1.05rem;background:var(--chip);border:1px solid var(--line);line-height:1.9}
+      .quiz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:1.1rem}
+      .quiz-score{font-weight:700;color:var(--brand)}
+      .quiz-result{text-align:center;padding:1.4rem 0 .4rem;display:none}
+      .quiz-result .big{font-family:"Amiri",serif;font-size:2.2rem;color:var(--brand)}
+
+      /* ---------- nisab / founder ---------- */
+      .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+      @media (max-width:820px){ .two-col{grid-template-columns:1fr} }
+      .book-list{display:grid;gap:.55rem;margin-top:.8rem}
+      .book{
+        display:flex;gap:.8rem;align-items:baseline;background:var(--surface-2);
+        border:1px solid var(--line);border-radius:10px;padding:.6rem .9rem;
+      }
+      .book .bn{font-weight:700}
+      .book .bd{color:var(--muted);font-size:.9rem}
+      .book .stage{margin-inline-start:auto;font-size:.78rem;font-weight:700;background:var(--brand);color:#fff;border-radius:999px;padding:.1rem .65rem;white-space:nowrap}
+      .founder-card{text-align:center;padding:2rem 1.5rem}
+      .founder-card .ring{
+        width:104px;height:104px;margin:0 auto 1rem;border-radius:50%;
+        border:3px solid var(--gold);background:var(--brand);color:var(--gold-soft);
+        display:grid;place-items:center;font-family:"Amiri",serif;font-size:2.6rem;font-weight:700;
+        box-shadow:0 0 0 6px var(--surface-2), var(--shadow);
+      }
+      .founder-card h3{font-family:"Marcellus",serif;font-size:1.5rem;letter-spacing:.06em;margin:.2rem 0;color:var(--ink)}
+      .founder-card .role{color:var(--gold-deep);font-weight:700}
+      .founder-card p{color:var(--ink-soft);max-width:520px;margin:.8rem auto 0;line-height:2}
+      .path-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-top:1.2rem}
+      .path-step{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:1.1rem;box-shadow:var(--shadow-sm)}
+      .path-step .num{
+        width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--brand-deep);
+        display:grid;place-items:center;font-weight:800;font-family:"Marcellus",serif;margin-bottom:.5rem;
+      }
+      .path-step h4{margin:.1rem 0 .3rem;font-size:1.03rem}
+      .path-step p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.85}
+
+      /* ---------- ticker patti (chalti hui ilm ki patti) ---------- */
+      .ticker{background:#04060b;color:#dbeafe;overflow:hidden;border-bottom:2px solid var(--brand-bright);direction:rtl}
+      .ticker-track{display:inline-flex;gap:3.2rem;white-space:nowrap;padding:.5rem 0;animation:tickmove 55s linear infinite;will-change:transform}
+      .ticker:hover .ticker-track{animation-play-state:paused}
+      .ticker-track span{font-size:.98rem}
+      .ticker-track .ar{font-family:"Amiri",serif;font-size:1.12rem;color:#93c5fd}
+      .ticker-track b{color:#fff}
+      @keyframes tickmove{from{transform:translateX(0)}to{transform:translateX(50%)}}
+      @media (prefers-reduced-motion: reduce){ .ticker-track{animation:none} }
+
+      /* ---------- hero layout (reference design) ---------- */
+      .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;text-align:right}
+      @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;text-align:center} .hero .hero-txt .hero-cta{justify-content:center} }
+      .hero .hero-txt{text-align:inherit}
+      .hero-vis{position:relative}
+      .hero-vis .bookcard{
+        background:rgba(255,255,255,.05);border:1px solid rgba(147,197,253,.35);border-radius:18px;
+        padding:1.4rem 1.2rem;text-align:center;backdrop-filter:blur(2px);
+      }
+      .hero-vis .bookcard .big-ar{font-family:"Amiri",serif;font-size:2rem;color:#fff;line-height:1.9}
+      .hero-vis .bookcard .sm{color:#bfdbfe;font-size:.92rem}
+      .float-chips{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.9rem}
+      .float-chips span{background:#2563eb;color:#fff;border-radius:999px;padding:.22rem .8rem;font-size:.85rem;font-weight:700}
+      .float-chips span.alt{background:rgba(255,255,255,.12);border:1px solid rgba(147,197,253,.5);color:#dbeafe}
+      .feat-strip{background:#04060b;border-top:1px solid rgba(147,197,253,.25);position:relative;z-index:2}
+      .feat-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+      @media (max-width:860px){ .feat-in{grid-template-columns:repeat(2,1fr)} }
+      .feat{padding:1rem;display:flex;gap:.7rem;align-items:center;color:#e2e8f0;border-inline-start:1px solid rgba(147,197,253,.18)}
+      .feat:first-child{border-inline-start:none}
+      .feat .fi{font-size:1.45rem}
+      .feat b{display:block;color:#fff;font-size:.95rem;line-height:1.5}
+      .feat small{color:#94a3b8;font-size:.8rem;line-height:1.5}
+
+      /* ---------- tools category grid (reference style) ---------- */
+      .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem}
+      .tool-card{
+        display:block;text-decoration:none;color:var(--ink);background:var(--surface);
+        border:1px solid var(--line);border-radius:var(--radius);padding:1.15rem 1rem;text-align:center;box-shadow:var(--shadow-sm);
+      }
+      .tool-card:hover{border-color:var(--brand-bright)}
+      .tool-card .ti{font-size:2rem;line-height:1.2}
+      .tool-card b{display:block;margin-top:.35rem;font-size:1rem}
+      .tool-card small{color:var(--muted);font-size:.83rem;line-height:1.6;display:block}
+
+      /* ---------- asatiza ---------- */
+      .teacher-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+      .teacher{
+        background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--brand-bright);
+        border-radius:var(--radius);padding:1.15rem;text-align:center;box-shadow:var(--shadow-sm);
+      }
+      .teacher .tm{
+        width:58px;height:58px;margin:0 auto .55rem;border-radius:50%;background:var(--brand);color:#fff;
+        display:grid;place-items:center;font-family:"Amiri",serif;font-size:1.5rem;font-weight:700;
+      }
+      .teacher h3{margin:.1rem 0;font-size:1.08rem;color:var(--ink)}
+      .teacher p{margin:.15rem 0 0;color:var(--muted);font-size:.9rem}
+
+      /* ---------- guide steps / mistakes ---------- */
+      .step-list{display:grid;gap:.8rem}
+      .step-item{display:flex;gap:.9rem;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem}
+      .step-item .sn{flex:none;width:36px;height:36px;border-radius:50%;background:var(--brand-bright);color:#fff;display:grid;place-items:center;font-weight:800;font-family:"Marcellus",serif}
+      .step-item h4{margin:.05rem 0 .2rem;font-size:1rem}
+      .step-item p{margin:0;color:var(--ink-soft);font-size:.95rem;line-height:1.9}
+      .step-item .ar{font-size:1.2rem;color:var(--brand-bright)}
+      .mistake-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
+      .mistake{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:1.05rem 1.15rem;box-shadow:var(--shadow-sm)}
+      .mistake h4{margin:.05rem 0 .45rem;font-size:1rem;color:var(--bad)}
+      .mistake .wrong,.mistake .right{border-radius:10px;padding:.5rem .8rem;font-family:"Amiri",serif;font-size:1.22rem;text-align:center;line-height:1.9;margin:.4rem 0}
+      .mistake .wrong{background:#fdf0ee;color:var(--bad);text-decoration:line-through;text-decoration-thickness:1px}
+      .mistake .right{background:var(--chip);color:var(--brand)}
+      .mistake p{margin:.35rem 0 0;color:var(--ink-soft);font-size:.93rem;line-height:1.9}
+
+      /* ---------- glossary / masdar ---------- */
+      .gloss-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+      .gloss-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:1rem 1.15rem;box-shadow:var(--shadow-sm)}
+      .gloss-card h4{margin:0;font-size:1.02rem;color:var(--ink)}
+      .gloss-card .gt{font-family:"Amiri",serif;font-size:1.28rem;color:var(--brand-bright)}
+      .gloss-card p{margin:.35rem 0;color:var(--ink-soft);font-size:.94rem;line-height:1.9}
+      .gloss-card .gex{background:var(--surface-2);border-radius:9px;padding:.35rem .7rem;font-family:"Amiri",serif;font-size:1.15rem;text-align:center;color:var(--ink)}
+
+      /* ---------- A-Z index ---------- */
+      .az-wrap{display:grid;grid-template-columns:330px 1fr;gap:1.1rem;align-items:start}
+      @media (max-width:860px){ .az-wrap{grid-template-columns:1fr} }
+      .az-list{display:grid;gap:.45rem;max-height:640px;overflow:auto;padding-inline-end:.3rem}
+      .az-item{
+        text-align:right;border:1.5px solid var(--line-strong);background:var(--surface);color:var(--ink);
+        border-radius:11px;padding:.55rem .85rem;font-weight:600;font-size:.96rem;
+      }
+      .az-item small{display:block;font-weight:400;color:var(--muted);font-family:"Amiri",serif;font-size:1.05rem}
+      .az-item.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+      .az-item.active small{color:var(--gold-soft)}
+      .az-detail{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:1.25rem 1.35rem;box-shadow:var(--shadow-sm);min-height:300px}
+      .az-detail h3{margin:.1rem 0 .2rem;font-size:1.25rem}
+      .az-detail .at{font-family:"Amiri",serif;font-size:1.5rem;color:var(--brand-bright)}
+      .az-detail p{color:var(--ink-soft);line-height:2;margin:.5rem 0}
+      .az-detail .lbl{font-weight:800;color:var(--brand);font-size:.9rem}
+      .az-detail .aex{background:var(--surface-2);border-radius:10px;padding:.6rem .9rem;margin:.55rem 0;text-align:center}
+      .az-detail .aex .ar{font-family:"Amiri",serif;font-size:1.35rem;color:var(--ink);line-height:1.9;display:block}
+      .az-detail .aex small{color:var(--muted)}
+
+      /* ---------- gardan library / seegha / masdar tables ---------- */
+      .lib-chips{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:1rem}
+      .grp-lbl{font-weight:800;color:var(--brand);margin:.9rem 0 .45rem;font-size:.98rem}
+      .finder-out{
+        margin-top:1rem;border:1.5px solid var(--gold);border-radius:12px;background:var(--surface-2);
+        padding:1rem 1.1rem;text-align:center;display:none;
+      }
+      .finder-out .fform{font-family:"Amiri",serif;font-size:2.3rem;color:var(--ink);line-height:1.6}
+      .finder-out .fform .hl{color:var(--brand-bright);font-weight:700;background:var(--chip);border-radius:6px;padding:0 .12em}
+      .finder-out p{margin:.3rem 0;color:var(--ink-soft);line-height:1.9}
+      table.plain{width:100%;border-collapse:collapse;min-width:560px}
+      table.plain th,table.plain td{border-bottom:1px solid var(--line);padding:.5rem .7rem;text-align:center}
+      table.plain thead th{background:var(--brand);color:#fff;font-size:.93rem}
+      table.plain td.ar,table.plain th.ar{font-family:"Amiri",serif;font-size:1.2rem}
+      .dict-table td.vf,.dict-table td.vm{font-family:"Amiri",serif;font-size:1.3rem;color:var(--brand)}
+      .awzan-chips{display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0 1rem}
+      .awzan-chips span{background:var(--surface-2);border:1px solid var(--line-strong);border-radius:999px;padding:.25rem .9rem;font-family:"Amiri",serif;font-size:1.12rem;color:var(--brand)}
+
+      footer.site{
+        margin-top:3.5rem;background:var(--brand-deep);color:#c7d3e8;
+        border-top:3px solid var(--gold);
+      }
+      .foot-in{max-width:1180px;margin:0 auto;padding:2.2rem 1rem;text-align:center}
+      .foot-in .ar{font-size:1.5rem;color:#93c5fd}
+      .foot-in p{margin:.4rem 0;font-size:.95rem}
+      .foot-in .credit{font-family:"Marcellus",serif;letter-spacing:.08em;color:#fff}
+      @media (max-width:640px){
+        body{font-size:16px}
+        nav.main{margin-inline-start:0}
+        .hero-in{padding:2.2rem 1rem 2rem}
+        .card{padding:1.05rem}
+        .word-grid{grid-template-columns:1fr}
+      }
+      @media (prefers-reduced-motion: reduce){
+        html{scroll-behavior:auto}
+        .btn:hover{transform:none}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar" style="background:#04060b;color:#e2e8f0;border-bottom:1px solid #1e293b"><span class="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span> &nbsp;•&nbsp; <span dir="rtl" style="font-size:.85rem">صرف • نحو • اعراب • ترکیب — درسِ نظامی نصاب (اہلِ سنت و جماعت، حنفی)</span></div>
+
+    <header class="site">
+      <div class="head-in">
+        <a class="brandmark" href="#top" aria-label="Miftah-ul-Irab home">
+          <svg width="46" height="46" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="2" y="2" width="44" height="44" rx="10" fill="#04060b"/>
+            <path d="M13 33c3.5-1.6 7-1.6 11 .4V15.6c-4-2-7.5-2-11-.4z" fill="#ffffff"/>
+            <path d="M35 33c-3.5-1.6-7-1.6-11 .4V15.6c4-2 7.5-2 11-.4z" fill="#2f7bff"/>
+            <circle cx="24" cy="10.5" r="2.1" fill="#60a5fa"/>
+          </svg>
+          <span>
+            <span class="bt-ar" dir="rtl">مِفْتَاحُ الْإِعْرَاب</span><br />
+            <span class="bt-en">Miftah-ul-Irab Academy</span>
+          </span>
+        </a>
+        <nav class="main" aria-label="Main">
+          <a href="#solver">اعراب سولور</a>
+          <a href="#sarf">صرف و گردان</a>
+          <a href="#gardanlib">گردان لائبریری</a>
+          <a href="#seegha">صیغے</a>
+          <a href="#masdar">مصدر</a>
+          <a href="#tarkeeb">ترکیب</a>
+          <a href="#lughat">لغت</a>
+          <a href="#az">نحو و صرف A-Z</a>
+          <a href="#asatiza">اساتذہ</a>
+          <a href="#quiz">مشق</a>
+        </nav>
+        <div class="founder-chip"><span class="mono">ع</span><span>بانی: <span class="lat">Abdullah Attari</span></span></div>
+      </div>
+    </header>
+
+    <!-- ============ ILM KI CHALTI PATTI (ticker) ============ -->
+    <div class="ticker" aria-label="Ilm ticker">
+      <div class="ticker-track" id="tickerTrack">
+        <span><span class="ar">طَلَبُ الْعِلْمِ فَرِيضَةٌ</span> — علم حاصل کرنا فرض ہے (حدیث)</span>
+        <span><span class="ar">رَبِّ زِدْنِي عِلْمًا</span> — اے میرے رب! میرے علم میں اضافہ فرما (طٰہٰ: 114)</span>
+        <span><b>قاعدہ:</b> فاعل ہمیشہ مرفوع ہوتا ہے</span>
+        <span><span class="ar">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</span> — تم میں بہتر وہ ہے جو قرآن سیکھے اور سکھائے (بخاری)</span>
+        <span><b>قاعدہ:</b> مفعول بہ ہمیشہ منصوب ہوتا ہے</span>
+        <span><span class="ar">يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ</span> — اللہ اہلِ ایمان اور اہلِ علم کے درجے بلند فرماتا ہے (المجادلہ: 11)</span>
+        <span><b>قاعدہ:</b> مضاف الیہ ہمیشہ مجرور ہوتا ہے</span>
+        <span><span class="ar">إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ</span> — اللہ سے اس کے بندوں میں علما ہی ڈرتے ہیں (فاطر: 28)</span>
+        <span><b>قاعدہ:</b> حرفِ جر کے بعد اسم مجرور ہوتا ہے</span>
+        <span><b>اساتذہ کرام:</b> سید انیق مدنی • مفتی غلام یٰسین • محسن مدنی • شاہد مدنی • علامہ عارف الحق • خالد مدنی</span>
+      </div>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <div class="hero" id="top">
+      <div class="hero-in">
+       <div class="hero-grid">
+        <div class="hero-txt">
+        <span class="kicker" dir="rtl">اَلنَّحْوُ مِفْتَاحُ فَهْمِ الْقُرْآنِ وَالسُّنَّة</span>
+        <h1 dir="rtl">مِفْتَاحُ <span class="gold">الْإِعْرَاب</span></h1>
+        <div class="h-en">Miftah-ul-Irab — <span class="blu">Arabic Grammar Academy</span></div>
+        <p class="lead" dir="rtl">
+          اپنی عربی عبارت یہاں حل کریں — ہر لفظ کا <b>اعراب، ترکیب اور قاعدہ</b> آسان اردو میں سمجھیں۔
+          صرف و نحو کی مکمل رہنمائی کے ساتھ پڑھیں، گردان کریں، مشق کریں اور عربی میں ماہر ہو جائیں۔
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#solver">عبارت حل کریں</a>
+          <a class="btn btn-ghost" href="#gardanlib">گردان دیکھیں</a>
+        </div>
+        </div>
+        <div class="hero-vis" aria-hidden="true">
+          <div class="bookcard">
+            <svg width="120" height="86" viewBox="0 0 120 86" style="margin-bottom:.4rem">
+              <path d="M60 74c-14-8-30-10-46-6V14c16-4 32-2 46 6z" fill="#dbeafe"/>
+              <path d="M60 74c14-8 30-10 46-6V14c-16-4-32-2-46 6z" fill="#2563eb"/>
+              <path d="M22 26c10-2 20 0 30 4M22 40c10-2 20 0 30 4M22 54c10-2 20 0 30 4M68 30c10-4 20-6 30-4M68 44c10-4 20-6 30-4M68 58c10-4 20-6 30-4" stroke="#64748b" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            </svg>
+            <div class="big-ar" dir="rtl">اِقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</div>
+            <div class="sm" dir="rtl">پڑھیے اپنے رب کے نام سے جس نے پیدا کیا (العلق: 1)</div>
+            <div class="float-chips" dir="rtl">
+              <span>فاعل — مرفوع</span><span class="alt">مفعول — منصوب</span><span>مضاف الیہ — مجرور</span><span class="alt">مبتدا و خبر</span>
+            </div>
+          </div>
+        </div>
+       </div>
+        <div class="hero-steps" dir="rtl">
+          <span><b>۱۔</b> عبارت لکھیں</span>
+          <span><b>۲۔</b> لفظ بلفظ ترکیب دیکھیں</span>
+          <span><b>۳۔</b> قاعدہ سیکھیں</span>
+          <span><b>۴۔</b> مشق سے پختہ کریں</span>
+        </div>
+        <div class="hero-stats">
+          <div class="st"><div class="n" id="statTrk">۸</div><div class="t">حل شدہ عبارات (ترکیب)</div></div>
+          <div class="st"><div class="n" id="statRules">۱۲</div><div class="t">نحو کے قواعد</div></div>
+          <div class="st"><div class="n" id="statQuiz">۱۰</div><div class="t">مشقی سوالات</div></div>
+          <div class="st"><div class="n">۶</div><div class="t">ابوابِ صرف کی گردان</div></div>
+        </div>
+      </div>
+      <div class="feat-strip">
+        <div class="feat-in" dir="rtl">
+          <div class="feat"><span class="fi">📖</span><span><b>اعراب سولور</b><small>اپنی عبارت لکھیں — لفظ بلفظ اعراب وجہ سمیت</small></span></div>
+          <div class="feat"><span class="fi">🔤</span><span><b>گردان لائبریری</b><small>تیار گردانیں — جن کو نہیں آتی وہ بھی دیکھ کر سیکھیں</small></span></div>
+          <div class="feat"><span class="fi">🧩</span><span><b>صیغہ و مصدر</b><small>14 صیغوں کی چارٹ، صیغہ فائنڈر اور مصدر لغت</small></span></div>
+          <div class="feat"><span class="fi">📚</span><span><b>نحو و صرف A-Z</b><small>مکمل نصاب — ہر موضوع تعریف، قاعدہ، مثال کے ساتھ</small></span></div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- ================= TOOLS (category grid — reference style) ================= -->
+      <section class="block" id="tools">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">أَدَوَاتُ التَّعَلُّم</p>
+          <h2>سیکھنے کے تمام اوزار — ایک جگہ</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">جو بھی پوچھنا یا دیکھنا ہو — عبارت، گردان، صیغہ، مصدر، قاعدہ — سب یہاں موجود ہے۔ کسی بھی خانے پر کلک کریں۔</p>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-card" href="#solver"><span class="ti">📖</span><b dir="rtl">اعراب سولور</b><small dir="rtl">اپنی عبارت کا لفظ بلفظ اعراب، وجہ سمیت</small></a>
+          <a class="tool-card" href="#guide"><span class="ti">🪜</span><b dir="rtl">ترکیب کیسے کریں؟</b><small dir="rtl">پہلے قدم سے آخری قدم تک مکمل رہنمائی</small></a>
+          <a class="tool-card" href="#sarf"><span class="ti">⚙️</span><b dir="rtl">گردان مشین</b><small dir="rtl">کسی بھی فعل کی گردان خود بنائیں</small></a>
+          <a class="tool-card" href="#gardanlib"><span class="ti">🔤</span><b dir="rtl">تیار گردانیں</b><small dir="rtl">مشہور افعال کی مکمل گردانیں، معنی سمیت</small></a>
+          <a class="tool-card" href="#seegha"><span class="ti">🧩</span><b dir="rtl">صیغے</b><small dir="rtl">14 صیغوں کی چارٹ اور صیغہ فائنڈر</small></a>
+          <a class="tool-card" href="#masdar"><span class="ti">🗂️</span><b dir="rtl">مصدر لغت</b><small dir="rtl">کون سا فعل، کون سا مصدر — تلاش کریں</small></a>
+          <a class="tool-card" href="#tarkeeb"><span class="ti">📜</span><b dir="rtl">ترکیب لائبریری</b><small dir="rtl">قرآن و حدیث کی حل شدہ عبارات</small></a>
+          <a class="tool-card" href="#lughat"><span class="ti">📕</span><b dir="rtl">اصطلاحات لغت</b><small dir="rtl">نحو و صرف کی ہر اصطلاح، تعریف و مثال</small></a>
+          <a class="tool-card" href="#az"><span class="ti">📚</span><b dir="rtl">نحو و صرف A-Z</b><small dir="rtl">مکمل نصاب — فہرست سے موضوع کھولیں</small></a>
+          <a class="tool-card" href="#mistakes"><span class="ti">⚠️</span><b dir="rtl">عام غلطیاں</b><small dir="rtl">طلبہ کی مشہور غلطیاں اور ان کی اصلاح</small></a>
+          <a class="tool-card" href="#quiz"><span class="ti">✍️</span><b dir="rtl">مشق</b><small dir="rtl">سوالات حل کریں، اسکور دیکھیں</small></a>
+          <a class="tool-card" href="#asatiza"><span class="ti">🎓</span><b dir="rtl">اساتذہ کرام</b><small dir="rtl">ہمارے اساتذہ جن سے ہم نے یہ علم حاصل کیا</small></a>
+        </div>
+      </section>
+
+      <!-- ================= ASATIZA ================= -->
+      <section class="block" id="asatiza">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">أَسَاتِذَتُنَا الْكِرَام</p>
+          <h2>ہمارے اساتذہ کرام</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">یہ علم ہمیں اپنے ان اساتذہ کرام سے حاصل ہوا۔ اللہ تعالیٰ ان سب کو جزائے خیر عطا فرمائے اور ان کے علم و عمر میں برکت دے۔ آمین۔</p>
+        </div>
+        <div class="teacher-grid">
+          <div class="teacher"><div class="tm">س</div><h3>Sayed Aneeq Madni</h3><p dir="rtl">سید انیق مدنی — استاذِ محترم</p></div>
+          <div class="teacher"><div class="tm">م</div><h3>Mufti Ghulam Yaseen</h3><p dir="rtl">مفتی غلام یٰسین — استاذِ محترم</p></div>
+          <div class="teacher"><div class="tm">م</div><h3>Mohsin Madni</h3><p dir="rtl">محسن مدنی — استاذِ محترم</p></div>
+          <div class="teacher"><div class="tm">ش</div><h3>Shahid Madni</h3><p dir="rtl">شاہد مدنی — استاذِ محترم</p></div>
+          <div class="teacher"><div class="tm">ع</div><h3>Allama Araful Haq</h3><p dir="rtl">علامہ عارف الحق — استاذِ محترم</p></div>
+          <div class="teacher"><div class="tm">خ</div><h3>Khalid Madni</h3><p dir="rtl">خالد مدنی — استاذِ محترم</p></div>
+        </div>
+      </section>
+
+      <!-- ================= SOLVER ================= -->
+      <section class="block" id="solver">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">حَلُّ الْعِبَارَة</p>
+          <h2>عبارت حل کریں — اعراب سولور</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">اپنی عربی عبارت لکھیں یا نیچے دی گئی مثال چنیں۔ سولور ہر لفظ کو الگ کر کے اس کی قسم (اسم، فعل، حرف)، آخری حرکت اور ممکنہ اعراب بتائے گا — تاکہ آپ کو معلوم ہو کہاں کیا لگانا ہے۔</p>
+        </div>
+        <div class="card solver">
+          <textarea id="ibaraInput" dir="rtl" lang="ar" placeholder="یہاں عربی عبارت لکھیں… مثلاً: ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ">ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ</textarea>
+          <div class="sample-row">
+            <span class="lbl" dir="rtl">تیار مثالیں:</span>
+            <span id="sampleChips"></span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-brand" id="analyzeBtn" type="button">ترکیب کریں</button>
+            <button class="btn btn-line" id="clearBtn" type="button">صاف کریں</button>
+          </div>
+          <div class="sentence-type" id="sentenceType" dir="rtl"></div>
+          <div class="word-grid" id="wordGrid"></div>
+          <p class="note-line" dir="rtl">نوٹ: سولور قواعد کی بنیاد پر رہنمائی دیتا ہے۔ اعراب لگاتے وقت لفظ کی آخری حرکت ضرور دیکھیں — وہی رفع، نصب اور جر کی اصل پہچان ہے۔ مشکل عبارت میں اپنے استاد سے بھی تصدیق کر لیں۔</p>
+        </div>
+      </section>
+
+      <!-- ================= TARKEEB GUIDE ================= -->
+      <section class="block" id="guide">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">كَيْفَ تُرَكِّبُ؟</p>
+          <h2>ترکیب کیسے کریں؟ — قدم بہ قدم رہنمائی</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">کوئی بھی عبارت ملے، گھبرائیں نہیں — بس یہ آٹھ قدم ترتیب سے اٹھائیں۔ ہر عبارت اسی ترتیب سے حل ہوتی ہے۔</p>
+        </div>
+        <div class="card">
+          <div class="step-list">
+            <div class="step-item"><div class="sn">1</div><div><h4 dir="rtl">پہلا قدم — جملے کی قسم پہچانیں</h4><p dir="rtl">دیکھیں جملہ کس سے شروع ہو رہا ہے: فعل سے شروع ہو تو <b>جملہ فعلیہ</b>، اسم سے شروع ہو تو <b>جملہ اسمیہ</b>۔ مثال: <span class="ar">ذَهَبَ الطَّالِبُ</span> فعل سے شروع ہوا — جملہ فعلیہ۔ <span class="ar">اَلْعِلْمُ نُورٌ</span> اسم سے شروع ہوا — جملہ اسمیہ۔</p></div></div>
+            <div class="step-item"><div class="sn">2</div><div><h4 dir="rtl">دوسرا قدم — ہر لفظ کی قسم الگ کریں</h4><p dir="rtl">ہر لفظ کو اسم، فعل یا حرف میں بانٹیں۔ پہچان: آخر میں تنوین یا «ال» ہو تو اسم؛ زمانہ بتائے تو فعل (کَتَبَ = لکھا)؛ اکیلا مکمل معنی نہ دے تو حرف (فِي، مِنْ)۔ اوپر سولور میں عبارت لکھیں تو یہ قدم خود ہو جاتا ہے۔</p></div></div>
+            <div class="step-item"><div class="sn">3</div><div><h4 dir="rtl">تیسرا قدم — حروف کو الگ کر کے ان کا اثر دیکھیں</h4><p dir="rtl">حرفِ جر ملے تو اس کے بعد والا اسم فوراً <b>مجرور</b> لکھیں۔ إِنَّ ملے تو اگلا اسم اس کا اسم (منصوب) اور اس کی خبر (مرفوع)۔ کانَ ملے تو اگلا اسم اس کا اسم (مرفوع) اور خبر منصوب۔ مثال: <span class="ar">فِي الْمَسْجِدِ</span> — المسجدِ فی کی وجہ سے مجرور۔</p></div></div>
+            <div class="step-item"><div class="sn">4</div><div><h4 dir="rtl">چوتھا قدم — فعل ملے تو فاعل تلاش کریں</h4><p dir="rtl">فعل کے بعد پوچھیں: «کس نے؟ / کون؟» — جو جواب ملے وہی <b>فاعل</b> ہے اور وہ ہمیشہ مرفوع ہوگا۔ مثال: <span class="ar">كَتَبَ الطَّالِبُ الدَّرْسَ</span> — کس نے لکھا؟ الطالبُ — فاعل مرفوع۔</p></div></div>
+            <div class="step-item"><div class="sn">5</div><div><h4 dir="rtl">پانچواں قدم — مفعول بہ تلاش کریں</h4><p dir="rtl">اب پوچھیں: «کیا؟ / کس کو؟» — جو جواب ملے وہ <b>مفعول بہ</b> ہے اور ہمیشہ منصوب ہوگا۔ اوپر کی مثال میں: کیا لکھا؟ الدرسَ — مفعول بہ منصوب۔ اگر فعل لازم ہو (ذَھَبَ، جَلَسَ) تو مفعول نہیں آتا۔</p></div></div>
+            <div class="step-item"><div class="sn">6</div><div><h4 dir="rtl">چھٹا قدم — جملہ اسمیہ ہو تو مبتدا و خبر بنائیں</h4><p dir="rtl">پہلا اسم <b>مبتدا</b> اور اس کے بارے میں بتائی گئی بات <b>خبر</b> — دونوں مرفوع۔ مثال: <span class="ar">اَلْمَسْجِدُ كَبِيرٌ</span> — المسجدُ مبتدا، کبیرٌ خبر۔ خبر کبھی جار و مجرور بھی ہوتی ہے: <span class="ar">اَلْكِتَابُ عَلَى الْمَكْتَبِ</span>۔</p></div></div>
+            <div class="step-item"><div class="sn">7</div><div><h4 dir="rtl">ساتواں قدم — اضافہ اور نعت چیک کریں</h4><p dir="rtl">دو اسم پاس پاس ہوں اور دوسرا مجرور ہو تو پہلا <b>مضاف</b>، دوسرا <b>مضاف الیہ</b>: <span class="ar">كِتَابُ الطَّالِبِ</span>۔ صفت والا لفظ اپنے پہلے اسم جیسی حرکت لے تو وہ <b>نعت</b> ہے: <span class="ar">طَالِبٌ مُجْتَهِدٌ</span> — دونوں پر تنوینِ ضم۔</p></div></div>
+            <div class="step-item"><div class="sn">8</div><div><h4 dir="rtl">آٹھواں قدم — آخری حرکت سے تصدیق کریں</h4><p dir="rtl">آخر میں ہر لفظ کی آخری حرکت آپ کے لکھے اعراب سے ملائیں: ضمہ = رفع، فتحہ = نصب، کسرہ = جر، سکون = جزم/بنا۔ حرکت اور اعراب آپس میں مل جائیں تو ترکیب درست ہے۔ یہ آخری جانچ کبھی نہ چھوڑیں۔</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= COMMON MISTAKES ================= -->
+      <section class="block" id="mistakes">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">أَخْطَاءٌ شَائِعَة</p>
+          <h2>عام غلطیاں — اور ان کی اصلاح</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">یہ وہ غلطیاں ہیں جو تقریباً ہر طالب علم شروع میں کرتا ہے۔ غلط صورت پر خط اور درست صورت ساتھ دی گئی ہے۔</p>
+        </div>
+        <div class="mistake-grid">
+          <div class="mistake"><h4 dir="rtl">غلطی 1: فاعل کو منصوب کر دینا</h4><div class="wrong" dir="rtl">كَتَبَ الطَّالِبَ الدَّرْسَ</div><div class="right" dir="rtl">كَتَبَ الطَّالِبُ الدَّرْسَ</div><p dir="rtl">فاعل ہمیشہ <b>مرفوع</b> ہوتا ہے۔ «کس نے لکھا؟» — طالبُ۔ الدرسَ مفعول ہے اس لیے وہ منصوب ہے؛ دونوں کو ایک جیسا نہ کریں۔</p></div>
+          <div class="mistake"><h4 dir="rtl">غلطی 2: مضاف پر تنوین لگا دینا</h4><div class="wrong" dir="rtl">كِتَابٌ الطَّالِبِ</div><div class="right" dir="rtl">كِتَابُ الطَّالِبِ</div><p dir="rtl">مضاف پر نہ تنوین آتی ہے نہ «ال»۔ «کتاب» مضاف ہے اس لیے تنوین ختم؛ الطالبِ مضاف الیہ ہونے کی وجہ سے مجرور ہے۔</p></div>
+          <div class="mistake"><h4 dir="rtl">غلطی 3: إِنَّ کے اسم کو مرفوع پڑھنا</h4><div class="wrong" dir="rtl">إِنَّ اللَّهُ غَفُورٌ</div><div class="right" dir="rtl">إِنَّ اللَّهَ غَفُورٌ</div><p dir="rtl">إِنَّ اپنے اسم کو <b>نصب</b> دیتا ہے: اللَّهَ۔ اور اس کی خبر مرفوع رہتی ہے: غَفُورٌ۔ یہ جوڑا یاد رکھیں — پہلا منصوب، دوسرا مرفوع۔</p></div>
+          <div class="mistake"><h4 dir="rtl">غلطی 4: کانَ کی خبر کو مرفوع کر دینا</h4><div class="wrong" dir="rtl">كَانَ الْجَوُّ بَارِدٌ</div><div class="right" dir="rtl">كَانَ الْجَوُّ بَارِدًا</div><p dir="rtl">کانَ کا عمل إِنَّ کے الٹ ہے: اسم مرفوع (الجوُّ) اور خبر <b>منصوب</b> (باردًا)۔</p></div>
+          <div class="mistake"><h4 dir="rtl">غلطی 5: حرفِ جر کے بعد اسم مرفوع پڑھنا</h4><div class="wrong" dir="rtl">ذَهَبْتُ إِلَى الْمَسْجِدُ</div><div class="right" dir="rtl">ذَهَبْتُ إِلَى الْمَسْجِدِ</div><p dir="rtl">إِلَى حرفِ جر ہے؛ اس کے بعد والا اسم ہمیشہ <b>مجرور</b> ہوگا — کسرہ ضرور دیکھیں۔</p></div>
+          <div class="mistake"><h4 dir="rtl">غلطی 6: نعت کو منعوت سے الگ حرکت دینا</h4><div class="wrong" dir="rtl">رَأَيْتُ طَالِبًا مُجْتَهِدٌ</div><div class="right" dir="rtl">رَأَيْتُ طَالِبًا مُجْتَهِدًا</div><p dir="rtl">نعت (صفت) ہمیشہ منعوت کے اعراب کی پیروی کرتی ہے۔ طالبًا منصوب ہے تو مجتہدًا بھی منصوب ہوگا۔</p></div>
+          <div class="mistake"><h4 dir="rtl">غلطی 7: جمع مذکر سالم کی علامت گڈمڈ کرنا</h4><div class="wrong" dir="rtl">رَأَيْتُ الْمُعَلِّمُونَ</div><div class="right" dir="rtl">رَأَيْتُ الْمُعَلِّمِينَ</div><p dir="rtl">جمع مذکر سالم: رفع میں <b>واو</b> (المعلمونَ — فاعل ہو تو)، نصب و جر میں <b>یاء</b> (المعلمینَ)۔ یہاں مفعول ہے اس لیے یاء آئی۔</p></div>
+          <div class="mistake"><h4 dir="rtl">غلطی 8: فعلِ لازم کا مفعول ڈھونڈنا</h4><div class="wrong" dir="rtl">ذَهَبَ زَيْدٌ — میں مفعول تلاش کرنا</div><div class="right" dir="rtl">ذَهَبَ فعلِ لازم ہے — اس کا مفعول بہ نہیں آتا</div><p dir="rtl">ذَھَبَ، جَلَسَ، نَامَ جیسے افعال لازم ہیں؛ ان کے بعد جار و مجرور یا ظرف آتا ہے، مفعول نہیں۔ پہلے فعل کا لازم/متعدی ہونا پہچانیں۔</p></div>
+        </div>
+      </section>
+
+      <!-- ================= SARF ================= -->
+      <section class="block" id="sarf">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">عِلْمُ الصَّرْف</p>
+          <h2>صرف — گردان مشین</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">کسی بھی ثلاثی مجرد فعل کے تین حروف لکھیں اور باب منتخب کریں — ماضی، مضارع، امر اور نہی کی پوری گردان (صرفِ صغیر) فوراً بن جائے گی۔</p>
+        </div>
+        <div class="card">
+          <div class="sarf-controls">
+            <div class="field">
+              <label for="rootInput" dir="rtl">مادہ (تین حروف)</label>
+              <input class="ar-in" id="rootInput" dir="rtl" lang="ar" value="ن ص ر" maxlength="9" />
+            </div>
+            <div class="field">
+              <label for="babSelect" dir="rtl">باب منتخب کریں</label>
+              <select id="babSelect"></select>
+            </div>
+            <button class="btn btn-brand" id="gardanBtn" type="button">گردان بنائیں</button>
+          </div>
+          <div class="root-chips" id="rootChips"></div>
+          <div class="table-wrap">
+            <table class="gardan" aria-label="Sarf gardan table">
+              <thead>
+                <tr><th>صیغہ</th><th>ضمیر</th><th>ماضی</th><th>مضارع</th><th>امر</th><th>نہی</th><th>معنی</th></tr>
+              </thead>
+              <tbody id="gardanBody"></tbody>
+            </table>
+          </div>
+          <div class="derived" id="derivedRow"></div>
+          <p class="note-line" id="sarfMsg" dir="rtl"></p>
+        </div>
+
+        <div class="card" style="margin-top:1.2rem">
+          <h3 style="margin:.1rem 0 .8rem" dir="rtl">ثلاثی مجرد کے چھ ابواب — ایک نظر میں</h3>
+          <div class="table-wrap">
+            <table class="bab-table" aria-label="Six abwab">
+              <thead><tr><th>باب</th><th>ماضی</th><th>مضارع</th><th>پہچان</th></tr></thead>
+              <tbody id="babBody"></tbody>
+            </table>
+          </div>
+          <p class="note-line" dir="rtl">یاد رکھنے کا طریقہ: ماضی کے عین کلمہ اور مضارع کے عین کلمہ کی حرکت دیکھیں — یہی دونوں حرکتیں باب کی پہچان ہیں۔ گردان ہمیشہ آواز بلند کر کے دہرائیں، صرف پڑھنے سے یاد نہیں ہوتی۔</p>
+        </div>
+      </section>
+
+      <!-- ================= GARDAN LIBRARY ================= -->
+      <section class="block" id="gardanlib">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">مَكْتَبَةُ الْغَرْدَان</p>
+          <h2>تیار گردان لائبریری — جن کو گردان نہیں آتی، وہ بھی دیکھ کر سیکھیں</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">کسی گردان پر اٹکے ہوں تو یہاں سے دیکھ لیں: مشہور افعال کی مکمل گردانیں (ماضی، مضارع، امر، نہی — 14 صیغے) اردو معنی کے ساتھ پہلے سے موجود ہیں۔ بس فعل چنیں۔</p>
+        </div>
+        <div class="card">
+          <h3 dir="rtl" style="margin:.1rem 0 .4rem">گردان یاد کیسے کریں؟ — 5 آسان قدم</h3>
+          <p dir="rtl" style="color:var(--ink-soft);margin:.2rem 0 1rem;line-height:2">۱) پہلے ضمیریں ترتیب سے ازبر کریں: هُوَ، هُمَا، هُمْ، هِيَ، هُمَا، هُنَّ، أَنْتَ، أَنْتُمَا، أَنْتُمْ، أَنْتِ، أَنْتُمَا، أَنْتُنَّ، أَنَا، نَحْنُ۔ ۲) ایک فعل (مثلاً نَصَرَ) کی گردان آواز بلند کر کے روز 5 بار دہرائیں۔ ۳) آخر کی علامتیں پہچانیں: تُ، تَ، تُمْ، نَا وغیرہ — یہی صیغے کی پہچان ہیں۔ ۴) معنی ساتھ جوڑیں: نَصَرَ = اس نے مدد کی، نَصَرَا = ان دونوں نے مدد کی… ۵) جب ایک باب کی گردان پکی ہو جائے تو اسی طرز پر دوسرے ابواب خود بنائیں — وزن ایک، صرف عین کلمہ کی حرکت بدلتی ہے۔</p>
+          <div class="grp-lbl" dir="rtl">ثلاثی مجرد — چھ ابواب (ہر باب کی ایک مکمل مثال)</div>
+          <div class="lib-chips" id="libChipsMuj"></div>
+          <div class="grp-lbl" dir="rtl">روزمرہ کے مشہور افعال</div>
+          <div class="lib-chips" id="libChipsDaily"></div>
+          <div class="grp-lbl" dir="rtl">ثلاثی مزید فیہ — مشہور ابواب</div>
+          <div class="lib-chips" id="libChipsMaz"></div>
+          <div class="grp-lbl" dir="rtl">معتل افعال (ان کی گردان مختلف ہوتی ہے)</div>
+          <div class="lib-chips" id="libChipsMut"></div>
+          <p id="libInfo" dir="rtl" style="font-weight:700;color:var(--brand);margin:.4rem 0 .8rem"></p>
+          <div class="table-wrap">
+            <table class="gardan" aria-label="Ready gardan library table">
+              <thead><tr><th>صیغہ</th><th>ضمیر</th><th>ماضی</th><th>مضارع</th><th>امر</th><th>نہی</th><th>معنی (ضمیر)</th></tr></thead>
+              <tbody id="libBody"></tbody>
+            </table>
+          </div>
+          <p class="note-line" id="libNote" dir="rtl"></p>
+        </div>
+      </section>
+
+      <!-- ================= SEEGHA ================= -->
+      <section class="block" id="seegha">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">اَلصِّيَغُ الْأَرْبَعَةَ عَشَر</p>
+          <h2>صیغے — 14 صیغوں کی مکمل چارٹ اور صیغہ فائنڈر</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">جو صیغہ نہیں آتا، وہ بھی یہاں سے دیکھ لیں: ہر صیغے کا نام، اس کی ضمیر، اردو معنی اور پہچان کی علامت — ماضی، مضارع، امر، نہی چاروں کی۔ نیچے فائنڈر سے کوئی بھی صیغہ خود بنا کر دیکھیں۔</p>
+        </div>
+        <div class="card">
+          <div class="table-wrap">
+            <table class="plain" aria-label="14 seegha chart">
+              <thead><tr><th>نمبر</th><th>صیغے کا نام</th><th>ضمیر</th><th>ماضی (نَصَرَ)</th><th>مضارع (يَنْصُرُ)</th><th>امر</th><th>نہی</th><th>پہچان کی علامت</th></tr></thead>
+              <tbody id="seeghaBody"></tbody>
+            </table>
+          </div>
+          <p class="note-line" dir="rtl">پہچان کا آسان طریقہ: ماضی میں آخر کے لگے ہوئے حصے دیکھیں — تُ (میں)، تَ (تو مذکر)، تِ (تو مؤنث)، تُمْ (تم سب)، نَا (ہم)، ا (دونوں)، وا (سب مذکر)، نَ (سب مؤنث)۔ مضارع میں شروع کی ضمیر حرف (يَ = غائب مذکر، تَ = مؤنث/حاضر، أَ = متکلم واحد، نَ = متکلم جمع) اور آخر کی علامت (ونَ = جمع مذکر، ينَ = واحد مؤنث حاضر، انِ = تثنیہ، نَ = جمع مؤنث) دیکھیں — صیغہ خود بول پڑے گا۔</p>
+        </div>
+        <div class="card" style="margin-top:1.2rem">
+          <h3 dir="rtl" style="margin:.1rem 0 .8rem">صیغہ فائنڈر — اپنا صیغہ خود بنائیں (مثال: نَصَرَ پر)</h3>
+          <div class="sarf-controls">
+            <div class="field"><label for="sfTense" dir="rtl">زمانہ / قسم</label>
+              <select id="sfTense"><option value="madi">ماضی</option><option value="mud">مضارع</option><option value="amr">امر</option><option value="nahi">نہی</option></select></div>
+            <div class="field"><label for="sfPerson" dir="rtl">شخص</label>
+              <select id="sfPerson"><option value="ghaib">غائب</option><option value="hazir">حاضر</option><option value="mut">متکلم</option></select></div>
+            <div class="field"><label for="sfNum" dir="rtl">عدد</label>
+              <select id="sfNum"><option value="wahid">واحد</option><option value="tas">تثنیہ (دو)</option><option value="jama">جمع (سب)</option></select></div>
+            <div class="field"><label for="sfGen" dir="rtl">جنس</label>
+              <select id="sfGen"><option value="m">مذکر</option><option value="f">مؤنث</option></select></div>
+            <button class="btn btn-brand" id="sfBtn" type="button">صیغہ دکھائیں</button>
+          </div>
+          <div class="finder-out" id="sfOut"></div>
+        </div>
+      </section>
+
+      <!-- ================= MASDAR ================= -->
+      <section class="block" id="masdar">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">اَلْمَصْدَر</p>
+          <h2>مصدر — تعریف، لغت اور اوزان</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">جو مصدر پوچھنا ہو، وہ بھی یہاں سے مل جائے گا: مصدر کی تعریف، 48 مشہور افعال کے مصادر کی لغت (تلاش کے ساتھ) اور مزید فیہ ابواب کے مصادر کے قاعدے۔</p>
+        </div>
+        <div class="card">
+          <h3 dir="rtl" style="margin:.1rem 0 .4rem">مصدر کیا ہوتا ہے؟</h3>
+          <p dir="rtl" style="color:var(--ink-soft);line-height:2;margin:.3rem 0">
+            <b>تعریف:</b> مصدر وہ اسم ہے جو کسی کام یا کیفیت کو بغیر زمانے کے بتائے — جیسے ضَرْب (مارنا)، عِلْم (جاننا)، جُلُوس (بیٹھنا)۔ <b>فعل سے فرق:</b> فعل میں زمانہ ہوتا ہے (ضَرَبَ = اس نے مارا، ماضی) مگر مصدر میں زمانہ نہیں ہوتا (ضَرْب = صرف «مارنا»)۔ فعل کسی فاعل کے ساتھ جڑا ہوتا ہے، مصدر اکیلا کام کا نام ہے۔ <b>پہچان:</b> اردو ترجمے میں آخر پر «نا» آئے (لکھنا، پڑھنا، نکلنا) تو عموماً وہی مصدر ہے۔ <b>یاد رکھیں:</b> ثلاثی مجرد کا مصدر <b>سماعی</b> ہوتا ہے — یعنی اس کا کوئی ایک مقرر وزن نہیں، اہلِ زبان سے سن کر اور استعمال دیکھ کر یاد ہوتا ہے؛ اسی لیے نیچے لغت دی گئی ہے۔ البتہ کچھ اوزان بہت مشہور ہیں:
+          </p>
+          <div class="awzan-chips" dir="rtl">
+            <span>فَعْل — نَصْر</span><span>فُعُول — خُرُوج</span><span>فِعَالَة — كِتَابَة</span><span>فَعَالَة — شَهَادَة</span><span>فِعْل — عِلْم</span><span>فُعْل — شُرْب</span><span>فَعَل — طَلَب</span><span>فِعَال — جِهَاد</span><span>فَعِيل — رَحِيل</span>
+          </div>
+          <div class="search-box" style="margin:0 0 1rem;max-width:520px">
+            <input id="masdarSearch" type="search" dir="rtl" placeholder="فعل یا مصدر تلاش کریں… مثلاً: كتب، علم، خروج" aria-label="Search masdar" />
+          </div>
+          <div class="table-wrap">
+            <table class="plain dict-table" aria-label="Masdar dictionary">
+              <thead><tr><th>فعل</th><th>مصدر</th><th>اردو معنی</th><th>باب / وزن</th></tr></thead>
+              <tbody id="masdarBody"></tbody>
+            </table>
+          </div>
+          <p class="empty-msg" id="masdarEmpty" dir="rtl">یہ فعل لغت میں نہیں ملا — املا بدل کر یا عربی میں لکھ کر دوبارہ تلاش کریں۔</p>
+          <h3 dir="rtl" style="margin:1.3rem 0 .5rem">مزید فیہ ابواب کے مصادر — قاعدے سے بنتے ہیں</h3>
+          <div class="table-wrap">
+            <table class="plain" aria-label="Mazeed masdar rules">
+              <thead><tr><th>باب</th><th>فعل کی مثال</th><th>مصدر کا وزن</th><th>مصدر کی مثال</th></tr></thead>
+              <tbody>
+                <tr><td dir="rtl">إفعال</td><td class="ar" dir="rtl">أَكْرَمَ</td><td class="ar" dir="rtl">إِفْعَال</td><td class="ar" dir="rtl">إِكْرَام</td></tr>
+                <tr><td dir="rtl">تفعیل</td><td class="ar" dir="rtl">عَلَّمَ</td><td class="ar" dir="rtl">تَفْعِيل</td><td class="ar" dir="rtl">تَعْلِيم</td></tr>
+                <tr><td dir="rtl">مفاعلہ</td><td class="ar" dir="rtl">قَاتَلَ</td><td class="ar" dir="rtl">مُفَاعَلَة / فِعَال</td><td class="ar" dir="rtl">مُقَاتَلَة / قِتَال</td></tr>
+                <tr><td dir="rtl">انفعال</td><td class="ar" dir="rtl">اِنْكَسَرَ</td><td class="ar" dir="rtl">اِنْفِعَال</td><td class="ar" dir="rtl">اِنْكِسَار</td></tr>
+                <tr><td dir="rtl">افتعال</td><td class="ar" dir="rtl">اِجْتَمَعَ</td><td class="ar" dir="rtl">اِفْتِعَال</td><td class="ar" dir="rtl">اِجْتِمَاع</td></tr>
+                <tr><td dir="rtl">تفاعل</td><td class="ar" dir="rtl">تَعَاوَنَ</td><td class="ar" dir="rtl">تَفَاعُل</td><td class="ar" dir="rtl">تَعَاوُن</td></tr>
+                <tr><td dir="rtl">تفعُّل</td><td class="ar" dir="rtl">تَعَلَّمَ</td><td class="ar" dir="rtl">تَفَعُّل</td><td class="ar" dir="rtl">تَعَلُّم</td></tr>
+                <tr><td dir="rtl">استفعال</td><td class="ar" dir="rtl">اِسْتَغْفَرَ</td><td class="ar" dir="rtl">اِسْتِفْعَال</td><td class="ar" dir="rtl">اِسْتِغْفَار</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note-line" dir="rtl">قاعدہ: مزید فیہ کے مصادر قیاسی (قاعدے والے) ہوتے ہیں — باب پہچانیں، وزن لگائیں، مصدر بن گیا۔ مجرد کے مصادر سماعی ہیں، وہ لغت اور کثرتِ استعمال سے یاد ہوتے ہیں۔</p>
+        </div>
+      </section>
+
+      <!-- ================= TARKEEB LIBRARY ================= -->
+      <section class="block" id="tarkeeb">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">التَّرْكِيبُ النَّحْوِي</p>
+          <h2>ترکیب لائبریری — حل شدہ عبارات</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">قرآنِ مجید، حدیثِ مبارک اور نصابی کتب کی منتخب عبارات کی مکمل لفظ بلفظ ترکیب۔ عبارت منتخب کریں اور ہر لفظ کا اعراب غور سے پڑھیں۔</p>
+        </div>
+        <div class="search-box">
+          <input id="trkSearch" type="search" dir="rtl" placeholder="عبارت تلاش کریں… مثلاً: بسملہ، کان، حدیث" aria-label="Search tarkeeb library" />
+        </div>
+        <div class="trk-tabs" id="trkTabs"></div>
+        <div class="card">
+          <div class="trk-sentence" id="trkSentence" dir="rtl" lang="ar"></div>
+          <div class="trk-meta" id="trkMeta" dir="rtl"></div>
+          <div class="table-wrap">
+            <table class="trk-table" aria-label="Tarkeeb table">
+              <thead><tr><th style="text-align:right">لفظ</th><th style="text-align:right">اعراب</th><th style="text-align:right">وجہ و تفصیل</th></tr></thead>
+              <tbody id="trkBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= QAWAID ================= -->
+      <section class="block" id="qawaid">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">قَوَاعِدُ النَّحْو</p>
+          <h2>نحو کے قواعد</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">نصاب کے اہم قواعد آسان اردو میں، ہر قاعدے کے ساتھ عربی مثال۔ قاعدہ تلاش بھی کر سکتے ہیں۔</p>
+        </div>
+        <div class="search-box">
+          <input id="ruleSearch" type="search" dir="rtl" placeholder="قاعدہ تلاش کریں… مثلاً: فاعل، جر، مبتدا" aria-label="Search rules" />
+        </div>
+        <div class="rule-grid" id="ruleGrid"></div>
+        <p class="empty-msg" id="ruleEmpty" dir="rtl">اس نام کا کوئی قاعدہ نہیں ملا — کوئی اور لفظ لکھ کر تلاش کریں۔</p>
+      </section>
+
+      <!-- ================= GLOSSARY ================= -->
+      <section class="block" id="lughat">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">قَامُوسُ الْمُصْطَلَحَات</p>
+          <h2>اصطلاحات کی لغت — ہر لفظ کی تعریف و مثال</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">کوئی اصطلاح سمجھ نہ آئے تو یہاں تلاش کریں: نحو و صرف کی تمام بنیادی اصطلاحات آسان اردو تعریف اور مثال کے ساتھ۔</p>
+        </div>
+        <div class="search-box">
+          <input id="glossSearch" type="search" dir="rtl" placeholder="اصطلاح تلاش کریں… مثلاً: فاعل، معرفہ، ضمیر" aria-label="Search glossary" />
+        </div>
+        <div class="gloss-grid" id="glossGrid"></div>
+        <p class="empty-msg" id="glossEmpty" dir="rtl">یہ اصطلاح نہیں ملی — کوئی اور لفظ لکھ کر تلاش کریں۔</p>
+      </section>
+
+      <!-- ================= A-Z INDEX ================= -->
+      <section class="block" id="az">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">الْفِهْرِسُ الْكَامِل</p>
+          <h2>نحو و صرف — A سے Z مکمل نصاب</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">کتاب کی فہرست کی طرح: جس موضوع پر اٹکے ہوں، فہرست سے چنیں — تعریف، قاعدہ، پہچان اور حل شدہ مثالیں سامنے آ جائیں گی۔ تلاش بھی چلتی ہے۔</p>
+        </div>
+        <h3 dir="rtl" style="margin:.2rem 0 .7rem">📗 علمِ نحو — مکمل فہرست</h3>
+        <div class="search-box" style="margin-inline:0">
+          <input id="azNahwSearch" type="search" dir="rtl" placeholder="نحو کا موضوع تلاش کریں… مثلاً: حال، استثنا، شرط" aria-label="Search nahw index" />
+        </div>
+        <div class="az-wrap">
+          <div class="az-list" id="azNahwList"></div>
+          <div class="az-detail" id="azNahwDetail"></div>
+        </div>
+        <h3 dir="rtl" style="margin:1.8rem 0 .7rem">📘 علمِ صرف — مکمل فہرست</h3>
+        <div class="search-box" style="margin-inline:0">
+          <input id="azSarfSearch" type="search" dir="rtl" placeholder="صرف کا موضوع تلاش کریں… مثلاً: مشتقات، مجہول، اعلال" aria-label="Search sarf index" />
+        </div>
+        <div class="az-wrap">
+          <div class="az-list" id="azSarfList"></div>
+          <div class="az-detail" id="azSarfDetail"></div>
+        </div>
+      </section>
+
+      <!-- ================= QUIZ ================= -->
+      <section class="block" id="quiz">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">اَلْمَشْقُ وَالتَّمْرِين</p>
+          <h2>مشق — اپنا اعراب آزمائیں</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">ہر سوال میں درست اعراب یا ترکیب منتخب کریں۔ جواب کے ساتھ وجہ بھی دی جائے گی تاکہ غلطی سے بھی سبق ملے۔</p>
+        </div>
+        <div class="card">
+          <div class="quiz-progress"><i id="quizBar"></i></div>
+          <div id="quizMain">
+            <div class="quiz-q" id="quizQ" dir="rtl"></div>
+            <div class="quiz-opts" id="quizOpts"></div>
+            <div class="quiz-explain" id="quizExplain" dir="rtl"></div>
+            <div class="quiz-foot">
+              <span class="quiz-score" id="quizScore"></span>
+              <button class="btn btn-brand" id="quizNext" type="button" style="display:none">اگلا سوال</button>
+            </div>
+          </div>
+          <div class="quiz-result" id="quizResult">
+            <div class="big" dir="rtl">مَا شَاءَ اللَّه!</div>
+            <p id="quizResultText" dir="rtl"></p>
+            <button class="btn btn-gold" id="quizRestart" type="button">دوبارہ مشق کریں</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= NISAB + FOUNDER ================= -->
+      <section class="block" id="nisab">
+        <div class="sec-head">
+          <p class="ar-t" dir="rtl">اَلنِّصَابُ الدِّرَاسِي</p>
+          <h2>نصاب اور اکیڈمی کا تعارف</h2>
+          <div class="gold-rule"></div>
+          <p dir="rtl">یہ اکیڈمی <b>اہلِ سنت و جماعت — بریلوی، حنفی</b> نصاب کے مطابق چلتی ہے۔ صرف و نحو کی تدریس درسِ نظامی کی مستند کتب سے ہوتی ہے؛ کسی دوسرے مسلک کا مواد شامل نہیں۔</p>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <h3 style="margin:.1rem 0 .2rem" dir="rtl">نصابی کتب — صرف و نحو</h3>
+            <p style="color:var(--muted);margin:0" dir="rtl">مرحلہ وار ترتیب: پہلے صرف، پھر نحو، پھر اعراب کی مشق۔</p>
+            <div class="book-list" id="bookList"></div>
+          </div>
+          <div class="card founder-card">
+            <div class="ring">ع</div>
+            <div class="role" dir="rtl">بانی و نگرانِ اکیڈمی</div>
+            <h3>Abdullah Attari</h3>
+            <p dir="rtl">
+              «مفتاح الإعراب» کا مقصد ہر طالبِ علم کی عبارت درست کرنا ہے: جو یہاں سیکھے، وہ قرآن و حدیث کی
+              عربی خود پڑھے، اعراب پہچانے اور ترکیب کر سکے۔ محنت طالب علم کی، رہنمائی ہماری —
+              اور توفیق اللہ تعالیٰ کی طرف سے ہے۔
+            </p>
+            <div class="hero-steps" style="margin-top:1.2rem">
+              <span dir="rtl">مسلک: <b>اہلِ سنت و جماعت</b></span>
+              <span dir="rtl">فقہ: <b>حنفی</b></span>
+              <span dir="rtl">طریقِ تدریس: <b>نصابی</b></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-steps">
+          <div class="path-step"><div class="num">1</div><h4 dir="rtl">پہلا مرحلہ — صرف</h4><p dir="rtl">میزانِ صرف، مادہ و جذر کی پہچان اور چھ ابواب کی گردان ازبر کریں۔ لفظ کی بناوٹ سمجھے بغیر اعراب مشکل رہتا ہے۔</p></div>
+          <div class="path-step"><div class="num">2</div><h4 dir="rtl">دوسرا مرحلہ — نحو</h4><p dir="rtl">کلمہ کی اقسام سے شروع کر کے فاعل، مفعول، مبتدا، خبر اور حروف کے احکام ترتیب سے سیکھیں۔</p></div>
+          <div class="path-step"><div class="num">3</div><h4 dir="rtl">تیسرا مرحلہ — ترکیب</h4><p dir="rtl">روزانہ ایک عبارت کی ترکیب لکھیں: پہلے سولور سے مدد لیں، پھر بغیر دیکھے خود حل کریں اور ملا کر دیکھیں۔</p></div>
+          <div class="path-step"><div class="num">4</div><h4 dir="rtl">چوتھا مرحلہ — مہارت</h4><p dir="rtl">بغیر اعراب والی عبارت پڑھنے کی مشق کریں۔ جب نظر خود حرکت پہچاننے لگے تو سمجھیں عبارت set ہو گئی۔</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="foot-in">
+        <div class="ar" dir="rtl">رَبِّ زِدْنِي عِلْمًا</div>
+        <p dir="rtl">مفتاح الإعراب — عربی گرامر اکیڈمی | صرف • نحو • اعراب • ترکیب</p>
+        <p class="credit">Designed &amp; Founded by Abdullah Attari</p>
+        <p dir="rtl">اساتذہ کرام: سید انیق مدنی • مفتی غلام یٰسین • محسن مدنی • شاہد مدنی • علامہ عارف الحق • خالد مدنی</p>
+        <p dir="rtl">نصاب: اہلِ سنت و جماعت (بریلوی) — فقہِ حنفی • تمام مواد تعلیمی مقصد کے لیے ہے</p>
+      </div>
+    </footer>
+    <script>
+    /* ============================================================
+       مفتاح الإعراب — data (نصاب: اہلِ سنت و جماعت، بریلوی حنفی)
+       ============================================================ */
+    var TARKEEB = [
+      {
+        title: "بسملہ شریفہ", source: "قرآن مجید کی ہر سورت کا آغاز (سورۃ التوبہ کے سوا)",
+        ar: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        tr: "اللہ کے نام سے (شروع کرتا ہوں) جو بڑا مہربان، نہایت رحم فرمانے والا ہے۔",
+        words: [
+          ["بِسْمِ","مجرور — بحرفِ جر","باء حرفِ جر ہے اور «اسم» اس سے مجرور ہے، علامتِ جر کسرہ ہے۔ «اسم» آگے مضاف بھی ہے، اس لیے اس پر تنوین نہیں آئی۔ جار و مجرور کسی محذوف فعل (مثلاً أَبْدَأُ) سے متعلق ہیں۔"],
+          ["اللَّهِ","مضاف الیہ — مجرور","«اسم» کا مضاف الیہ ہے، اس لیے مجرور ہے اور علامتِ جر کسرہ ظاہرہ ہے۔ لفظِ جلالہ معرفہ ہے۔"],
+          ["الرَّحْمَٰنِ","نعت — مجرور","اللہ تعالیٰ کی صفت (نعت) ہے۔ نعت ہمیشہ منعوت کے اعراب کی پیروی کرتی ہے؛ منعوت مجرور ہے اس لیے یہ بھی مجرور، علامت کسرہ۔"],
+          ["الرَّحِيمِ","نعتِ ثانی — مجرور","دوسری صفت ہے، یہ بھی منعوت کے تابع ہونے کی وجہ سے مجرور ہے، علامت کسرہ ظاہرہ۔"]
+        ]
+      },
+      {
+        title: "انّ کا جملہ", source: "سورۃ البقرہ، آیت 173 کا آخری حصہ",
+        ar: "إِنَّ اللَّهَ غَفُورٌ رَّحِيمٌ",
+        tr: "بے شک اللہ بخشنے والا، مہربان ہے۔",
+        words: [
+          ["إِنَّ","حرفِ مشبہ بالفعل","یہ حروفِ مشبہ بالفعل میں سے ہے: اپنے اسم کو نصب اور خبر کو رفع دیتا ہے۔ یہاں تاکید (پختگی) کے معنی میں ہے۔ جملہ اسی سے شروع ہوا اس لیے یہ جملہ اسمیہ ہے۔"],
+          ["اللَّهَ","اسمِ إنَّ — منصوب","إنَّ کا اسم ہونے کی وجہ سے منصوب ہے، علامتِ نصب فتحہ ظاہرہ ہے۔ قاعدہ یاد رکھیں: إنَّ کے بعد اسم پر ہمیشہ فتحہ/نصب دیکھیں۔"],
+          ["غَفُورٌ","خبرِ إنَّ — مرفوع","إنَّ کی خبر ہے اس لیے مرفوع ہے، علامتِ رفع تنوینِ ضم ہے۔"],
+          ["رَّحِيمٌ","خبرِ ثانی — مرفوع","دوسری خبر ہے، یہ بھی مرفوع ہے اور علامت تنوینِ ضم ہے۔ ایک مبتدا/اسم کی خبریں کئی ہو سکتی ہیں۔"]
+        ]
+      },
+      {
+        title: "جملہ اسمیہ", source: "نحوی مثال — مبتدا و خبر کی پہچان",
+        ar: "اَلْعِلْمُ نُورٌ",
+        tr: "علم روشنی ہے۔",
+        words: [
+          ["اَلْعِلْمُ","مبتدا — مرفوع","جملہ اسم سے شروع ہوا اس لیے یہ جملہ اسمیہ ہے۔ پہلا اسم «العلم» مبتدا ہے، مرفوع ہے، علامتِ رفع ضمہ ظاہرہ۔ یہ معرفہ باللام ہے۔"],
+          ["نُورٌ","خبر — مرفوع","مبتدا کی خبر بیان کر رہا ہے اس لیے خبر ہے۔ خبر بھی مرفوع ہوتی ہے، علامت تنوینِ ضم۔ خبر یہاں نکرہ آئی ہے، یہی عام قاعدہ ہے۔"]
+        ]
+      },
+      {
+        title: "جملہ فعلیہ + جار مجرور", source: "نحوی مثال — فاعل اور حرفِ جر",
+        ar: "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ",
+        tr: "طالب علم مدرسے کی طرف گیا۔",
+        words: [
+          ["ذَهَبَ","فعلِ ماضی — مبنی","فعل ماضی ہے اور مبنی علی الفتح ہے؛ مبنی پر اعراب تبدیل نہیں ہوتا۔ جملہ فعل سے شروع ہوا اس لیے جملہ فعلیہ ہے۔"],
+          ["الطَّالِبُ","فاعل — مرفوع","«جانے» کا کام کرنے والا یہی ہے، اس لیے فاعل ہے۔ فاعل ہمیشہ مرفوع ہوتا ہے، علامتِ رفع ضمہ ظاہرہ۔"],
+          ["إِلَى","حرفِ جر","حروفِ جارہ میں سے ہے، اپنے بعد والے اسم کو جر دیتا ہے۔ «کی طرف» کے معنی دیتا ہے۔"],
+          ["الْمَدْرَسَةِ","مجرور — بإلى","إلى کی وجہ سے مجرور ہے، علامتِ جر کسرہ ظاہرہ۔ جار و مجرور مل کر فعل «ذھب» سے متعلق ہیں۔"]
+        ]
+      },
+      {
+        title: "فاعل و مفعول بہ", source: "نحوی مثال — فعل متعدی کی ترکیب",
+        ar: "قَرَأَ مُحَمَّدٌ الْكِتَابَ",
+        tr: "محمد نے کتاب پڑھی۔",
+        words: [
+          ["قَرَأَ","فعلِ ماضی — مبنی","مبنی علی الفتح ہے۔ یہ فعل متعدی ہے یعنی اس کا اثر فاعل سے آگے مفعول تک جاتا ہے، اس لیے آگے مفعول بہ آئے گا۔"],
+          ["مُحَمَّدٌ","فاعل — مرفوع","پڑھنے والا محمد ہے، اس لیے فاعل ہے اور مرفوع ہے، علامت تنوینِ ضم۔"],
+          ["الْكِتَابَ","مفعول بہ — منصوب","جس چیز پر فعل کا اثر پڑا وہ کتاب ہے، اس لیے مفعول بہ ہے۔ مفعول بہ ہمیشہ منصوب ہوتا ہے، علامتِ نصب فتحہ ظاہرہ۔"]
+        ]
+      },
+      {
+        title: "حدیثِ مبارک", source: "صحیح بخاری، کتاب الوحی — پہلی حدیث",
+        ar: "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ",
+        tr: "اعمال کا دارومدار نیتوں پر ہے۔",
+        words: [
+          ["إِنَّمَا","کافّہ و مکفوفہ","یہ إنَّ اور ما (کافہ) کا مجموعہ ہے۔ ما کافہ آ جانے سے إنَّ کا عمل (نصب دینا) رک جاتا ہے، اس لیے آگے والا اسم منصوب نہیں بلکہ مبتدا بنتا ہے۔"],
+          ["الْأَعْمَالُ","مبتدا — مرفوع","إنما کے بعد جملہ اسمیہ شروع ہوا؛ «الأعمال» مبتدا ہے، مرفوع ہے، علامت ضمہ ظاہرہ۔"],
+          ["بِالنِّيَّاتِ","جار و مجرور — خبر کے مقام پر","باء حرفِ جر اور «النیات» مجرور بہ کسرہ ہے۔ یہ جار و مجرور محذوف خبر (مثلاً مُعْتَبَرَةٌ / ثابتة) سے متعلق ہو کر خبر کا فائدہ دے رہے ہیں۔"]
+        ]
+      },
+      {
+        title: "سورۃ الفاتحہ", source: "قرآن مجید، سورۃ الفاتحہ، آیت 2",
+        ar: "اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        tr: "سب تعریفیں اللہ کے لیے ہیں جو سارے جہانوں کا پروردگار ہے۔",
+        words: [
+          ["اَلْحَمْدُ","مبتدا — مرفوع","جملہ اسمیہ کا مبتدا ہے، مرفوع، علامتِ رفع ضمہ ظاہرہ۔"],
+          ["لِلَّهِ","جار و مجرور — متعلقِ خبر","لام حرفِ جر ہے (اصل: لِ + اللہ)؛ «اللہ» اس سے مجرور ہے۔ جار و مجرور محذوف خبر سے متعلق ہیں، یعنی خبر کا مفہوم یہیں سے مکمل ہوتا ہے۔"],
+          ["رَبِّ","نعت — مجرور و مضاف","اللہ کی صفت ہے اس لیے مجرور ہے۔ ساتھ ہی یہ مضاف بھی ہے، اسی لیے تنوین نہیں آئی اور آگے مضاف الیہ آیا ہے۔"],
+          ["الْعَالَمِينَ","مضاف الیہ — مجرور","«ربّ» کا مضاف الیہ ہے اس لیے مجرور ہے۔ یہ جمع مذکر سالم ہے اور جمع مذکر سالم کی علامتِ جر «یاء» ہوتی ہے (رفع میں واو، نصب و جر میں یاء)۔"]
+        ]
+      },
+      {
+        title: "کانَ کا جملہ", source: "سورۃ النساء، آیت 17 کا حصہ (إِنَّ اللَّهَ كَانَ عَلِيمًا حَكِيمًا)",
+        ar: "كَانَ اللَّهُ عَلِيمًا حَكِيمًا",
+        tr: "اللہ جاننے والا، حکمت والا ہے۔",
+        words: [
+          ["كَانَ","فعلِ ناقص — مبنی","افعالِ ناقصہ میں سے ہے، مبنی علی الفتح۔ یہ اپنے اسم کو رفع اور خبر کو نصب دیتا ہے — إنَّ کے بالکل الٹ عمل ہے۔"],
+          ["اللَّهُ","اسمِ کانَ — مرفوع","کانَ کا اسم ہے اس لیے مرفوع ہے، علامتِ رفع ضمہ ظاہرہ۔"],
+          ["عَلِيمًا","خبرِ کانَ — منصوب","کانَ کی خبر ہے اس لیے منصوب ہے، علامتِ نصب تنوینِ فتح۔"],
+          ["حَكِيمًا","خبرِ ثانی — منصوب","دوسری خبر بھی منصوب ہے، علامت تنوینِ فتح۔ کانَ کی خبریں بھی متعدد ہو سکتی ہیں۔"]
+        ]
+      }
+    ];
+
+    var RULES = [
+      { t:"کلمہ اور اس کی اقسام", term:"اَلْكَلِمَة", d:"کلمہ وہ لفظ ہے جو اکیلا معنی دے۔ اس کی تین قسمیں ہیں: اسم (کسی ذات، چیز یا معنی کا نام: کتاب، علم)، فعل (زمانے کے ساتھ کام: کَتَبَ، یَکْتُبُ) اور حرف (دوسرے لفظ کے ساتھ مل کر معنی دے: فِي، مِنْ)۔ ہر عبارت کی ترکیب اسی پہچان سے شروع ہوتی ہے۔", ex:"كَتَبَ الطَّالِبُ الدَّرْسَ", exn:"کتب = فعل، الطالب = اسم (فاعل)، الدرس = اسم (مفعول)" },
+      { t:"معرفہ اور نکرہ", term:"اَلْمَعْرِفَةُ وَالنَّكِرَةُ", d:"نکرہ وہ اسم ہے جو کسی غیر معین چیز کو بتائے، اس پر عموماً تنوین آتی ہے (كِتَابٌ = کوئی کتاب)۔ معرفہ معین چیز کو بتاتا ہے؛ اس کی مشہور صورت «ال» والا اسم ہے (اَلْكِتَابُ = وہ مخصوص کتاب)۔ مبتدا عموماً معرفہ اور خبر عموماً نکرہ آتی ہے۔", ex:"جَاءَ رَجُلٌ — اَلرَّجُلُ كَرِيمٌ", exn:"رجلٌ نکرہ ہے، الرجلُ «ال» کی وجہ سے معرفہ ہے" },
+      { t:"مبتدا اور خبر (جملہ اسمیہ)", term:"اَلْمُبْتَدَأُ وَالْخَبَرُ", d:"جو جملہ اسم سے شروع ہو وہ جملہ اسمیہ ہے۔ پہلے اسم کو مبتدا اور اس کے بارے میں بتائی گئی بات کو خبر کہتے ہیں۔ دونوں مرفوع ہوتے ہیں۔ خبر مفرد بھی ہو سکتی ہے، جملہ بھی اور جار و مجرور بھی۔", ex:"اَلْمَسْجِدُ كَبِيرٌ", exn:"المسجدُ = مبتدا مرفوع، کبیرٌ = خبر مرفوع" },
+      { t:"فاعل", term:"اَلْفَاعِلُ", d:"فاعل وہ اسم ہے جو فعل کے کرنے والے کو بتائے، یعنی «کس نے؟» کا جواب۔ فاعل ہمیشہ مرفوع ہوتا ہے۔ پہچان: فعل کے بعد «کون/کس نے» پوچھیں، جو جواب ملے وہی فاعل ہے۔ فاعل ظاہر بھی ہوتا ہے اور فعل میں چھپی ضمیر بھی۔", ex:"نَجَحَ الْمُجْتَهِدُ", exn:"کس نے کامیابی پائی؟ المجتہدُ — یہی فاعل ہے" },
+      { t:"مفعول بہ", term:"اَلْمَفْعُولُ بِهِ", d:"وہ اسم جس پر فعل کا اثر پڑے، یعنی «کس کو/کیا؟» کا جواب۔ مفعول بہ ہمیشہ منصوب ہوتا ہے۔ صرف فعلِ متعدی کا مفعول بہ آتا ہے؛ فعلِ لازم (جیسے ذَھَبَ، جَلَسَ) مفعول نہیں لیتا، وہ جار و مجرور یا ظرف کے ساتھ مکمل ہوتا ہے۔", ex:"شَرِبَ الْوَلَدُ الْمَاءَ", exn:"کیا پیا؟ الماءَ — مفعول بہ، منصوب بالفتحہ" },
+      { t:"مضاف اور مضاف الیہ", term:"اَلْإِضَافَةُ", d:"دو اسموں کا وہ تعلق جس میں پہلا دوسرے کی طرف منسوب ہو (کتابُ الطالب = طالب علم کی کتاب)۔ پہلا مضاف، دوسرا مضاف الیہ۔ قاعدہ: مضاف الیہ ہمیشہ مجرور ہوتا ہے، اور مضاف پر نہ تنوین آتی ہے نہ «ال»۔", ex:"بَابُ الْمَدْرَسَةِ مَفْتُوحٌ", exn:"بابُ = مضاف، المدرسةِ = مضاف الیہ مجرور" },
+      { t:"حروفِ جارہ", term:"حُرُوفُ الْجَرِّ", d:"وہ حروف جو اسم کو جر دیتے ہیں۔ مشہور حروف یہ ہیں: مِنْ (سے)، إِلَى (کی طرف)، عَنْ (سے/کے بارے میں)، عَلَى (پر)، فِي (میں)، رُبَّ (کم/بہت)، باء (سے/ساتھ)، کاف (کی طرح)، لام (کے لیے) اور قسم کے حروف واو، باء، تاء۔ ان کے بعد والا اسم ہمیشہ مجرور ہوگا۔", ex:"سَافَرْتُ مِنَ الْقَرْيَةِ إِلَى الْمَدِينَةِ", exn:"القريةِ اور المدينةِ دونوں حروفِ جر سے مجرور ہیں" },
+      { t:"إنَّ اور اس کی بہنیں", term:"إِنَّ وَأَخَوَاتُهَا", d:"حروفِ مشبہ بالفعل: إِنَّ، أَنَّ، كَأَنَّ، لٰكِنَّ، لَيْتَ، لَعَلَّ۔ یہ جملہ اسمیہ پر داخل ہو کر مبتدا کو نصب دے کر اپنا «اسم» بناتے ہیں اور خبر کو رفع پر رہنے دیتے ہیں۔ یعنی ان کے بعد پہلا اسم منصوب، دوسرا مرفوع نظر آئے گا۔", ex:"إِنَّ الْعِلْمَ نَافِعٌ", exn:"العلمَ = اسمِ إنَّ منصوب، نافعٌ = خبرِ إنَّ مرفوع" },
+      { t:"کانَ اور اس کی بہنیں", term:"كَانَ وَأَخَوَاتُهَا", d:"افعالِ ناقصہ: كَانَ، أَصْبَحَ، أَضْحَى، ظَلَّ، بَاتَ، صَارَ، لَيْسَ وغیرہ۔ یہ مبتدا کو رفع پر رکھ کر اسے اپنا «اسم» بناتے ہیں اور خبر کو نصب دے کر اپنی «خبر» بناتے ہیں — یعنی إنَّ کے الٹ: پہلا اسم مرفوع، خبر منصوب۔", ex:"كَانَ الْجَوُّ بَارِدًا", exn:"الجوُّ = اسمِ کانَ مرفوع، باردًا = خبرِ کانَ منصوب" },
+      { t:"نعت اور منعوت", term:"اَلنَّعْتُ وَالْمَنْعُوتُ", d:"نعت (صفت) وہ لفظ ہے جو پہلے اسم (منعوت) کی صفت بیان کرے۔ قاعدہ: نعت چار چیزوں میں منعوت کے تابع ہوتی ہے — اعراب (رفع/نصب/جر)، معرفہ/نکرہ، مذکر/مؤنث اور واحد/جمع۔ منعوت جیسا، نعت ویسا۔", ex:"رَأَيْتُ طَالِبًا مُجْتَهِدًا", exn:"طالبًا منصوب ہے تو اس کی نعت مجتہدًا بھی منصوب" },
+      { t:"اعراب کی علامتیں", term:"عَلَامَاتُ الْإِعْرَابِ", d:"اصل علامتیں: رفع کی ضمہ، نصب کی فتحہ، جر کی کسرہ اور جزم کی سکون۔ فرعی علامتیں: جمع مذکر سالم میں رفع واو سے، نصب و جر یاء سے (الْمُسْلِمُونَ / الْمُسْلِمِينَ)؛ تثنیہ میں رفع الف سے، نصب و جر یاء سے؛ پانچ اسموں (ابوک، اخوک وغیرہ) میں رفع واو، نصب الف اور جر یاء سے ہوتا ہے۔", ex:"جَاءَ الْمُعَلِّمُونَ — رَأَيْتُ الْمُعَلِّمِينَ", exn:"رفع میں واو، نصب میں یاء — یہی فرعی علامتیں ہیں" },
+      { t:"فعل کی اقسام اور اعراب", term:"اَلْفِعْلُ الْمَاضِي وَالْمُضَارِعُ", d:"فعلِ ماضی مبنی ہوتا ہے (عموماً علی الفتح) — اس کا اعراب نہیں بدلتا۔ فعلِ مضارع معرب ہے: آخر میں کوئی ناصب/جازم نہ ہو تو مرفوع (یَکْتُبُ)، أَنْ/لَنْ آئے تو منصوب (لَنْ یَکْتُبَ)، لَمْ آئے تو مجزوم (لَمْ یَکْتُبْ)۔ امر و نہی بھی مبنی شمار ہوتے ہیں۔", ex:"لَمْ يَذْهَبْ — لَنْ يَذْهَبَ — يَذْهَبُ", exn:"ایک ہی فعل تین حالتوں میں: مجزوم، منصوب، مرفوع" }
+    ];
+
+    /* ہر قاعدے کی دوسری حل شدہ مثال */
+    var RULE_EX2 = {
+      "اَلْكَلِمَة":["شَرِبَ الْوَلَدُ الْمَاءَ","شربَ = فعل، الولدُ = اسم (فاعل)، الماءَ = اسم (مفعول)"],
+      "اَلْمَعْرِفَةُ وَالنَّكِرَةُ":["هَٰذَا كِتَابٌ جَدِيدٌ","کتابٌ نکرہ ہے؛ ہذا (اسمِ اشارہ) خود معرفہ ہے اور اشارہ اسی کتاب کی طرف ہے"],
+      "اَلْمُبْتَدَأُ وَالْخَبَرُ":["اَلصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ","الصلاةُ = مبتدا مرفوع، خیرٌ = خبر مرفوع"],
+      "اَلْفَاعِلُ":["كَتَبَ الْمُعَلِّمُ الدَّرْسَ","کس نے لکھا؟ المعلمُ — فاعل مرفوع بالضمہ"],
+      "اَلْمَفْعُولُ بِهِ":["زَرَعَ الْفَلَّاحُ الْقَمْحَ","کیا بویا؟ القمحَ — مفعول بہ منصوب بالفتحہ"],
+      "اَلْإِضَافَةُ":["مِفْتَاحُ الْبَابِ جَدِيدٌ","مفتاحُ = مضاف (تنوین نہیں)، البابِ = مضاف الیہ مجرور"],
+      "حُرُوفُ الْجَرِّ":["جَلَسْتُ عَلَى الْكُرْسِيِّ","الکرسيِّ علی (حرفِ جر) کی وجہ سے مجرور"],
+      "إِنَّ وَأَخَوَاتُهَا":["لَعَلَّ النَّجَاحَ قَرِيبٌ","لعل بھی إنَّ کی بہن ہے: النجاحَ اسم منصوب، قریبٌ خبر مرفوع"],
+      "كَانَ وَأَخَوَاتُهَا":["أَصْبَحَ الْجَوُّ صَافِيًا","اصبح کانَ کی بہن ہے: الجوُّ اسم مرفوع، صافیًا خبر منصوب"],
+      "اَلنَّعْتُ وَالْمَنْعُوتُ":["هَٰذَا طَالِبٌ ذَكِيٌّ","ذکيٌّ طالبٌ کی نعت ہے — دونوں مرفوع اور دونوں نکرہ"],
+      "عَلَامَاتُ الْإِعْرَابِ":["سَلَّمْتُ عَلَى الْمُعَلِّمِينَ","جر میں بھی یاء: المعلمین علی کی وجہ سے مجرور بیاء"],
+      "اَلْفِعْلُ الْمَاضِي وَالْمُضَارِعُ":["لَنْ أَكْذِبَ أَبَدًا","لن ناصبہ ہے، اس لیے اکذبَ منصوب بالفتحہ"]
+    };
+
+    var QUIZ = [
+      { q:"«ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ» میں «الطَّالِبُ» کیا ہے؟", opts:["مفعول بہ","فاعل","مبتدا","مضاف الیہ"], a:1, ex:"«گیا» کا عمل کرنے والا طالب علم ہے۔ فعل کے بعد «کس نے/کون؟» کا جواب فاعل ہوتا ہے اور فاعل ہمیشہ مرفوع ہوتا ہے — اسی لیے اس پر ضمہ ہے۔" },
+      { q:"«إِنَّ اللَّهَ غَفُورٌ» میں «اللَّهَ» منصوب کیوں ہے؟", opts:["وہ مفعول بہ ہے","وہ اسمِ إنَّ ہے","وہ مضاف ہے","وہ خبر ہے"], a:1, ex:"إنَّ حروفِ مشبہ بالفعل سے ہے؛ یہ اپنے اسم کو نصب دیتا ہے۔ اس لیے «اللہ» یہاں اسمِ إنَّ ہونے کی وجہ سے منصوب ہے اور «غفورٌ» اس کی خبر مرفوع ہے۔" },
+      { q:"حرفِ جر کے بعد آنے والا اسم ہمیشہ ہوتا ہے:", opts:["مرفوع","منصوب","مجزوم","مجرور"], a:3, ex:"حروفِ جارہ کا کام ہی اسم کو جر دینا ہے۔ جیسے: فِي الْمَسْجِدِ — «المسجد» فی کی وجہ سے مجرور ہے۔" },
+      { q:"«قَرَأَ مُحَمَّدٌ الْكِتَابَ» میں مفعول بہ کون سا لفظ ہے؟", opts:["قَرَأَ","مُحَمَّدٌ","الْكِتَابَ","کوئی نہیں"], a:2, ex:"«کیا پڑھا؟» — کتاب۔ جس چیز پر فعل کا اثر پڑے وہ مفعول بہ ہوتی ہے اور ہمیشہ منصوب ہوتی ہے؛ یہی وجہ ہے کہ الکتابَ پر فتحہ ہے۔" },
+      { q:"«اَلْعِلْمُ نُورٌ» میں «نُورٌ» کا اعراب کیا ہے؟", opts:["مبتدا","فاعل","خبر","نعت"], a:2, ex:"جملہ اسم سے شروع ہوا یعنی جملہ اسمیہ: پہلا لفظ «العلمُ» مبتدا ہے اور اس کے بارے میں بتائی گئی بات «نورٌ» خبر ہے۔ مبتدا و خبر دونوں مرفوع ہوتے ہیں۔" },
+      { q:"«الْعَالَمِينَ» مجرور ہے، اس کی علامتِ جر کیا ہے؟", opts:["کسرہ","یاء","فتحہ","واو"], a:1, ex:"«العالمین» جمع مذکر سالم ہے۔ جمع مذکر سالم کی علامتیں فرعی ہیں: رفع میں واو (العالَمونَ)، جبکہ نصب اور جر دونوں میں یاء (العالَمينَ)۔" },
+      { q:"مضاف پر کیا نہیں آ سکتا؟", opts:["ضمہ","فتحہ","تنوین اور «ال»","کسرہ"], a:2, ex:"قاعدہ ہے: مضاف پر نہ تنوین آتی ہے نہ «ال»۔ جیسے «كِتَابُ الطَّالِبِ» — کتاب پر تنوین نہیں؛ اور مجرور ہمیشہ مضاف الیہ (الطالبِ) ہوتا ہے۔" },
+      { q:"«كَانَ اللَّهُ عَلِيمًا» میں «عَلِيمًا» منصوب کیوں ہے؟", opts:["وہ خبرِ کانَ ہے","وہ مفعول بہ ہے","وہ اسمِ کانَ ہے","وہ نعت ہے"], a:0, ex:"کانَ افعالِ ناقصہ سے ہے: اپنے اسم (اللہُ) کو رفع اور خبر کو نصب دیتا ہے۔ اس لیے «علیمًا» خبرِ کانَ ہونے کی وجہ سے منصوب ہے۔" },
+      { q:"فعل «نَصَرَ» کا مضارع کیا ہے؟", opts:["يَنْصِرُ","يَنْصُرُ","يَنْصَرُ","يُنْصِرُ"], a:1, ex:"نَصَرَ بابِ نصر سے ہے: فَعَلَ — يَفْعُلُ۔ اس باب میں مضارع کے عین کلمہ پر ضمہ آتا ہے، اس لیے درست صورت يَنْصُرُ ہے۔" },
+      { q:"«لَمْ يَذْهَبْ» میں «يَذْهَبْ» مجزوم کیوں ہے؟", opts:["لَنْ کی وجہ سے","لَمْ کی وجہ سے","لا کی وجہ سے","قَد کی وجہ سے"], a:1, ex:"لَمْ حروفِ جازمہ سے ہے؛ یہ فعلِ مضارع کو جزم دیتا ہے اور اس کے معنی نفیِ ماضی کے ہو جاتے ہیں: «وہ نہیں گیا»۔ جزم کی علامت یہاں سکون ہے۔" }
+    ];
+
+    /* ============ اصطلاحات لغت ============ */
+    var GLOSSARY = [
+      ["لفظ","اَللَّفْظ","انسانی منہ سے نکلنے والی وہ آواز جس میں حروف ہوں — بامعنی ہو (کتاب) یا بے معنی (دیز، جو کتاب کا الٹ ہے)۔","كِتَاب"],
+      ["کلام","اَلْكَلَام","لفظوں کا وہ مجموعہ جو پوری بات اور مفید معنی دے اور سننے والا اس پر رک سکے، جیسے: العلم نورٌ۔","اَلْعِلْمُ نُورٌ"],
+      ["کلمہ","اَلْكَلِمَة","وہ لفظ جو اکیلا معنی دے۔ اس کی تین قسمیں ہیں: اسم، فعل، حرف۔","قَلَمٌ — اسم ہے"],
+      ["اسم","اَلِاسْم","وہ کلمہ جو کسی ذات، چیز یا معنی کا نام ہو اور اس میں زمانہ نہ پایا جائے: کتاب، علی، علم۔ پہچان: آخر میں جر آ سکے، تنوین اور «ال» لگ سکے۔","اَلْكِتَابُ جَدِيدٌ"],
+      ["فعل","اَلْفِعْل","وہ کلمہ جو کسی زمانے میں کسی کام کو بتائے: نصر (ماضی)، ینصر (حال/مستقبل)، انصر (حکم)۔","نَصَرَ — يَنْصُرُ"],
+      ["حرف","اَلْحَرْف","وہ کلمہ جو اکیلا مکمل معنی نہ دے، دوسرے کے ساتھ مل کر معنی دے: في (میں)، من (سے)۔ حرف ہمیشہ مبنی ہوتا ہے۔","فِي الْبَيْتِ"],
+      ["معرب","اَلْمُعْرَب","وہ کلمہ جس کے آخر میں عامل کے بدلنے سے اعراب بدلے: الکتابُ، الکتابَ، الکتابِ۔","جَاءَ الطَّالِبُ — رَأَيْتُ الطَّالِبَ"],
+      ["مبنی","اَلْمَبْنِي","وہ کلمہ جس کا آخر ہمیشہ ایک ہی حالت پر رہے: ضمائر (هو، انت)، اسماءِ اشارہ (ھذا)، حروف (من، في)۔","هَٰذَا — أَمْسِ"],
+      ["اعراب","اَلْإِعْرَاب","کلمے کے آخر کی وہ تبدیلی جو عامل کے بدلنے سے آتی ہے: رفع، نصب، جر، جزم کی حالتیں۔","الطالبُ، الطالبَ، الطالبِ"],
+      ["معرفہ","اَلْمَعْرِفَة","وہ اسم جو معین (خاص) چیز کو بتائے۔ معرفہ کی 7 صورتیں ہیں: ضمیر، علم، اشارہ، موصول، مضاف الی معرفہ، معرفہ باللام، منادیٰ۔","اَلرَّجُلُ — هُوَ — هَٰذَا"],
+      ["نکرہ","اَلنَّكِرَة","وہ اسم جو غیر معین (عام) چیز کو بتائے، عموماً اس پر تنوین آتی ہے: رجلٌ = کوئی مرد۔","جَاءَ رَجُلٌ"],
+      ["فاعل","اَلْفَاعِل","وہ اسم جو فعل کے کرنے والے کو بتائے، ہمیشہ مرفوع ہوتا ہے۔ پہچان: «کس نے؟»","قَامَ زَيْدٌ"],
+      ["نائب فاعل","نَائِبُ الْفَاعِل","جب فعل مجہول ہو (فاعل معلوم نہ ہو) تو مفعول فاعل کی جگہ آ کر مرفوع ہو جاتا ہے، اسی کو نائب فاعل کہتے ہیں۔","ضُرِبَ اللِّصُّ"],
+      ["مفعول بہ","اَلْمَفْعُولُ بِهِ","وہ اسم جس پر فعل کا اثر پڑے، ہمیشہ منصوب۔ پہچان: «کیا؟ / کس کو؟»","أَكَلْتُ التُّفَّاحَ"],
+      ["مفعول مطلق","اَلْمَفْعُولُ الْمُطْلَق","فعل کی اپنی جنس کا مصدر جو فعل کے بعد تاکید، نوع یا عدد کے لیے آئے، منصوب ہوتا ہے۔","ضَرَبْتُهُ ضَرْبًا شَدِيدًا"],
+      ["مفعول فیہ (ظرف)","اَلْمَفْعُولُ فِيهِ","زمان یا مکان کا وہ اسم جو فعل کے واقع ہونے کا وقت/جگہ بتائے، منصوب ہوتا ہے۔","سَافَرْتُ لَيْلًا — جَلَسْتُ عِنْدَكَ"],
+      ["حال","اَلْحَال","وہ منصوب اسم جو فاعل یا مفعول کی حالت بتائے۔ حال ہمیشہ نکرہ اور اس کا صاحب (ذوالحال) ہمیشہ معرفہ ہوتا ہے۔","جَاءَ الطَّالِبُ ضَاحِكًا"],
+      ["تمییز","اَلتَّمْيِيز","وہ منصوب نکرہ اسم جو پہلے جملے کی ابہام دور کرے: «حسن زید خلقًا» میں خلقًا نے واضح کیا کہ حسن کس چیز میں ہے۔","طَابَ زَيْدٌ نَفْسًا"],
+      ["مستثنیٰ","اَلْمُسْتَثْنَىٰ","وہ اسم جسے «إلا» وغیرہ سے عام حکم سے الگ کیا جائے۔ إلا کے بعد والا اسم کئی صورتوں میں منصوب ہوتا ہے۔","جَاءَ الْقَوْمُ إِلَّا زَيْدًا"],
+      ["مضاف","اَلْمُضَاف","پہلا اسم جو دوسرے کی طرف نسبت رکھے۔ اس پر نہ «ال» آتا ہے نہ تنوین۔","كِتَابُ الطَّالِبِ"],
+      ["مضاف الیہ","اَلْمُضَافُ إِلَيْهِ","دوسرا اسم جس کی طرف نسبت ہو، ہمیشہ مجرور ہوتا ہے۔","بَابُ الدَّارِ"],
+      ["نعت / صفت","اَلنَّعْت","وہ لفظ جو پہلے اسم (منعوت) کی صفت بتائے اور چار چیزوں میں اس کے تابع ہو: اعراب، تعریف/تنکیر، تذکیر/تانیث، عدد۔","جَاءَ رَجُلٌ كَرِيمٌ"],
+      ["منعوت / موصوف","اَلْمَنْعُوت","وہ اسم جس کی صفت بیان کی جائے — نعت اس کے بعد آتی ہے۔","رَجُلٌ كَرِيمٌ — رجل منعوت"],
+      ["مبتدا","اَلْمُبْتَدَأ","جملہ اسمیہ کا پہلا اسم جس کے بارے میں خبر دی جائے، ہمیشہ مرفوع اور عموماً معرفہ ہوتا ہے۔","اَلشَّمْسُ مُشْرِقَةٌ"],
+      ["خبر","اَلْخَبَر","وہ بات جو مبتدا کے بارے میں بتائی جائے، مرفوع ہوتی ہے؛ مفرد، جملہ یا جار و مجرور بھی ہو سکتی ہے۔","اَلْبَيْتُ وَاسِعٌ"],
+      ["کان و اخواتہا","كَانَ وَأَخَوَاتُهَا","افعالِ ناقصہ (کان، اصبح، صار، لیس وغیرہ): مبتدا کو اپنا اسم بنا کر مرفوع رکھتے ہیں اور خبر کو منصوب کرتے ہیں۔","كَانَ الْبَابُ مَفْتُوحًا"],
+      ["إنّ و اخواتہا","إِنَّ وَأَخَوَاتُهَا","حروفِ مشبہ بالفعل (إنّ، أنّ، کأنّ، لکنّ، لیت، لعلّ): اپنے اسم کو منصوب اور خبر کو مرفوع کرتے ہیں۔","إِنَّ الصِّدْقَ مُنْجٍ"],
+      ["ضمیر","اَلضَّمِير","وہ اسم جو متکلم، حاضر یا غائب کی جگہ آئے: أنا، أنت، هو۔ ضمائر مبنی ہوتی ہیں۔","هُوَ مُعَلِّمٌ"],
+      ["اسمِ اشارہ","اِسْمُ الْإِشَارَة","وہ اسم جس سے کسی چیز کی طرف اشارہ ہو: ھذا (یہ مذکر)، ھذہ (یہ مؤنث)، ذلک (وہ)، اولئک (وہ سب)۔ مبنی ہوتا ہے۔","هَٰذَا قَلَمٌ"],
+      ["اسمِ موصول","اَلِاسْمُ الْمَوْصُول","وہ اسم جو اپنے بعد والے جملے (صلہ) کے ساتھ مل کر معنی دے: الذي، التي، من، ما۔","جَاءَ الَّذِي نَجَحَ"],
+      ["جملہ اسمیہ","اَلْجُمْلَةُ الِاسْمِيَّة","وہ جملہ جو اسم سے شروع ہو؛ اس کے دو رکن ہیں: مبتدا اور خبر۔","اَلْحَقُّ ظَاهِرٌ"],
+      ["جملہ فعلیہ","اَلْجُمْلَةُ الْفِعْلِيَّة","وہ جملہ جو فعل سے شروع ہو؛ اس کے ارکان: فعل، فاعل (اور مفعول وغیرہ)۔","ظَهَرَ الْحَقُّ"],
+      ["منادیٰ","اَلْمُنَادَىٰ","جسے «یا» وغیرہ حرفِ ندا سے پکارا جائے: یا زیدُ۔ مفرد علم ہو تو ضمہ پر مبنی/مرفوع صورت میں آتا ہے۔","يَا طَالِبُ، اِجْتَهِدْ"],
+      ["عطف","اَلْعَطْف","واو، فاء، ثم، أو وغیرہ سے کسی اسم کو پہلے اسم کے اعراب میں شریک کرنا؛ دوسرا (معطوف) پہلے (معطوف علیہ) کے تابع ہوتا ہے۔","جَاءَ زَيْدٌ وَعَمْرٌو"],
+      ["بدل","اَلْبَدَل","وہ تابع جس سے پہلے اسم کی وضاحت یا اس کی جگہ مراد ہو: «جاء اخوک زیدٌ» میں زیدٌ بدل ہے۔","أَعْجَبَنِي زَيْدٌ عِلْمُهُ"],
+      ["توکید","اَلتَّأْكِيد","وہ تابع جو پہلے اسم کی تاکید کرے: نفس، عین، کل، اجمع وغیرہ — اعراب میں مؤکد کے تابع ہوتا ہے۔","جَاءَ الْقَوْمُ كُلُّهُمْ"],
+      ["ظرف","اَلظَّرْف","زمان یا مکان بتانے والا اسم (مفعول فیہ): یوم، لیل، عند، فوق، تحت، أمام، خلف وغیرہ۔","جِئْتُ صَبَاحًا"]
+    ];
+
+    /* ============ مصدر لغت (48) ============ */
+    var MASDAR_DICT = [
+      ["كَتَبَ","كِتَابَة","لکھنا","مجرد — فِعَالَة"],["نَصَرَ","نَصْر","مدد کرنا","مجرد — فَعْل"],
+      ["عَلِمَ","عِلْم","جاننا، علم","مجرد — فِعْل"],["شَرِبَ","شُرْب","پینا","مجرد — فُعْل"],
+      ["خَرَجَ","خُرُوج","نکلنا","مجرد — فُعُول"],["جَلَسَ","جُلُوس","بیٹھنا","مجرد — فُعُول"],
+      ["قَرَأَ","قِرَاءَة","پڑھنا","مجرد — فِعَالَة"],["صَامَ","صَوْم / صِيَام","روزہ رکھنا","مجرد — فَعْل/فِعَال"],
+      ["صَلَّىٰ","صَلَاة","نماز پڑھنا","مزید — تفعیل کا مصدر (اصل: تصلية)"],
+      ["زَكَّىٰ","زَكَاة","زکاۃ دینا","مزید — تفعیل"],["حَجَّ","حَجّ","حج کرنا","مجرد — فَعْل"],
+      ["جَاهَدَ","جِهَاد / مُجَاهَدَة","جہاد/کوشش کرنا","مفاعلہ"],["اِسْتَغْفَرَ","اِسْتِغْفَار","بخشش مانگنا","استفعال"],
+      ["عَلَّمَ","تَعْلِيم","سکھانا، تعلیم","تفعیل"],["أَكْرَمَ","إِكْرَام","عزت کرنا","إفعال"],
+      ["دَرَسَ","دَرْس / دِرَاسَة","پڑھنا، سبق","مجرد — فَعْل/فِعَالَة"],["فَتَحَ","فَتْح","کھولنا","مجرد — فَعْل"],
+      ["ضَرَبَ","ضَرْب","مارنا","مجرد — فَعْل"],["سَمِعَ","سَمَاع / سَمْع","سننا","مجرد — فَعَال/فَعْل"],
+      ["حَسِبَ","حِسْبَان / حِسَاب","گمان کرنا، گننا","مجرد"],["كَرُمَ","كَرَم","بزرگی، سخاوت","مجرد — فَعَل"],
+      ["ذَهَبَ","ذَهَاب","جانا","مجرد — فَعَال"],["أَكَلَ","أَكْل","کھانا","مجرد — فَعْل"],
+      ["عَمِلَ","عَمَل","کام کرنا","مجرد — فَعَل"],["شَهِدَ","شَهَادَة","گواہی دینا","مجرد — فَعَالَة"],
+      ["صَبَرَ","صَبْر","صبر کرنا","مجرد — فَعْل"],["شَكَرَ","شُكْر","شکر کرنا","مجرد — فُعْل"],
+      ["طَلَبَ","طَلَب","طلب کرنا، مانگنا","مجرد — فَعَل"],["نَظَرَ","نَظَر","دیکھنا","مجرد — فَعَل"],
+      ["حَفِظَ","حِفْظ","یاد کرنا، حفاظت","مجرد — فِعْل"],["فَهِمَ","فَهْم","سمجھنا","مجرد — فَعْل"],
+      ["لَعِبَ","لَعِب","کھیلنا","مجرد — فَعِل"],["سَأَلَ","سُؤَال","پوچھنا","مجرد — فُعَال"],
+      ["بَدَأَ","بَدْء","شروع کرنا","مجرد — فَعْل"],["رَجَعَ","رُجُوع","لوٹنا، واپس آنا","مجرد — فُعُول"],
+      ["وَعَدَ","وَعْد","وعدہ کرنا","مجرد — مثال (وعد) — فَعْل"],["قَالَ","قَوْل","کہنا","مجرد — اجوف — فَعْل"],
+      ["بَاعَ","بَيْع","بیچنا","مجرد — اجوف — فَعْل"],["نَامَ","نَوْم","سونا","مجرد — اجوف — فَعْل"],
+      ["رَمَىٰ","رَمْي","پھینکنا","مجرد — ناقص — فَعْل"],["دَعَا","دُعَاء","دعا کرنا، بلانا","مجرد — ناقص — فُعَال"],
+      ["بَنَىٰ","بِنَاء","بنانا، تعمیر","مجرد — ناقص — فِعَال"],["سَعَىٰ","سَعْي","کوشش/دوڑ","مجرد — ناقص — فَعْل"],
+      ["أَجَابَ","إِجَابَة","جواب دینا","إفعال"],["أَقَامَ","إِقَامَة","قائم کرنا، اقامت","إفعال"],
+      ["صَدَّقَ","تَصْدِيق","تصدیق کرنا","تفعیل"],["قَاتَلَ","قِتَال / مُقَاتَلَة","لڑنا","مفاعلہ"],
+      ["اِنْكَسَرَ","اِنْكِسَار","ٹوٹ جانا","انفعال"],["اِجْتَمَعَ","اِجْتِمَاع","جمع ہونا، اجتماع","افتعال"],
+      ["تَعَاوَنَ","تَعَاوُن","ایک دوسرے کی مدد","تفاعل"],["خَاطَبَ","مُخَاطَبَة / خِطَاب","خطاب کرنا","مفاعلہ"]
+    ];
+
+    /* ============ نحو A-Z ============ */
+    var AZ_NAHW = [
+      {n:"لفظ، کلام، کلمہ",t:"اَللَّفْظُ وَالْكَلَامُ وَالْكَلِمَةُ",d:"لفظ: منہ سے نکلی آواز جس میں حروف ہوں۔ کلام: لفظوں کا مفید مجموعہ جس پر سننے والا رک سکے۔ کلمہ: اکیلا معنی دینے والا لفظ — اس کی تین قسمیں: اسم، فعل، حرف۔",r:"پہچان: کلمہ الگ کریں — نام ہو تو اسم، زمانے کے ساتھ کام ہو تو فعل، دوسرے سے مل کر معنی دے تو حرف۔",e:"كَتَبَ الطَّالِبُ الدَّرْسَ",en:"کتبَ = فعل، الطالبُ = اسم (فاعل)، الدرسَ = اسم (مفعول)"},
+      {n:"معرب اور مبنی",t:"اَلْمُعْرَبُ وَالْمَبْنِيُّ",d:"معرب وہ کلمہ جس کے آخر میں عامل بدلنے سے اعراب بدلے (الطالبُ/الطالبَ/الطالبِ)۔ مبنی کا آخر ہمیشہ ایک حالت پر رہے: ضمائر، اشارات، موصولات، حروف اور فعلِ ماضی۔",r:"پہچان: لفظ کو فاعل، مفعول اور مجرور تینوں جگہ رکھ کر دیکھیں — آخر بدلے تو معرب، نہ بدلے تو مبنی۔",e:"هَٰذَا طَالِبٌ — رَأَيْتُ هَٰذَا",en:"ھذا دونوں جگہ ایک جیسا — مبنی ہے"},
+      {n:"اعراب کی چار حالتیں اور علامتیں",t:"اَلرَّفْعُ وَالنَّصْبُ وَالْجَرُّ وَالْجَزْمُ",d:"رفع (ضمہ)، نصب (فتحہ)، جر (کسرہ)، جزم (سکون) — یہ اصل علامتیں ہیں۔ فرعی علامتیں: تثنیہ و جمع مذکر سالم میں حروف (الف، واو، یاء)، پانچ اسموں میں واو/الف/یاء، اور جمع مؤنث سالم میں نصب = کسرہ۔",r:"پہچان: آخری حرکت دیکھیں — یہی حالت کی سب سے بڑی علامت ہے۔",e:"الْمُسْلِمُونَ — الْمُسْلِمِينَ — الْمُسْلِمَاتِ",en:"رفع واو سے، نصب و جر یاء سے؛ مسلمات کی نصب بھی کسرے سے"},
+      {n:"معرفہ اور نکرہ — سات معارف",t:"اَلْمَعَارِفُ السَّبْعَةُ",d:"معرفہ معین چیز کو بتاتا ہے۔ اس کی سات صورتیں: ۱) ضمیر (هو، انت) ۲) علم (زید، مکہ) ۳) اسمِ اشارہ (ھذا، ذلک) ۴) اسمِ موصول (الذي) ۵) مضاف الی المعرفہ (کتاب الطالب) ۶) معرفہ باللام (الکتاب) ۷) منادیٰ (یا زیدُ)۔ اس کے علاوہ سب نکرہ ہے۔",r:"پہچان: تنوین آئے اور «ال» نہ ہو تو عموماً نکرہ؛ سات صورتوں میں سے کوئی ہو تو معرفہ۔",e:"جَاءَنِي رَجُلٌ — جَاءَنِي الرَّجُلُ",en:"رجلٌ نکرہ، الرجلُ معرفہ باللام"},
+      {n:"فاعل",t:"اَلْفَاعِلُ",d:"وہ مرفوع اسم جو فعل کے کرنے والے کو بتائے۔ فاعل ظاہر بھی ہوتا ہے (قام زیدٌ) اور فعل میں چھپی ضمیر بھی (قامَ — فاعل «هو» مستتر)۔",r:"پہچان: فعل کے بعد «کس نے؟» پوچھیں۔ ہمیشہ مرفوع ہوگا۔",e:"نَجَحَ الْمُجْتَهِدُونَ",en:"المجتھدون فاعل — جمع مذکر سالم، رفع واو سے"},
+      {n:"نائب فاعل",t:"نَائِبُ الْفَاعِلِ",d:"فعل مجہول (جس کا فاعل معلوم/مذکور نہ ہو) میں مفعول فاعل کی جگہ لے کر مرفوع ہو جاتا ہے، اسے نائب فاعل کہتے ہیں۔ مجہول بنانے کا قاعدہ ماضی میں پہلے حرف پر ضمہ اور آخری سے پہلے پر کسرہ: ضُرِبَ۔",r:"پہچان: فعل مجہول صورت میں ہو اور اس کے بعد مرفوع اسم آئے تو وہ نائب فاعل ہے۔",e:"كُتِبَ الدَّرْسُ",en:"کتبَ مجہول ہے، الدرسُ نائب فاعل مرفوع"},
+      {n:"مبتدا اور خبر",t:"اَلْمُبْتَدَأُ وَالْخَبَرُ",d:"جملہ اسمیہ کے دو رکن: مبتدا (جس کے بارے میں بات ہو — مرفوع، عموماً معرفہ) اور خبر (جو بات بتائی جائے — مرفوع)۔ خبر مفرد، جملہ، یا شبہ جملہ (جار و مجرور/ظرف) ہو سکتی ہے۔",r:"پہچان: جملہ اسم سے شروع ہو تو پہلا اسم مبتدا، باقی خبر کی تلاش کریں۔",e:"اَلْكِتَابُ عَلَى الْمَكْتَبِ",en:"الکتابُ مبتدا؛ علی المکتبِ شبہ جملہ خبر کے مقام پر"},
+      {n:"مرفوعات کا خلاصہ",t:"اَلْمَرْفُوعَاتُ",d:"مرفوع ہونے والے اسماء: فاعل، نائب فاعل، مبتدا، خبر، اسمِ کانَ، خبرِ إنَّ، خبرِ لا (نفی جنس والی)، اور توابع میں سے جو مرفوع کے تابع ہو۔ یہ مکمل فہرست یاد کر لیں تو رفع کی ہر صورت سمجھ آ جائے گی۔",r:"پہچان: ضمہ/تنوینِ ضم یا فرعی علامت (واو/الف) نظر آئے تو انہی سات میں سے کوئی وجہ ہوگی۔",e:"إِنَّ الْعِلْمَ نُورُ الْقُلُوبِ",en:"نورُ خبرِ إنَّ ہونے کی وجہ سے مرفوع"},
+      {n:"مفعول بہ",t:"اَلْمَفْعُولُ بِهِ",d:"وہ منصوب اسم جس پر فعلِ متعدی کا اثر پڑے۔ صرف متعدی فعل کا مفعول آتا ہے۔",r:"پہچان: «کیا؟ / کس کو؟» کا جواب — ہمیشہ منصوب۔",e:"يَحْفَظُ الطَّالِبُ الْقُرْآنَ",en:"کیا حفظ کرتا ہے؟ القرآنَ — مفعول بہ"},
+      {n:"مفعول مطلق",t:"اَلْمَفْعُولُ الْمُطْلَقُ",d:"فعل ہی کی جنس کا مصدر جو فعل کے بعد آئے — تاکید کے لیے (ضربتہ ضربًا)، نوع کے لیے (ضربًا شدیدًا) یا عدد کے لیے (ضربتین)؛ ہمیشہ منصوب۔",r:"پہچان: فعل کے ہم جنس مصدر کو فعل کے فوراً بعد دیکھیں۔",e:"فَرِحْتُ فَرَحًا كَبِيرًا",en:"فرحًا مصدر ہے — نوع بیان کر رہا ہے"},
+      {n:"مفعول فیہ — ظرفِ زمان و مکان",t:"اَلْمَفْعُولُ فِيهِ",d:"وہ منصوب اسم جو فعل کے ہونے کا وقت (یوم، لیل، صباح) یا جگہ (عند، فوق، أمام) بتائے۔ ظرف عموماً مضاف ہوتا ہے۔",r:"پہچان: «کب؟ / کہاں؟» کا جواب اور معنی میں «میں» کا مفہوم پایا جائے۔",e:"جَلَسْتُ عِنْدَ الْمُعَلِّمِ",en:"عندَ ظرفِ مکان منصوب، المعلمِ مضاف الیہ"},
+      {n:"مفعول لہ اور مفعول معہ",t:"اَلْمَفْعُولُ لَهُ وَمَعَهُ",d:"مفعول لہ: وہ منصوب مصدر جو فعل کی وجہ/سبب بتائے (جئت طلبًا للعلم)۔ مفعول معہ: واو (بمعنی «مع») کے بعد والا منصوب اسم (سرت والنیلَ = نیل کے ساتھ ساتھ چلا)۔",r:"پہچان: «کیوں؟» کا جواب مفعول لہ؛ واو کے بعد «کے ساتھ» معنی ہو تو مفعول معہ۔",e:"قُمْتُ إِجْلَالًا لِلْمُعَلِّمِ — سِرْتُ وَالطَّرِيقَ",en:"اجلالًا سبب ہے، الطریقَ واوِ معیہ کے بعد منصوب"},
+      {n:"حال",t:"اَلْحَالُ",d:"وہ منصوب نکرہ اسم جو ذوالحال (فاعل/مفعول) کی حالت بتائے۔ شرط: حال نکرہ، ذوالحال معرفہ۔ حال مفرد بھی آتا ہے اور جملہ بھی۔",r:"پہچان: «کس حال میں؟ / کیسا؟» — ذوالحال کے بارے میں حالت بتائے۔",e:"دَخَلَ الطِّفْلُ بَاكِيًا",en:"بچہ کس حال میں داخل ہوا؟ روتا ہوا — باکیًا حال"},
+      {n:"تمییز",t:"اَلتَّمْيِيزُ",d:"وہ منصوب نکرہ اسم جو پہلے مبہم بات کی وضاحت کرے — ذات کی تمییز (اشتریت رطلًا أرزًا) اور نسبت کی تمییز (حسن زیدٌ خلقًا)۔",r:"پہچان: مبہم مقدار/بات کے بعد «کس چیز میں؟» کی وضاحت دینے والا منصوب نکرہ۔",e:"اِزْدَادَ الطَّالِبُ عِلْمًا",en:"علمًا نے بتا دیا کہ زیادتی کس چیز میں ہوئی"},
+      {n:"استثنا",t:"اَلِاسْتِثْنَاءُ",d:"إلا، غیر، سویٰ، عدا، خلا، حاشا سے کسی کو عام حکم سے نکالنا۔ تام موجب کلام میں إلا کے بعد والا (مستثنیٰ) منصوب ہوتا ہے: جاء القوم إلا زیدًا۔ ناقص (منفی) کلام میں مستثنیٰ بدل بھی بن سکتا ہے۔",r:"پہچان: إلا دیکھیں — اس سے پہلے والا مستثنیٰ منہ، بعد والا مستثنیٰ۔",e:"مَا نَجَحَ إِلَّا الْمُجْتَهِدُ",en:"کلام ناقص/منفی ہے اس لیے المجتہدُ فاعل کے طور پر مرفوع آیا"},
+      {n:"منصوبات کا خلاصہ",t:"اَلْمَنْصُوبَاتُ",d:"منصوب اسماء: مفعول بہ، مفعول مطلق، مفعول فیہ، مفعول لہ، مفعول معہ، حال، تمییز، مستثنیٰ، خبرِ کانَ، اسمِ إنَّ، منادیٰ (مضاف/شبہ مضاف صورت میں)، اور منصوب کے تابع توابع۔",r:"پہچان: فتحہ/تنوینِ فتح یا یاء/کسرہ (جمع مؤنث) نظر آئے تو اسی فہرست میں وجہ تلاش کریں۔",e:"كَانَ الطَّالِبُ مُجْتَهِدًا",en:"مجتہدًا خبرِ کانَ — منصوبات میں سے ہے"},
+      {n:"مجرورات — مضاف الیہ اور جار و مجرور",t:"اَلْمَجْرُورَاتُ",d:"جر صرف دو جگہ آتی ہے: ۱) اضافہ سے — مضاف الیہ ہمیشہ مجرور۔ ۲) حرفِ جر سے — اس کے بعد والا اسم مجرور اور دونوں مل کر «جار و مجرور» کہلاتے ہیں جو کسی فعل/خبر سے متعلق ہوتے ہیں۔",r:"پہچان: کسرہ نظر آئے تو یا پہلا اسم مضاف ہوگا یا اس سے پہلے حرفِ جر۔",e:"مَرَرْتُ بِرَجُلٍ كَرِيمٍ",en:"برجلٍ: ب حرفِ جر؛ کریمٍ رجل کی نعت — تابع بھی مجرور"},
+      {n:"توابع — نعت، عطف، تاکید، بدل",t:"اَلتَّوَابِعُ",d:"تابع وہ لفظ ہے جو اعراب میں اپنے سے پہلے (متبوع) کی پیروی کرے: نعت (صفت)، معطوف (واو وغیرہ سے جڑا)، مؤکد (نفس، کل)، بدل (وضاحت/جانشین) اور عطفِ بیان۔",r:"پہچان: دو اسموں کی حرکت ایک جیسی ہو اور دوسرا پہلے کی صفت/ساتھی/وضاحت ہو تو تابع ہے۔",e:"رَأَيْتُ زَيْدًا وَأَخَاهُ",en:"اخاہ: واو سے معطوف — زیدًا کی طرح منصوب"},
+      {n:"جملہ اسمیہ اور جملہ فعلیہ",t:"اَلْجُمْلَتَانِ",d:"جملہ اسمیہ اسم سے شروع ہوتا ہے (مبتدا + خبر) اور ثبات/دوام کا معنی دیتا ہے؛ جملہ فعلیہ فعل سے شروع ہوتا ہے (فعل + فاعل) اور وقوع/تجدید بتاتا ہے۔ جملہ بڑا بھی ہو سکتا ہے اور کسی بڑے جملے کا جز بھی۔",r:"پہچان: پہلا لفظ دیکھیں — یہی فیصلہ کن ہے۔",e:"اَلنَّظَافَةُ مِنَ الْإِيمَانِ — نَظَّفَ الطَّالِبُ غُرْفَتَهُ",en:"پہلا جملہ اسمیہ، دوسرا فعلیہ"},
+      {n:"کانَ، إنَّ اور ظنَّ کے خاندان",t:"اَلنَّوَاسِخُ",d:"نواسخ وہ الفاظ ہیں جو جملہ اسمیہ پر داخل ہو کر اس کا اعراب بدل دیتے ہیں: کانَ و اخواتہا (اسم مرفوع، خبر منصوب)، إنَّ و اخواتہا (اسم منصوب، خبر مرفوع)، ظنَّ و اخواتہا (دو مفعول لیتی ہیں — اصل میں مبتدا و خبر): ظننت زیدًا قائمًا۔",r:"پہچان: جملے کے شروع/درمیان میں یہ الفاظ ملیں تو مبتدا و خبر کے اعراب ان کے حساب سے لکھیں۔",e:"ظَنَنْتُ الْعِلْمَ سَهْلًا",en:"ظن کے دو مفعول: العلمَ (پہلا) اور سہلًا (دوسرا)"},
+      {n:"افعالِ مدح و ذم — نعم اور بئس",t:"نِعْمَ وَبِئْسَ",d:"نعم (مدح) اور بئس (ذم) جامد فعل ہیں: ان کے بعد فاعل مرفوع آتا ہے اور پھر مخصوص بالمدح/الذم (جو خود مبتدا مؤخر یا خبر محذوف کا مبتدا ہوتا ہے)۔",r:"پہچان: نعم/بئس دیکھیں — اگلا مرفوع اسم فاعل، آخر والا مخصوص ہے۔",e:"نِعْمَ الرَّجُلُ زَيْدٌ",en:"الرجلُ فاعلِ نعم، زیدٌ مخصوص بالمدح"},
+      {n:"تعجب",t:"اَلتَّعَجُّبُ",d:"تعجب کے دو مشہور اسلوب: ۱) ما أفعلہ: ما أجملَ العلمَ! ۲) أفعل بہ: أكرم بالعلمِ! پہلے میں «ما» مبتدا، فعلِ تعجب کے بعد والا منصوب مفعول ہے؛ دوسرے میں ب زائدہ اور اسم ظاہراً مجرور، محلاً فاعل۔",r:"پہچان: ما + أفعلَ یا أفعلْ + ب دیکھیں تو تعجب ہے۔",e:"مَا أَنْفَعَ الْعِلْمَ",en:"انفع فعلِ تعجب، العلمَ اس کا مفعول بہ"},
+      {n:"ندا — منادیٰ کے احکام",t:"اَلنِّدَاءُ",d:"حروفِ ندا: یا، أیا، هیا، أی، الہمزة۔ منادیٰ کی صورتیں: مفرد علم/نکرہ مقصودہ ہو تو ضمہ پر مبنی (یا زیدُ)؛ مضاف، شبہ مضاف یا نکرہ غیر مقصودہ ہو تو منصوب (یا طالبَ العلمِ، یا رجلًا)۔",r:"پہچان: یا دیکھیں — منادیٰ اکیلا خاص اسم ہو تو ضمہ، جملے جیسا ہو تو فتحہ۔",e:"يَا طَالِبَ الْعِلْمِ، اِجْتَهِدْ",en:"طالب مضاف ہے اس لیے منادیٰ منصوب"},
+      {n:"شرط و جزا",t:"اَلشَّرْطُ وَالْجَزَاءُ",d:"حروف/اسماءِ شرط (إن، من، ما، مھما، متى، أين، كيفما وغیرہ) دو جملوں کو جوڑتے ہیں: پہلا شرط، دوسرا جزا۔ جازم اسماءِ شرط دونوں فعلوں کو جزم دیتے ہیں: إن تدرسْ تنجحْ۔",r:"پہچان: إن/من/ما کے بعد دو فعل اور دونوں کے آخر میں سکون/جزم کی علامت دیکھیں۔",e:"مَنْ يَزْرَعْ يَحْصُدْ",en:"من شرطیہ جازمہ؛ یزرع شرط، یحصد جزا — دونوں مجزوم"},
+      {n:"مبنیات — ضمائر، اشارات، موصولات، استفہام، ظروف",t:"اَلْمَبْنِيَّاتُ",d:"یہ اسماء مبنی ہوتے ہیں: تمام ضمائر، اسماءِ اشارہ (ما عدا تثنیہ)، اسماءِ موصول، اسماءِ استفہام (من، ما، أين، كيف)، بعض ظروف (أمس، حيث، الآن) اور مرکب عدد (أحد عشر وغیرہ)۔ مبنی ہونے کا مطلب: آخر نہیں بدلتا، اعراب «محل» سے بیان ہوتا ہے۔",r:"پہچان: ترکیب میں ایسے اسم آئیں تو «محلاً مرفوع/منصوب/مجرور» لکھیں۔",e:"رَأَيْتُ هَٰذَا الرَّجُلَ",en:"ھذا مبنی ہے — محلاً منصوب، مفعول بہ"},
+      {n:"اضافہ کی تفصیل",t:"اَلْإِضَافَةُ",d:"اضافہ دو اسموں کا تعلق ہے: مضاف + مضاف الیہ۔ احکام: مضاف پر ال اور تنوین نہیں آتی؛ نونِ تثنیہ/جمع بھی حذف ہو جاتا ہے (کتابا الطالب، معلمو المدرسة)؛ مضاف الیہ ہمیشہ مجرور؛ اضافہ سے تعریف یا تخصیص حاصل ہوتی ہے۔",r:"پہچان: پہلے اسم پر تنوین غائب اور دوسرا مجرور — یہی اضافہ کی روشن علامت ہے۔",e:"مُعَلِّمُو الْمَدْرَسَةِ حَاضِرُونَ",en:"معلمون سے نون گرا — اضافہ کی وجہ سے"},
+      {n:"ترکیب کا مکمل طریقہ",t:"طَرِيقَةُ التَّرْكِيبِ",d:"مکمل ترکیب کی ترتیب: ۱) جملے کی قسم ۲) ہر کلمے کی قسم ۳) حروف کا اثر ۴) فعل ہو تو فاعل/نائب فاعل ۵) مفعولات و متعلقات ۶) مبتدا و خبر ۷) اضافہ، نعت و توابع ۸) آخر میں ہر لفظ کا اعراب بمع علامت و وجہ۔",r:"عملی رہنمائی اسی صفحے کے «ترکیب کیسے کریں؟» حصے میں قدم بہ قدم دی گئی ہے۔",e:"اِقْرَأْ كِتَابَكَ بِاهْتِمَامٍ",en:"اقرأ فعل و فاعل (انت مستتر)، کتابک مفعول، باھتمام جار و مجرور متعلق"}
+    ];
+
+    /* ============ صرف A-Z ============ */
+    var AZ_SARF = [
+      {n:"فعل کی اقسام — ماضی، مضارع، امر، نہی",t:"أَقْسَامُ الْفِعْلِ",d:"ماضی: گزرا ہوا زمانہ (نصرَ)۔ مضارع: حال/مستقبل (ینصرُ) — شروع میں أ، ن، ي، ت میں سے ایک حرف (حروفِ مضارعہ) آتا ہے۔ امر: حکم (انصرْ) — مضارعِ حاضر سے بنتا ہے۔ نہی: ممانعت (لا تنصرْ) — لا کے ساتھ مضارع مجزوم۔",r:"پہچان: آخر میں تا/تم/نا جیسے لاحقے ہوں تو ماضی؛ شروع میں ي/ت/أ/ن ہو تو مضارع۔",e:"كَتَبَ — يَكْتُبُ — اُكْتُبْ — لَا تَكْتُبْ",en:"ایک ہی مادے کی چار صورتیں"},
+      {n:"ثلاثی مجرد کے چھ ابواب",t:"أَبْوَابُ الثُّلَاثِيِّ الْمُجَرَّدِ",d:"فعل کے اصل تین حروف ہوں تو مجرد ہے۔ عین کلمہ کی حرکت سے چھ ابواب: نصر (فَعَلَ يَفْعُلُ)، ضرب (يَفْعِلُ)، فتح (يَفْعَلُ)، سمع (فَعِلَ يَفْعَلُ)، کرم (فَعُلَ يَفْعُلُ)، حسب (فَعِلَ يَفْعِلُ)۔ مکمل گردانیں اوپر گردان لائبریری میں موجود ہیں۔",r:"پہچان: ماضی کے عین اور مضارع کے عین کی حرکت دیکھیں — باب فوراً معلوم ہو جائے گا۔",e:"سَمِعَ يَسْمَعُ",en:"ماضی میں کسرہ، مضارع میں فتحہ — باب سمع"},
+      {n:"ثلاثی مزید فیہ کے ابواب",t:"أَبْوَابُ الثُّلَاثِيِّ الْمَزِيدِ فِيهِ",d:"اصل تین حروف پر حروف بڑھائے جائیں تو مزید فیہ ہے۔ مشہور ابواب: إفعال (أكرم — عزت/داخل کرنا)، تفعیل (علّم — تکیثر/تعلیم)، مفاعلة (قاتل — باہمی مقابلہ)، تفعّل (تعلّم — تدریج)، تفاعل (تعاون — باہمی اشتراک)، انفعال (انكسر — اثر پذیری)، افتعال (اجتمع — کوشش/اختیار)، استفعال (استغفر — طلب کرنا: بخشش مانگنا)، افعلال (احمرّ — رنگ/عیب)۔",r:"پہچان: حروف گنیں — تین سے زیادہ ہوں اور وزن پر رکھ کر دیکھیں کہ کون سے حروف زائد ہیں۔",e:"اِسْتَخْرَجَ الْعَامِلُ الْمَعْدِنَ",en:"استخرج استفعال ہے — معنی: نکالنے کی کوشش/طلب سے نکالا"},
+      {n:"رباعی مجرد و مزید",t:"اَلرُّبَاعِيُّ",d:"چار اصل حروف والا فعل رباعی ہے: مجرد کا وزن فَعْلَلَ (زلزل، دحرج، ترجم)۔ مزید فیہ: تَفَعْلُل (تدحرج)، اِفْعَلَلَّ (اقشعرّ)، اِفْعِلَال (اطمئنان — اطمأنّ)۔",r:"پہچان: اصل حروف چار ہوں اور پہلا وزن فعلل پر آئے تو رباعی۔",e:"زَلْزَلَ — يُزَلْزِلُ — زَلْزَلَة",en:"زلزل رباعی مجرد؛ اس کا مصدر فعللة آتا ہے"},
+      {n:"صحت کے لحاظ سے فعل کی اقسام",t:"أَقْسَامُ الْفِعْلِ بِاعْتِبَارِ الصِّحَّةِ",d:"صحیح: تینوں حروف اصلی صحیح ہوں (کتب)۔ مہموز: کسی جگہ ہمزة ہو (أكل، سأل، قرأ)۔ مضاعف: دو ایک جیسے حروف (مدّ، شدّ)۔ مثال: پہلا حرف واو/یاء (وصل، یسر)۔ اجوف: درمیان میں حرفِ علت (قال، باع)۔ ناقص: آخر میں حرفِ علت (رمى، دعا)۔ لفیف: دو حرفِ علت (وقى — مقرون، طوى — مفروق الٹ ترتیب)۔",r:"پہچان: فا، عین، لام کلمہ کو الگ کر کے دیکھیں — علت کا حرف کس جگہ ہے، قسم وہی ہے۔ معتل کی گردان میں تبدیلی (اعلال) آتی ہے، مثال گردانیں لائبریری میں دیکھیں۔",e:"وَصَلَ — قَالَ — رَمَىٰ",en:"ترتیب سے: مثال، اجوف، ناقص"},
+      {n:"لازم اور متعدی",t:"اَللَّازِمُ وَالْمُتَعَدِّي",d:"لازم وہ فعل جس کا اثر فاعل سے آگے نہ جائے (ذهب، جلس) — مفعول نہیں لیتا۔ متعدی کا اثر مفعول تک جائے (كتب الدرس)؛ بعض دو مفعول لیتے ہیں (أعطى، ظنّ) اور بعض حرفِ جر سے متعدی ہوتے ہیں (رغب في، ذهب إلى)۔",r:"پہچان: فعل کے بعد «کیا؟» پوچھیں — معقول جواب ملے تو متعدی۔",e:"أَعْطَيْتُ الْفَقِيرَ صَدَقَةً",en:"اعطی دو مفعول لیتا ہے: الفقير اور صدقة"},
+      {n:"معروف اور مجہول",t:"اَلْمَعْرُوفُ وَالْمَجْهُولُ",d:"مجہول میں فاعل حذف ہو کر مفعول نائب فاعل بنتا ہے۔ بنانے کا قاعدہ — ماضی: اول پر ضمہ، آخری سے پہلے حرف پر کسرہ (نُصِرَ)؛ مضارع: اول پر ضمہ، آخری سے پہلے پر فتحہ (يُنْصَرُ)۔",r:"پہچان: فعل کی یہی حرکات اور بعد میں مرفوع نائب فاعل۔",e:"فُتِحَ الْبَابُ — يُفْتَحُ الْبَابُ",en:"دونوں میں البابُ نائب فاعل"},
+      {n:"مشتقات — آٹھ مشہور مشتق اسماء",t:"اَلْمُشْتَقَّاتُ",d:"مصدر (نصرٌ)، اسمِ فاعل (ناصرٌ — فَاعِل)، اسمِ مفعول (منصورٌ — مَفْعُول)، صفة مشبھة (کریم، حسن — معنی میں فاعل جیسی، وزن مختلف)، صیغۂ مبالغہ (نصّار، غفّار — فَعَّال وغیرہ)، اسمِ تفضیل (أكبر، أفضل — أَفْعَل)، اسمِ ظرف (مجلِس، موقِف — مَفْعِل/مَفْعَل)، اسمِ آلہ (مفتاح، میزان — مِفْعَال وغیرہ)۔ مزید فیہ کے اسمِ فاعل/مفعول مضارع سے بنتے ہیں: اول کی جگہ میم مضمومہ، آخری سے پہلے پر کسرہ (فاعل: مُكْرِم) یا فتحہ (مفعول: مُكْرَم)۔",r:"پہچان: وزن پر تولیں — فاعل کا وزن فاعِل (مجرد میں)، مفعول کا مفعول؛ مزید میں میم سے شروع ہونا پہچان ہے۔",e:"عَلَّمَ — مُعَلِّم — مُعَلَّم — تَعْلِيم",en:"تفعیل کے فاعل، مفعول اور مصدر کی صورتیں"},
+      {n:"تصغیر",t:"اَلتَّصْغِيرُ",d:"کسی اسم کو چھوٹا/کم ظاہر کرنے کے لیے وزن بدلنا: کتاب → كُتَيِّب، رجل → رُجَيْل، جبل → جُبَيْل۔ مشہور وزن: فُعَيْل، فُعَيْعِل، فُعَيْعِيل۔ محبت یا تحقیر دونوں مقصد ہو سکتے ہیں۔",r:"پہچان: شروع میں ضمہ، دوسرے پر فتحہ اور یاءِ تصغیر نظر آئے تو تصغیر ہے۔",e:"نَهْرٌ — نُهَيْرٌ",en:"نہر (دریا) کی تصغیر: چھوٹی نہر/نالہ"},
+      {n:"گردان کے 14 صیغے",t:"اَلصِّيَغُ",d:"ہر فعل کی گردان 14 صیغوں پر ہوتی ہے: غائب کے 6 (مذکر/مؤنث × واحد/تثنیہ/جمع)، حاضر کے 6، متکلم کے 2۔ مکمل چارٹ اور صیغہ فائنڈر اسی صفحے کے «صیغے» حصے میں دیا گیا ہے۔",r:"پہچان: صیغے کی علامتیں (تُ، تُمْ، نَا، ونَ، ینَ، انِ) — چارٹ میں ہر صیغے کی علامت لکھی ہوئی ہے۔",e:"نَصَرْتُمَا",en:"آخر میں تُما — تثنیہ حاضر مذکر، ماضی کا صیغہ"},
+      {n:"اعلال — قلب، حذف، اسکان",t:"اَلْإِعْلَالُ",d:"حروفِ علت (و، ی، ا) میں آسانی کے لیے ہونے والی تبدیلیاں: قلب — حرفِ علت کا دوسرے حرف میں بدلنا (قَوَلَ → قَالَ)؛ حذف — حرفِ علت گر جانا (يَوْعِدُ → يَعِدُ)؛ اسکان — متحرک حرفِ علت ساکن ہو جانا (يَقْوُلُ → يَقُولُ میں واو سے حرکت قاف/لام کی طرف منتقلی کے ساتھ)۔ یہی وجہ ہے کہ معتل افعال کی گردان صحیح سے مختلف نظر آتی ہے۔",r:"پہچان: فعل میں واو/یاء/الف غیر متوقع جگہ بدلا یا غائب ملے تو اعلال ہوا ہے — اصل مادہ لغت سے ملائیں۔",e:"بَيَعَ → بَاعَ — وَقَىٰ → اِتَّقَىٰ",en:"پہلے میں یاء کا الف سے قلب، دوسرے میں واو کا تاء سے ادغام/قلب"}
+    ];
+
+    var BOOKS = [
+      ["علم الصرف (اول، دوم)","مادہ، میزان اور گردان کی بنیاد","صرف — مرحلہ 1"],
+      ["صرفِ بہائی / فصولِ اکبری","ابواب و تصریف کی مشق","صرف — مرحلہ 2"],
+      ["نحو میر","نحو کی ابتدائی و جامع کتاب","نحو — مرحلہ 1"],
+      ["شرح مائۃ عامل","سو عاملوں کی تفصیل و ترکیب","نحو — مرحلہ 2"],
+      ["ہدایت النحو","قواعد کی مرحلہ وار تکمیل","نحو — مرحلہ 3"],
+      ["کافیہ (ابن حاجب)","اعراب کی باریکیاں اور اصول","نحو — مرحلہ 4"],
+      ["شرح جامی","کافیہ کی مشہور شرح — اعلیٰ مرحلہ","نحو — مرحلہ 5"]
+    ];
+
+    /* صرف — ابواب */
+    var F = "َ", Dm = "ُ", Ks = "ِ", Sk = "ْ", TnD = "ٌ", TnF = "ً";
+    var BABS = [
+      { name:"باب نَصْر — فَعَلَ يَفْعُلُ", madi:"a", mud:"u", sample:["ن","ص","ر"], note:"عینِ ماضی پر فتحہ، عینِ مضارع پر ضمہ — جیسے نَصَرَ يَنْصُرُ" },
+      { name:"باب ضَرْب — فَعَلَ يَفْعِلُ", madi:"a", mud:"i", sample:["ض","ر","ب"], note:"عینِ ماضی پر فتحہ، عینِ مضارع پر کسرہ — جیسے ضَرَبَ يَضْرِبُ" },
+      { name:"باب فَتْح — فَعَلَ يَفْعَلُ", madi:"a", mud:"a", sample:["ف","ت","ح"], note:"دونوں میں فتحہ — جیسے فَتَحَ يَفْتَحُ" },
+      { name:"باب سَمْع — فَعِلَ يَفْعَلُ", madi:"i", mud:"a", sample:["س","م","ع"], note:"عینِ ماضی پر کسرہ، مضارع پر فتحہ — جیسے سَمِعَ يَسْمَعُ" },
+      { name:"باب كَرْم — فَعُلَ يَفْعُلُ", madi:"u", mud:"u", sample:["ك","ر","م"], note:"دونوں میں ضمہ — جیسے كَرُمَ يَكْرُمُ" },
+      { name:"باب حَسْب — فَعِلَ يَفْعِلُ", madi:"i", mud:"i", sample:["ح","س","ب"], note:"دونوں میں کسرہ — جیسے حَسِبَ يَحْسِبُ" }
+    ];
+    var PRON = [
+      ["هُوَ","وہ (ایک مرد)","m"], ["هُمَا","وہ (دو مرد)","m"], ["هُمْ","وہ (سب مرد)","m"],
+      ["هِيَ","وہ (ایک عورت)","f"], ["هُمَا","وہ (دو عورتیں)","f"], ["هُنَّ","وہ (سب عورتیں)","f"],
+      ["أَنْتَ","تو (ایک مرد)","a"], ["أَنْتُمَا","تم (دو مرد)","a"], ["أَنْتُمْ","تم (سب مرد)","a"],
+      ["أَنْتِ","تو (ایک عورت)","a"], ["أَنْتُمَا","تم (دو عورتیں)","a"], ["أَنْتُنَّ","تم (سب عورتیں)","a"], ["أَنَا","میں","a"], ["نَحْنُ","ہم","a"]
+    ];
+    </script>
+    <script>
+    function $(id){ return document.getElementById(id); }
+    function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+
+    /* ================= اعراب سولور ================= */
+    var TASHKEEL = /[ً-ٰٟ]/g;
+    function stripT(w){ return w.replace(TASHKEEL,"").replace(/[۔،؛؟!.,;:«»"']/g,""); }
+    var HARF_ALL = {"في":1,"من":1,"إلى":1,"على":1,"عن":1,"أن":1,"إن":1,"لن":1,"لم":1,"لا":1,"ما":1,"هل":1,"قد":1,"سوف":1,"بل":1,"لكن":1,"ثم":1,"أو":1,"إذ":1,"إذا":1,"لو":1,"كي":1,"إلا":1,"لعل":1,"ليت":1,"كأن":1,"حتى":1,"رب":1,"أي":1,"أم":1,"منذ":1,"مذ":1,"ليس":1};
+    var HARF_JARR = {"من":1,"إلى":1,"عن":1,"على":1,"في":1,"حتى":1,"منذ":1,"مذ":1,"رب":1};
+    var INNA = {"إن":1,"أن":1,"لكن":1,"لعل":1,"ليت":1,"كأن":1};
+    var KANA = {"كان":1,"كانت":1,"أصبح":1,"صار":1,"ليس":1,"ظل":1,"بات":1,"أضحى":1,"يكون":1};
+    var VERBS = {"ذهب":1,"قرأ":1,"كتب":1,"قال":1,"جاء":1,"رأى":1,"علم":1,"عمل":1,"دخل":1,"خرج":1,"جلس":1,"سمع":1,"شرب":1,"أكل":1,"نجح":1,"لعب":1,"درس":1,"حفظ":1,"فهم":1,"نظر":1,"وقف":1,"رجع":1,"فتح":1,"ضرب":1,"نصر":1,"عبد":1,"شكر":1,"صبر":1,"خلق":1,"أخذ":1,"سأل":1,"بدأ":1,"خاف":1,"نام":1,"قام":1,"وصل":1,"عرف":1,"سافر":1,"حضر":1,"غفر":1,"رحم":1,"أحب":1,"يريد":1,"يذهب":1,"يقرأ":1,"يكتب":1,"يعلم":1,"يعمل":1,"يدخل":1,"يجلس":1,"يسمع":1,"ينجح":1,"يفهم":1,"يفتح":1,"يضرب":1,"ينصر":1,"يشرب":1,"يأكل":1,"يحفظ":1,"يلعب":1,"يخرج":1,"ينظر":1,"يقف":1,"يرجع":1,"يقول":1,"يأتي":1,"يرى":1,"يسافر":1,"يحضر":1,"كان":1};
+    function lastHarakah(w){
+      for(var i=w.length-1;i>=0;i--){
+        var c=w[i];
+        if(c==="ُ"||c==="ٌ") return {k:"damma", label:"ضمہ / تنوینِ ضم", state:"مرفوع"};
+        if(c==="َ"||c==="ً") return {k:"fatha", label:"فتحہ / تنوینِ فتح", state:"منصوب"};
+        if(c==="ِ"||c==="ٍ") return {k:"kasra", label:"کسرہ / تنوینِ کسر", state:"مجرور"};
+        if(c==="ْ") return {k:"sukoon", label:"سکون", state:"مجزوم / مبنی"};
+        if(/[ً-ٟ]/.test(c)) continue;
+        return {k:"none", label:"حرکت ظاہر نہیں", state:"—"};
+      }
+      return {k:"none", label:"حرکت ظاہر نہیں", state:"—"};
+    }
+    function splitProclitics(core){
+      var pref=[], s=core;
+      if(/^[وف]/.test(s)){ pref.push(s[0]==="و"?"واو (عطف)":"فاء (عطف/سبب)"); s=s.slice(1); }
+      if(/^[بكل]$/.test(s[0]||"") && s.length>2){ pref.push({"ب":"باء (حرفِ جر)","ك":"کاف (حرفِ جر/تشبیہ)","ل":"لام (حرفِ جر)"}[s[0]]); s=s.slice(1); }
+      var hasAl=false;
+      if(s.indexOf("ال")===0 && s.length>3){ hasAl=true; s=s.slice(2); }
+      return {pref:pref, stem:s, hasAl:hasAl};
+    }
+    function analyzeSentence(text){
+      var raw = text.replace(/\s+/g," ").trim().split(" ").filter(function(x){return x.length;});
+      var items = raw.map(function(w,i){
+        var core = stripT(w);
+        var sp = splitProclitics(core);
+        var hk = lastHarakah(w);
+        return {raw:w, core:core, pref:sp.pref, stem:sp.stem, hasAl:sp.hasAl, hk:hk,
+                type:"اسم", state:hk.state, role:"", why:""};
+      });
+      items.forEach(function(it,i){
+        var prev = i>0 ? items[i-1] : null;
+        var viaJarrPrefix = it.pref.some(function(p){return p.indexOf("حرفِ جر")>-1;});
+        if(HARF_ALL[it.core] && it.pref.length===0){
+          it.type="حرف"; it.state = HARF_JARR[it.core] ? "حرفِ جر" : "حرف";
+          it.role = HARF_JARR[it.core] ? "حرفِ جر" : (INNA[it.core] ? "حرفِ مشبہ بالفعل" : "حرف");
+          it.why = HARF_JARR[it.core] ? "یہ حرفِ جر ہے — اپنے بعد والے اسم کو مجرور کرے گا۔"
+                 : (INNA[it.core] ? "یہ حرفِ مشبہ بالفعل ہے — اگلا اسم اس کا اسم بن کر منصوب ہوگا اور اس کی خبر مرفوع رہے گی۔"
+                 : "یہ حرف ہے؛ حرف مبنی ہوتا ہے، اس کا اپنا اعراب نہیں ہوتا، اثر اگلے لفظ پر پڑتا ہے۔");
+          return;
+        }
+        if(KANA[it.core] || VERBS[it.core] || (/(تُ|تَ|تِ|تْ|نَا)$/.test(it.raw) || /وا$/.test(it.core)) && !it.hasAl){
+          it.type="فعل";
+          var isMud = /^[أنيت]/.test(it.core) && !KANA[it.core] && !/(تُ|تَ|تِ|نَا)$/.test(it.stem);
+          it.state = KANA[it.core] ? "فعلِ ناقص" : (isMud ? "فعلِ مضارع" : "فعلِ ماضی (مبنی)");
+          it.role = it.state;
+          it.why = KANA[it.core] ? "یہ فعلِ ناقص ہے — اگلا اسم اس کا اسم (مرفوع) اور اس کی خبر منصوب آئے گی۔"
+                 : (isMud ? "فعلِ مضارع معرب ہے: اوپر کوئی ناصب/جازم نہیں تو رفع کی حالت میں رہے گا۔"
+                 : "فعلِ ماضی مبنی ہوتا ہے (عموماً علی الفتح) — اس کا اعراب تبدیل نہیں ہوتا، آگے فاعل تلاش کریں۔");
+          return;
+        }
+        /* اسم */
+        it.type="اسم";
+        if(viaJarrPrefix){ it.state="مجرور"; it.role="مجرور — بحرفِ جر";
+          it.why="اس لفظ کے ساتھ حرفِ جر (باء/کاف/لام) ملا ہوا ہے، اس لیے یہ مجرور ہے۔"; return; }
+        if(prev && prev.type==="حرف" && HARF_JARR[prev.core]){ it.state="مجرور"; it.role="مجرور — بـ«"+prev.core+"»";
+          it.why="اس سے پہلے حرفِ جر «"+prev.core+"» آیا ہے، اس لیے یہ اسم مجرور ہے۔ جار و مجرور مل کر آگے متعلق بنتے ہیں۔"; return; }
+        if(prev && prev.type==="حرف" && INNA[prev.core]){ it.state="منصوب"; it.role="اسمِ "+prev.core;
+          it.why="حرفِ مشبہ بالفعل «"+prev.core+"» کا اسم ہے، اس لیے منصوب ہے۔"; return; }
+        if(prev && prev.type==="فعل" && KANA[prev.core]){ it.state="مرفوع"; it.role="اسمِ کانَ";
+          it.why="کانَ کا اسم ہے اس لیے مرفوع ہے؛ اس کی خبر آگے منصوب آئے گی۔"; return; }
+        if(prev && prev.type==="فعل"){
+          if(it.hk.k==="fatha"){ it.state="منصوب"; it.role="مفعول بہ (ممکنہ)";
+            it.why="فعل کے بعد فتحہ والا اسم عموماً مفعول بہ ہوتا ہے — «کیا/کس کو؟» پوچھ کر تصدیق کریں۔"; }
+          else if(it.hk.k==="kasra"){ it.state="مجرور"; it.role="مضاف الیہ / متعلق";
+            it.why="کسرہ جر کی علامت ہے — یہ یا مضاف الیہ ہے یا کسی محذوف حرفِ جر سے متعلق۔"; }
+          else { it.state="مرفوع"; it.role="فاعل";
+            it.why="فعل کے فوراً بعد مرفوع اسم فاعل ہوتا ہے — «کس نے؟» کا جواب یہی ہے۔"; }
+          return;
+        }
+        if(i===0){ it.role = it.hk.k==="fatha" ? "مبتدا (ممکنہ)" : "مبتدا";
+          if(it.hk.k!=="kasra"){ it.state = it.hk.k==="fatha" ? it.state : "مرفوع"; }
+          it.why="جملہ اسم سے شروع ہو رہا ہے اس لیے یہ جملہ اسمیہ ہے اور پہلا اسم مبتدا ہے — اس کی خبر آگے تلاش کریں۔"; return; }
+        if(prev && prev.type==="اسم"){
+          if(it.hk.k==="kasra" && prev.role.indexOf("مضاف الیہ")!==0){ it.state="مجرور"; it.role="مضاف الیہ";
+            it.why="پچھلا اسم مضاف ہے؛ اس کے بعد مجرور اسم مضاف الیہ ہوتا ہے۔ یاد رکھیں: مضاف الیہ ہمیشہ مجرور۔"; return; }
+          if(it.hk.k===prev.hk.k && it.hk.k!=="none"){ it.role = prev.role.indexOf("خبر")>-1||prev.role.indexOf("مبتدا")>-1 ? "خبر / نعت (ممکنہ)" : "نعت / عطف (ممکنہ)";
+            it.state = it.hk.state;
+            it.why="پچھلے اسم جیسی حرکت ہے — یہ اس کی خبر، نعت (صفت) یا اس پر معطوف ہو سکتا ہے۔ نعت ہمیشہ منعوت کے اعراب کی پیروی کرتی ہے۔"; return; }
+        }
+        it.role="اسم";
+        it.why="اس کی حالت آخری حرکت سے پہچانیں: ضمہ ہو تو رفع، فتحہ ہو تو نصب، کسرہ ہو تو جر کی علامت ہے۔";
+        if(it.hk.k==="damma"){ it.state="مرفوع"; }
+        if(it.hk.k==="fatha"){ it.state="منصوب"; }
+        if(it.hk.k==="kasra"){ it.state="مجرور"; }
+      });
+      /* تکمیلی پاس: خبرِ کانَ، مفعول بہ اور خبرِ إنَّ کی نشان دہی */
+      items.forEach(function(it,i){
+        if(it.type!=="اسم" || (it.role!=="اسم" && it.role!=="")) return;
+        var prevIt = i>0 ? items[i-1] : null;
+        var earlier = items.slice(0,i);
+        var hasVerb = earlier.some(function(x){return x.type==="فعل";});
+        var hasInna = earlier.some(function(x){return x.type==="حرف" && INNA[x.core];});
+        if(prevIt && prevIt.role.indexOf("اسمِ کان")===0 && it.hk.k==="fatha"){
+          it.role="خبرِ کانَ"; it.state="منصوب";
+          it.why="کانَ کی خبر ہے اس لیے منصوب ہے — کانَ اپنے اسم کو رفع اور خبر کو نصب دیتا ہے۔";
+        } else if(hasVerb && it.hk.k==="fatha"){
+          it.role="مفعول بہ"; it.state="منصوب";
+          it.why="فعل کا اثر اسی اسم پر پڑا ہے — «کیا / کس کو؟» کا جواب یہی ہے، اس لیے مفعول بہ منصوب ہے۔";
+        } else if(hasInna && it.hk.k==="damma"){
+          it.role="خبر (ممکنہ)"; it.state="مرفوع";
+          it.why="إنَّ والے جملے میں اس کے اسم کے بعد مرفوع اسم اس کی خبر ہوتا ہے۔";
+        }
+      });
+      /* اضافت کی تکمیل: اسم کے فوراً بعد مجرور اسم آئے تو پہلے کو مضاف نشان زد کریں */
+      items.forEach(function(it,i){
+        if(i+1<items.length && it.type==="اسم" && items[i+1].role==="مضاف الیہ" && it.role.indexOf("مضاف")<0){
+          it.role += " (مضاف)";
+        }
+      });
+      return items;
+    }
+    function renderAnalysis(){
+      var text = $("ibaraInput").value;
+      var grid = $("wordGrid"), st = $("sentenceType");
+      if(!text.trim()){ grid.innerHTML=""; st.style.display="none"; return; }
+      var items = analyzeSentence(text);
+      var first = items[0];
+      var kind = first.type==="فعل" ? "جُمْلَةٌ فِعْلِيَّة (جملہ فعلیہ — فعل سے شروع)"
+               : (first.type==="حرف" && INNA[first.core]) ? "جُمْلَةٌ اسْمِيَّة (جملہ اسمیہ — إنَّ سے شروع)"
+               : (first.type==="حرف" ? "جار و مجرور سے آغاز — خبر مقدم کی صورت ممکن ہے" : "جُمْلَةٌ اسْمِيَّة (جملہ اسمیہ — اسم سے شروع)");
+      st.style.display="block";
+      st.innerHTML = "جملے کی قسم: <span class='ar' dir='rtl'>"+kind+"</span> — کل الفاظ: "+items.length;
+      grid.innerHTML = items.map(function(it){
+        var prefTxt = it.pref.length ? "<div class='tags'>"+it.pref.map(function(p){return "<span class='tag'>"+p+"</span>";}).join("")+(it.hasAl?"<span class='tag'>ال (تعریف)</span>":"")+"</div>" : (it.hasAl?"<div class='tags'><span class='tag'>ال (تعریف)</span></div>":"");
+        return "<div class='word-card'><div class='w' dir='rtl' lang='ar'>"+esc(it.raw)+"</div>"+prefTxt+
+          "<div class='tags'><span class='tag'>"+it.type+"</span><span class='tag state'>"+it.state+"</span></div>"+
+          "<p dir='rtl'><b>اعراب:</b> "+it.role+"</p>"+
+          "<p dir='rtl'><b>آخری حرکت:</b> "+it.hk.label+"</p>"+
+          "<p dir='rtl'>"+it.why+"</p></div>";
+      }).join("");
+    }
+    $("analyzeBtn").addEventListener("click", renderAnalysis);
+    $("clearBtn").addEventListener("click", function(){ $("ibaraInput").value=""; $("wordGrid").innerHTML=""; $("sentenceType").style.display="none"; $("ibaraInput").focus(); });
+    var SAMPLES = ["ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ","إِنَّ اللَّهَ غَفُورٌ رَّحِيمٌ","قَرَأَ مُحَمَّدٌ الْكِتَابَ","اَلْعِلْمُ نُورٌ","كَانَ الْجَوُّ بَارِدًا","رَأَيْتُ طَالِبًا مُجْتَهِدًا فِي الْمَكْتَبَةِ"];
+    $("sampleChips").innerHTML = SAMPLES.map(function(s){ return "<button type='button' class='chip-btn' dir='rtl' lang='ar' data-s='"+s+"'>"+s+"</button>"; }).join(" ");
+    Array.prototype.forEach.call(document.querySelectorAll("#sampleChips .chip-btn"), function(b){
+      b.addEventListener("click", function(){ $("ibaraInput").value=b.getAttribute("data-s"); renderAnalysis(); });
+    });
+
+    /* ================= صرف — گردان ================= */
+    function hv(v){ return v==="a"?F:(v==="u"?Dm:Ks); }
+    function madiForms(r,bab){
+      var r1=r[0],r2=r[1],r3=r[2], e=hv(bab.madi);
+      var st=function(tail){ return r1+F+r2+e+r3+tail; };
+      var sk=function(tail){ return r1+F+r2+e+r3+Sk+tail; };
+      return [ st(F), st(F)+"ا", st(Dm)+"وا", st(F)+"تْ", st(F)+"تَا", sk("نَ"),
+               sk("تَ"), sk("تُمَا"), sk("تُمْ"), sk("تِ"), sk("تُمَا"), sk("تُنَّ"), sk("تُ"), sk("نَا") ];
+    }
+    function mudariForms(r,bab){
+      var r1=r[0],r2=r[1],r3=r[2], e=hv(bab.mud);
+      var P=["ي","ي","ي","ت","ت","ي","ت","ت","ت","ت","ت","ت","أ","ن"];
+      function f(i,tail){ return P[i]+F+r1+Sk+r2+e+r3+tail; }
+      return [ f(0,Dm), f(1,F)+"انِ", f(2,Dm)+"ونَ", f(3,Dm), f(4,F)+"انِ", f(5,Sk)+"نَ",
+               f(6,Dm), f(7,F)+"انِ", f(8,Dm)+"ونَ", f(9,Ks)+"ينَ", f(10,F)+"انِ", f(11,Sk)+"نَ", f(12,Dm), f(13,Dm) ];
+    }
+    function amrForms(r,bab){
+      var r1=r[0],r2=r[1],r3=r[2], e=hv(bab.mud);
+      var hz = bab.mud==="u" ? "اُ" : "اِ";
+      var base = hz+r1+Sk+r2+e+r3;
+      var map = {}; map[6]=base+Sk; map[7]=base+F+"ا"; map[8]=base+Dm+"وا"; map[9]=base+Ks+"ي"; map[10]=base+F+"ا"; map[11]=base+Sk+"نَ";
+      return map;
+    }
+    function nahyForms(r,bab){
+      var r1=r[0],r2=r[1],r3=r[2], e=hv(bab.mud);
+      var base="لَا تَ"+r1+Sk+r2+e+r3;
+      var map = {}; map[6]=base+Sk; map[7]=base+F+"ا"; map[8]=base+Dm+"وا"; map[9]=base+Ks+"ي"; map[10]=base+F+"ا"; map[11]=base+Sk+"نَ";
+      return map;
+    }
+    function renderGardan(){
+      var raw = stripT($("rootInput").value).replace(/\s+/g,"");
+      var msg = $("sarfMsg");
+      if(raw.length!==3){ msg.textContent="براہ کرم درست مادہ لکھیں — تین حروف، مثلاً: ن ص ر یا ک ت ب۔"; $("gardanBody").innerHTML=""; $("derivedRow").innerHTML=""; return; }
+      msg.textContent="";
+      var r=[raw[0],raw[1],raw[2]];
+      var bab = BABS[+$("babSelect").value];
+      var md = madiForms(r,bab), mu = mudariForms(r,bab), am = amrForms(r,bab), nh = nahyForms(r,bab);
+      $("gardanBody").innerHTML = PRON.map(function(p,i){
+        return "<tr><td class='mean'>"+(i+1)+"</td><td class='pron' dir='rtl'>"+p[0]+"</td>"+
+          "<td class='form' dir='rtl'>"+md[i]+"</td><td class='form' dir='rtl'>"+mu[i]+"</td>"+
+          "<td class='form' dir='rtl'>"+(am[i]||"—")+"</td><td class='form' dir='rtl'>"+(nh[i]||"—")+"</td>"+
+          "<td class='mean'>"+p[1]+"</td></tr>";
+      }).join("");
+      var fail = r[0]+F+"ا"+r[1]+Ks+r[2]+TnD;
+      var maf = "م"+F+r[0]+Sk+r[1]+Dm+"و"+r[2]+TnD;
+      var masdar = r[0]+F+r[1]+Sk+r[2]+TnF.replace("ً","ٌ");
+      var masdar2 = r[0]+F+r[1]+Sk+r[2]+TnD;
+      $("derivedRow").innerHTML =
+        "<div class='d'><div class='dl' dir='rtl'>اسمِ فاعل</div><div class='dv' dir='rtl'>"+fail+"</div></div>"+
+        "<div class='d'><div class='dl' dir='rtl'>اسمِ مفعول</div><div class='dv' dir='rtl'>"+maf+"</div></div>"+
+        "<div class='d'><div class='dl' dir='rtl'>مصدر (مشہور وزن)</div><div class='dv' dir='rtl'>"+masdar2+"</div></div>"+
+        "<div class='d'><div class='dl' dir='rtl'>باب</div><div style='font-size:.95rem' dir='rtl'>"+bab.note+"</div></div>";
+    }
+    $("babSelect").innerHTML = BABS.map(function(b,i){ return "<option value='"+i+"'>"+b.name+"</option>"; }).join("");
+    $("babBody").innerHTML = BABS.map(function(b){
+      var r=b.sample, md=madiForms(r,b)[0], mu=mudariForms(r,b)[0];
+      return "<tr><td>"+b.name.split("—")[0]+"</td><td class='ar' dir='rtl'>"+md+"</td><td class='ar' dir='rtl'>"+mu+"</td><td dir='rtl' style='font-size:.9rem'>"+b.note+"</td></tr>";
+    }).join("");
+    var ROOTS = [["ن","ص","ر",0],["ك","ت","ب",1],["ف","ت","ح",2],["س","م","ع",3],["ض","ر","ب",1],["ش","ر","ب",0],["د","ر","س",0],["ح","ف","ظ",2]];
+    $("rootChips").innerHTML = "<span class='lbl' dir='rtl' style='font-weight:700;color:var(--ink-soft);font-size:.92rem'>مشہور مادے:</span> " + ROOTS.map(function(x,i){
+      return "<button type='button' class='chip-btn' dir='rtl' lang='ar' data-i='"+i+"'>"+x[0]+" "+x[1]+" "+x[2]+"</button>";
+    }).join(" ");
+    Array.prototype.forEach.call(document.querySelectorAll("#rootChips .chip-btn"), function(b){
+      b.addEventListener("click", function(){ var x=ROOTS[+b.getAttribute("data-i")];
+        $("rootInput").value=x[0]+" "+x[1]+" "+x[2]; $("babSelect").value=x[3]; renderGardan(); });
+    });
+    $("gardanBtn").addEventListener("click", renderGardan);
+    $("babSelect").addEventListener("change", renderGardan);
+    $("rootInput").addEventListener("keydown", function(e){ if(e.key==="Enter"){ renderGardan(); } });
+
+    /* ================= ترکیب لائبریری ================= */
+    var curTrk = 0;
+    function renderTrkTabs(){
+      $("trkTabs").innerHTML = TARKEEB.map(function(t,i){
+        return "<button type='button' class='trk-tab"+(i===curTrk?" active":"")+"' data-i='"+i+"' dir='rtl'>"+t.title+"</button>";
+      }).join("");
+      Array.prototype.forEach.call(document.querySelectorAll(".trk-tab"), function(b){
+        b.addEventListener("click", function(){ curTrk=+b.getAttribute("data-i"); renderTrkTabs(); renderTrk(); });
+      });
+    }
+    function renderTrk(){
+      var t = TARKEEB[curTrk];
+      $("trkSentence").textContent = t.ar;
+      $("trkMeta").innerHTML = "ماخذ: "+t.source+"<br />ترجمہ: "+t.tr;
+      $("trkBody").innerHTML = t.words.map(function(w){
+        return "<tr><td class='wcell' dir='rtl'>"+w[0]+"</td><td class='icell' dir='rtl'>"+w[1]+"</td><td class='dcell' dir='rtl'>"+w[2]+"</td></tr>";
+      }).join("");
+    }
+
+    /* ================= قواعد ================= */
+    function renderRules(filter){
+      var f = (filter||"").trim();
+      var list = RULES.filter(function(r){ return !f || r.t.indexOf(f)>-1 || r.d.indexOf(f)>-1 || r.term.indexOf(f)>-1; });
+      $("ruleGrid").innerHTML = list.map(function(r){
+        var ex2 = (typeof RULE_EX2!=="undefined" && RULE_EX2[r.term]) ? "<div class='ex' dir='rtl'>"+RULE_EX2[r.term][0]+"<small dir='rtl'>"+RULE_EX2[r.term][1]+"</small></div>" : "";
+        return "<article class='rule-card'><h3 dir='rtl'>"+r.t+"</h3><div class='term' dir='rtl'>"+r.term+"</div><p dir='rtl'>"+r.d+"</p><div class='ex' dir='rtl'>"+r.ex+"<small dir='rtl'>"+r.exn+"</small></div>"+ex2+"</article>";
+      }).join("");
+      $("ruleEmpty").style.display = list.length ? "none" : "block";
+    }
+    $("ruleSearch").addEventListener("input", function(){ renderRules(this.value); });
+
+    /* ================= مشق (Quiz) ================= */
+    var qi=0, qScore=0, qDone=false;
+    function renderQuiz(){
+      qDone=false;
+      var q = QUIZ[qi];
+      $("quizBar").style.width = ((qi)/QUIZ.length*100)+"%";
+      $("quizQ").innerHTML = "سوال "+(qi+1)+" از "+QUIZ.length+": <span class='ar' dir='rtl'></span> "+esc(q.q);
+      $("quizExplain").style.display="none";
+      $("quizNext").style.display="none";
+      $("quizScore").textContent = "اسکور: "+qScore+" / "+QUIZ.length;
+      $("quizOpts").innerHTML = q.opts.map(function(o,i){
+        return "<button type='button' class='quiz-opt' data-i='"+i+"' dir='rtl'>"+esc(o)+"</button>";
+      }).join("");
+      Array.prototype.forEach.call(document.querySelectorAll(".quiz-opt"), function(b){
+        b.addEventListener("click", function(){
+          if(qDone) return; qDone=true;
+          var pick=+b.getAttribute("data-i");
+          var opts=document.querySelectorAll(".quiz-opt");
+          opts[q.a].classList.add("correct");
+          if(pick===q.a){ qScore++; } else { b.classList.add("wrong"); }
+          Array.prototype.forEach.call(opts, function(o){ o.disabled=true; });
+          $("quizExplain").innerHTML = "<b>"+(pick===q.a?"درست!":"درست جواب: "+esc(q.opts[q.a]))+"</b><br />"+q.ex;
+          $("quizExplain").style.display="block";
+          $("quizScore").textContent = "اسکور: "+qScore+" / "+QUIZ.length;
+          $("quizBar").style.width = ((qi+1)/QUIZ.length*100)+"%";
+          var nx=$("quizNext"); nx.style.display="inline-block";
+          nx.textContent = qi+1<QUIZ.length ? "اگلا سوال" : "نتیجہ دیکھیں";
+        });
+      });
+    }
+    $("quizNext").addEventListener("click", function(){
+      if(qi+1<QUIZ.length){ qi++; renderQuiz(); }
+      else{
+        $("quizMain").style.display="none"; $("quizResult").style.display="block";
+        var pct = Math.round(qScore/QUIZ.length*100);
+        $("quizResultText").textContent = "آپ کا اسکور: "+qScore+" از "+QUIZ.length+" ("+pct+" فیصد)۔ "+
+          (pct>=80 ? "بہت خوب! آپ کی ترکیب پختہ ہو رہی ہے — اب بغیر اعراب والی عبارات حل کرنے کی مشق کریں۔"
+          : pct>=50 ? "اچھی کوشش! جن سوالات میں غلطی ہوئی، ان کے قواعد قواعد والے حصے میں دوبارہ پڑھیں اور پھر مشق دہرائیں۔"
+          : "کوئی بات نہیں — پہلے قواعد اور ترکیب لائبریری غور سے پڑھیں، پھر دوبارہ کوشش کریں۔ اعراب مشق سے ہی آتا ہے۔");
+      }
+    });
+    $("quizRestart").addEventListener("click", function(){
+      qi=0; qScore=0; $("quizResult").style.display="none"; $("quizMain").style.display="block"; renderQuiz();
+    });
+
+    /* ================= ٹکر (chalti patti) ================= */
+    (function(){ var t=$("tickerTrack"); if(t){ t.innerHTML += t.innerHTML; } })();
+
+    /* ================= اصطلاحات لغت ================= */
+    function renderGloss(f){
+      f=(f||"").trim(); var fs=stripT(f);
+      var list=GLOSSARY.filter(function(g){ return !f || g[0].indexOf(f)>-1 || g[2].indexOf(f)>-1 || stripT(g[1]).indexOf(fs)>-1 || stripT(g[3]).indexOf(fs)>-1; });
+      $("glossGrid").innerHTML=list.map(function(g){
+        return "<article class='gloss-card'><h4 dir='rtl'>"+g[0]+"</h4><div class='gt' dir='rtl'>"+g[1]+"</div><p dir='rtl'>"+g[2]+"</p><div class='gex' dir='rtl'>"+g[3]+"</div></article>";
+      }).join("");
+      $("glossEmpty").style.display=list.length?"none":"block";
+    }
+    $("glossSearch").addEventListener("input", function(){ renderGloss(this.value); });
+
+    /* ================= مصدر لغت ================= */
+    function renderMasdar(f){
+      f=(f||"").trim(); var fs=stripT(f);
+      var list=MASDAR_DICT.filter(function(m){ return !f || stripT(m[0]).indexOf(fs)>-1 || stripT(m[1]).indexOf(fs)>-1 || m[2].indexOf(f)>-1; });
+      $("masdarBody").innerHTML=list.map(function(m){
+        return "<tr><td class='vf' dir='rtl'>"+m[0]+"</td><td class='vm' dir='rtl'>"+m[1]+"</td><td dir='rtl'>"+m[2]+"</td><td dir='rtl' style='font-size:.88rem;color:var(--muted)'>"+m[3]+"</td></tr>";
+      }).join("");
+      $("masdarEmpty").style.display=list.length?"none":"block";
+    }
+    $("masdarSearch").addEventListener("input", function(){ renderMasdar(this.value); });
+
+    /* ================= A-Z انڈیکس ================= */
+    function azInit(listId, detailId, data, searchId){
+      var cur=0;
+      function show(i){
+        cur=i; var a=data[i];
+        $(detailId).innerHTML="<div class='at' dir='rtl'>"+a.t+"</div><h3 dir='rtl'>"+a.n+"</h3>"+
+          "<p dir='rtl'><span class='lbl'>تعریف: </span>"+a.d+"</p>"+
+          "<p dir='rtl'><span class='lbl'>قاعدہ و پہچان: </span>"+a.r+"</p>"+
+          "<div class='aex'><span class='ar' dir='rtl'>"+a.e+"</span><small dir='rtl'>"+a.en+"</small></div>";
+        Array.prototype.forEach.call($(listId).querySelectorAll(".az-item"), function(b){
+          b.classList.toggle("active", +b.getAttribute("data-i")===i);
+        });
+      }
+      function renderList(f){
+        f=(f||"").trim(); var fs=stripT(f);
+        var idxs=data.map(function(a,i){return i;}).filter(function(i){
+          var a=data[i]; return !f || a.n.indexOf(f)>-1 || a.d.indexOf(f)>-1 || stripT(a.t).indexOf(fs)>-1;
+        });
+        $(listId).innerHTML= idxs.length ? idxs.map(function(i){
+          return "<button type='button' class='az-item' dir='rtl' data-i='"+i+"'>"+data[i].n+"<small dir='rtl'>"+data[i].t+"</small></button>";
+        }).join("") : "<p dir='rtl' style='color:var(--muted)'>اس نام کا کوئی موضوع نہیں ملا۔</p>";
+        Array.prototype.forEach.call($(listId).querySelectorAll(".az-item"), function(b){
+          b.addEventListener("click", function(){ show(+b.getAttribute("data-i")); });
+        });
+        if(idxs.length && idxs.indexOf(cur)<0) show(idxs[0]); else if(idxs.length) show(cur);
+      }
+      $(searchId).addEventListener("input", function(){ renderList(this.value); });
+      renderList("");
+    }
+
+    /* ================= صیغہ چارٹ + فائنڈر ================= */
+    var SEENAMES=["واحد مذکر غائب","تثنیہ مذکر غائب","جمع مذکر غائب","واحد مؤنث غائب","تثنیہ مؤنث غائب","جمع مؤنث غائب","واحد مذکر حاضر","تثنیہ مذکر حاضر","جمع مذکر حاضر","واحد مؤنث حاضر","تثنیہ مؤنث حاضر","جمع مؤنث حاضر","واحد متکلم (مذکر/مؤنث)","جمع متکلم / متکلم مع الغیر"];
+    var MAZI_END=["َ","َا","ُوا","َتْ","َتَا","ْنَ","ْتَ","ْتُمَا","ْتُمْ","ْتِ","ْتُمَا","ْتُنَّ","ْتُ","ْنَا"];
+    var MUD_PREF=["يَ","يَ","يَ","تَ","تَ","يَ","تَ","تَ","تَ","تَ","تَ","تَ","أَ","نَ"];
+    var MUD_END=["ُ","َانِ","ُونَ","ُ","َانِ","ْنَ","ُ","َانِ","ُونَ","ِينَ","َانِ","ْنَ","ُ","ُ"];
+    var HAZIR_END={6:"ْ",7:"َا",8:"ُوا",9:"ِي",10:"َا",11:"ْنَ"};
+    var MAZI_ALAMAT=["اصل صورت — کوئی لاحقہ نہیں","ا (الفِ تثنیہ)","وا (واوِ جمع + الف)","تْ (تاءِ تانیث ساکنہ)","تَا (تاء + الف)","نَ (نونِ نسوہ)","تُ (تاءِ متکلم/حاضر)","تُمَا","تُمْ","تِ","تُمَا","تُنَّ","تُ","نَا"];
+    function renderSeegha(){
+      var r=["ن","ص","ر"], bab=BABS[0];
+      var md=madiForms(r,bab), mu=mudariForms(r,bab), am=amrForms(r,bab), nh=nahyForms(r,bab);
+      $("seeghaBody").innerHTML=PRON.map(function(p,i){
+        return "<tr><td>"+(i+1)+"</td><td dir='rtl' style='font-weight:700'>"+SEENAMES[i]+"</td><td class='ar' dir='rtl'>"+p[0]+"</td>"+
+        "<td class='ar' dir='rtl'>"+md[i]+"</td><td class='ar' dir='rtl'>"+mu[i]+"</td>"+
+        "<td class='ar' dir='rtl'>"+(am[i]||"—")+"</td><td class='ar' dir='rtl'>"+(nh[i]||"—")+"</td>"+
+        "<td dir='rtl' style='font-size:.88rem;color:var(--muted)'>"+MAZI_ALAMAT[i]+"</td></tr>";
+      }).join("");
+    }
+    function sfIndex(person,num,gen){
+      if(person==="mut"){ return num==="wahid"?12:13; }
+      var base = person==="ghaib" ? (gen==="m"?0:3) : (gen==="m"?6:9);
+      return base + (num==="wahid"?0:(num==="tas"?1:2));
+    }
+    function runFinder(){
+      var tense=$("sfTense").value, person=$("sfPerson").value, num=$("sfNum").value, gen=$("sfGen").value;
+      var out=$("sfOut"); out.style.display="block";
+      if((tense==="amr"||tense==="nahi") && person!=="hazir"){
+        out.innerHTML="<p dir='rtl'><b>نوٹ:</b> امر اور نہی صرف <b>حاضر</b> کے صیغے ہوتے ہیں — غائب اور متکلم کے لیے امر/نہی نہیں بنتا۔ شخص کو «حاضر» کر کے دوبارہ دیکھیں۔</p>"; return;
+      }
+      var idx=sfIndex(person,num,gen), html="", note="";
+      if(tense==="madi"){
+        html="نَصَر<span class='hl'>"+MAZI_END[idx]+"</span>";
+        note="ماضی کا صیغہ «"+SEENAMES[idx]+"» — آخری علامت: "+MAZI_ALAMAT[idx]+"۔ اصل مادہ «ن ص ر» سے پہلے کی صورت نَصَرَ رہتی ہے، صیغہ آخر کے لاحقے سے پہچانا جاتا ہے۔";
+      } else if(tense==="mud"){
+        html="<span class='hl'>"+MUD_PREF[idx]+"</span>نْصُر<span class='hl'>"+MUD_END[idx]+"</span>";
+        note="مضارع کا صیغہ «"+SEENAMES[idx]+"» — شروع میں حرفِ مضارعہ «"+MUD_PREF[idx]+"» ضمیر کی پہچان ہے اور آخر کی علامت «"+MUD_END[idx]+"» عدد و جنس بتاتی ہے۔";
+      } else if(tense==="amr"){
+        html="اِنْصُر<span class='hl'>"+HAZIR_END[idx]+"</span>";
+        note="امر کا صیغہ «"+SEENAMES[idx]+"» — امر مضارعِ حاضر سے بنتا ہے: شروع کا حرفِ مضارعہ ہٹا کر ہمزۂ وصل لگتا ہے (عین پر ضمہ ہو تو ہمزہ پر بھی ضمہ: اُنْصُرْ)۔ آخر کی علامت صیغہ بتاتی ہے۔";
+      } else {
+        html="لَا تَنْصُر<span class='hl'>"+HAZIR_END[idx]+"</span>";
+        note="نہی کا صیغہ «"+SEENAMES[idx]+"» — «لا» ناہیہ مضارع کو جزم دیتا ہے، اس لیے واحد میں آخر ساکن ہوتا ہے اور نون والے صیغوں میں نونِ اعرابی گر جاتا ہے۔";
+      }
+      if(person==="mut" && num==="tas"){ note+=" (یاد رکھیں: متکلم میں تثنیہ کا الگ صیغہ نہیں ہوتا — دو کے لیے بھی نَحْنُ والا صیغہ آتا ہے۔)"; }
+      out.innerHTML="<div class='fform' dir='rtl'>"+html+"</div>"+
+        "<p dir='rtl'><b>صیغہ:</b> "+SEENAMES[idx]+" &nbsp;•&nbsp; <b>ضمیر:</b> <span class='ar'>"+PRON[idx][0]+"</span> &nbsp;•&nbsp; <b>اردو معنی:</b> "+PRON[idx][1]+" کے لیے نَصَرَ کی صورت (مدد کرنا)</p>"+
+        "<p dir='rtl'>"+note+"</p>";
+    }
+    $("sfBtn").addEventListener("click", runFinder);
+
+    /* ================= تیار گردان لائبریری ================= */
+    function conjMaz(mb,ms,ab,nb){
+      return {
+        mazi: MAZI_END.map(function(e){return mb+e;}),
+        mud: MUD_PREF.map(function(p,i){return p+ms+MUD_END[i];}),
+        amr: (function(){var m={}; for(var k in HAZIR_END){ m[k]=ab+HAZIR_END[k]; } return m;})(),
+        nahi: (function(){var m={}; for(var k in HAZIR_END){ m[k]=nb+HAZIR_END[k]; } return m;})()
+      };
+    }
+    var LIB = [
+      {g:0,label:"نَصَرَ — بابِ نصر",root:["ن","ص","ر"],bab:0,info:"باب نَصْر (فَعَلَ يَفْعُلُ) • معنی: مدد کرنا • پہچان: عینِ ماضی پر فتحہ، عینِ مضارع پر ضمہ"},
+      {g:0,label:"ضَرَبَ — بابِ ضرب",root:["ض","ر","ب"],bab:1,info:"باب ضَرْب (فَعَلَ يَفْعِلُ) • معنی: مارنا • پہچان: ماضی میں فتحہ، مضارع میں کسرہ"},
+      {g:0,label:"فَتَحَ — بابِ فتح",root:["ف","ت","ح"],bab:2,info:"باب فَتْح (فَعَلَ يَفْعَلُ) • معنی: کھولنا • پہچان: دونوں میں فتحہ (عین/لام حلقی حرف ہو تو عموماً یہی باب)"},
+      {g:0,label:"سَمِعَ — بابِ سمع",root:["س","م","ع"],bab:3,info:"باب سَمْع (فَعِلَ يَفْعَلُ) • معنی: سننا • پہچان: ماضی میں کسرہ، مضارع میں فتحہ"},
+      {g:0,label:"حَسِبَ — بابِ حسب",root:["ح","س","ب"],bab:5,info:"باب حَسْب (فَعِلَ يَفْعِلُ) • معنی: گمان کرنا • پہچان: دونوں میں کسرہ"},
+      {g:0,label:"كَرُمَ — بابِ کرم",root:["ك","ر","م"],bab:4,info:"باب كَرْم (فَعُلَ يَفْعُلُ) • معنی: بزرگ/کریم ہونا • پہچان: دونوں میں ضمہ — یہ باب عموماً لازم و صفتی افعال کا ہے"},
+      {g:1,label:"كَتَبَ — لکھنا",root:["ك","ت","ب"],bab:0,info:"باب نصر • معنی: لکھنا • روزمرہ کا سب سے مشہور فعل"},
+      {g:1,label:"جَلَسَ — بیٹھنا",root:["ج","ل","س"],bab:1,info:"باب ضرب • معنی: بیٹھنا • فعلِ لازم ہے — مفعول نہیں آتا"},
+      {g:1,label:"خَرَجَ — نکلنا",root:["خ","ر","ج"],bab:0,info:"باب نصر • معنی: نکلنا، باہر جانا"},
+      {g:1,label:"شَرِبَ — پینا",root:["ش","ر","ب"],bab:3,info:"باب سمع • معنی: پینا"},
+      {g:1,label:"عَلِمَ — جاننا",root:["ع","ل","م"],bab:3,info:"باب سمع • معنی: جاننا، علم حاصل کرنا"},
+      {g:2,label:"أَكْرَمَ — إفعال",maz:["أَكْرَم","كْرِم","أَكْرِم","لَا تُكْرِم"],info:"باب إِفْعَال (أَفْعَلَ يُفْعِلُ) • معنی: عزت کرنا • مصدر: إِكْرَام"},
+      {g:2,label:"عَلَّمَ — تفعیل",maz:["عَلَّم","عَلِّم","عَلِّم","لَا تُعَلِّم"],info:"باب تَفْعِيل (فَعَّلَ يُفَعِّلُ) • معنی: سکھانا • مصدر: تَعْلِيم"},
+      {g:2,label:"قَاتَلَ — مفاعلہ",maz:["قَاتَل","قَاتِل","قَاتِل","لَا تُقَاتِل"],info:"باب مُفَاعَلَة (فَاعَلَ يُفَاعِلُ) • معنی: لڑنا، مقابلہ کرنا • مصدر: قِتَال / مُقَاتَلَة"},
+      {g:2,label:"اِنْكَسَرَ — انفعال",maz:["اِنْكَسَر","نْكَسِر","اِنْكَسِر","لَا تَنْكَسِر"],info:"باب اِنْفِعَال (اِنْفَعَلَ يَنْفَعِلُ) • معنی: ٹوٹ جانا • مصدر: اِنْكِسَار"},
+      {g:2,label:"اِجْتَمَعَ — افتعال",maz:["اِجْتَمَع","جْتَمِع","اِجْتَمِع","لَا تَجْتَمِع"],info:"باب اِفْتِعَال (اِفْتَعَلَ يَفْتَعِلُ) • معنی: جمع ہونا • مصدر: اِجْتِمَاع"},
+      {g:2,label:"اِسْتَغْفَرَ — استفعال",maz:["اِسْتَغْفَر","سْتَغْفِر","اِسْتَغْفِر","لَا تَسْتَغْفِر"],info:"باب اِسْتِفْعَال (اِسْتَفْعَلَ يَسْتَفْعِلُ) • معنی: بخشش مانگنا (طلبِ مغفرت) • مصدر: اِسْتِغْفَار"},
+      {g:3,label:"قَالَ — اجوف",mut:{mazi:["قَالَ","قَالَا","قَالُوا","قَالَتْ","قَالَتَا","قُلْنَ","قُلْتَ","قُلْتُمَا","قُلْتُمْ","قُلْتِ","قُلْتُمَا","قُلْتُنَّ","قُلْتُ","قُلْنَا"],mud:["يَقُولُ","يَقُولَانِ","يَقُولُونَ","تَقُولُ","تَقُولَانِ","يَقُلْنَ","تَقُولُ","تَقُولَانِ","تَقُولُونَ","تَقُولِينَ","تَقُولَانِ","تَقُلْنَ","أَقُولُ","نَقُولُ"]},info:"معتل اجوف (درمیان میں حرفِ علت — اصل: قَوَلَ) • معنی: کہنا • نوٹ کریں: تاء والے صیغوں میں قُلْتُ ہو جاتا ہے — یہی اعلال ہے"},
+      {g:3,label:"رَمَىٰ — ناقص",mut:{mazi:["رَمَىٰ","رَمَيَا","رَمَوْا","رَمَتْ","رَمَتَا","رَمَيْنَ","رَمَيْتَ","رَمَيْتُمَا","رَمَيْتُمْ","رَمَيْتِ","رَمَيْتُمَا","رَمَيْتُنَّ","رَمَيْتُ","رَمَيْنَا"],mud:["يَرْمِي","يَرْمِيَانِ","يَرْمُونَ","تَرْمِي","تَرْمِيَانِ","يَرْمِينَ","تَرْمِي","تَرْمِيَانِ","تَرْمُونَ","تَرْمِينَ","تَرْمِيَانِ","تَرْمِينَ","أَرْمِي","نَرْمِي"]},info:"معتل ناقص (آخر میں حرفِ علت — اصل یاء) • معنی: پھینکنا • نوٹ کریں: جمع مذکر میں رَمَوْا اور تاء والے صیغوں میں رَمَيْتُ صورت بنتی ہے"},
+      {g:3,label:"وَصَلَ — مثال",mut:{mud:["يَصِلُ","يَصِلَانِ","يَصِلُونَ","تَصِلُ","تَصِلَانِ","يَصِلْنَ","تَصِلُ","تَصِلَانِ","تَصِلُونَ","تَصِلِينَ","تَصِلَانِ","تَصِلْنَ","أَصِلُ","نَصِلُ"]},root:["و","ص","ل"],bab:1,info:"معتل مثال (پہلا حرف واو) • معنی: پہنچنا، ملنا • نوٹ کریں: مضارع میں واو گر جاتی ہے — يَصِلُ (نہ کہ يوصل)"}
+    ];
+    var curLib=0;
+    function libForms(v){
+      if(v.maz){ return conjMaz(v.maz[0],v.maz[1],v.maz[2],v.maz[3]); }
+      if(v.mut && v.mut.mazi && v.mut.mud){ return { mazi:v.mut.mazi, mud:v.mut.mud, amr:{}, nahi:{} }; }
+      var bab=BABS[v.bab], f={ mazi:madiForms(v.root,bab), mud:mudariForms(v.root,bab), amr:amrForms(v.root,bab), nahi:nahyForms(v.root,bab) };
+      if(v.mut){ if(v.mut.mud) f.mud=v.mut.mud; f.amr={}; f.nahi={}; }
+      return f;
+    }
+    function renderLibChips(){
+      var groups=[$("libChipsMuj"),$("libChipsDaily"),$("libChipsMaz"),$("libChipsMut")];
+      groups.forEach(function(c){ c.innerHTML=""; });
+      LIB.forEach(function(v,i){
+        var b=document.createElement("button");
+        b.type="button"; b.className="chip-btn"+(i===curLib?" active":""); b.setAttribute("dir","rtl"); b.textContent=v.label;
+        if(i===curLib){ b.style.background="var(--brand)"; b.style.color="#fff"; b.style.borderColor="var(--brand)"; }
+        b.addEventListener("click", function(){ curLib=i; renderLibChips(); renderLib(); });
+        groups[v.g].appendChild(b);
+      });
+    }
+    function renderLib(){
+      var v=LIB[curLib], f=libForms(v);
+      $("libInfo").textContent=v.label+" — "+v.info;
+      $("libBody").innerHTML=PRON.map(function(p,i){
+        return "<tr><td class='mean'>"+(i+1)+"</td><td class='pron' dir='rtl'>"+p[0]+"</td>"+
+          "<td class='form' dir='rtl'>"+(f.mazi?f.mazi[i]:"—")+"</td><td class='form' dir='rtl'>"+(f.mud?f.mud[i]:"—")+"</td>"+
+          "<td class='form' dir='rtl'>"+(f.amr&&f.amr[i]?f.amr[i]:"—")+"</td><td class='form' dir='rtl'>"+(f.nahi&&f.nahi[i]?f.nahi[i]:"—")+"</td>"+
+          "<td class='mean'>"+p[1]+"</td></tr>";
+      }).join("");
+      $("libNote").textContent = v.g===3 ? "معتل افعال میں امر و نہی کی صورتیں اعلال کی وجہ سے الگ قاعدے رکھتی ہیں — اس لیے یہاں ماضی و مضارع کی مکمل گردان دی گئی ہے۔ یاد کرنے کا طریقہ: پہلے صحیح فعل کی طرز ازبر کریں، پھر معتل کی تبدیلیاں نوٹ کر کے دہرائیں۔" :
+        "یاد کرنے کی ترکیب: اسی گردان کو آواز بلند کر کے ضمیر کے ساتھ دہرائیں — «هُوَ نَصَرَ، هُمَا نَصَرَا…» — معنی ساتھ رکھیں تو گردان خود بخود زبان پر چڑھ جائے گی۔";
+    }
+
+    /* ================= ترکیب لائبریری تلاش ================= */
+    $("trkSearch").addEventListener("input", function(){
+      var q=this.value.trim(), qs=stripT(q);
+      Array.prototype.forEach.call(document.querySelectorAll("#trkTabs .trk-tab"), function(b){
+        var t=TARKEEB[+b.getAttribute("data-i")];
+        var hit=!q || t.title.indexOf(q)>-1 || stripT(t.ar).indexOf(qs)>-1 || t.source.indexOf(q)>-1;
+        b.style.display=hit?"":"none";
+      });
+    });
+
+    /* ================= کتب + آغاز ================= */
+    $("bookList").innerHTML = BOOKS.map(function(b){
+      return "<div class='book'><span class='bn' dir='rtl'>"+b[0]+"</span><span class='bd' dir='rtl'>"+b[1]+"</span><span class='stage' dir='rtl'>"+b[2]+"</span></div>";
+    }).join("");
+    $("statTrk").textContent = TARKEEB.length;
+    $("statRules").textContent = RULES.length;
+    $("statQuiz").textContent = QUIZ.length;
+    renderAnalysis();
+    renderGardan();
+    renderTrkTabs(); renderTrk();
+    renderRules("");
+    renderQuiz();
+    renderGloss("");
+    renderMasdar("");
+    azInit("azNahwList","azNahwDetail",AZ_NAHW,"azNahwSearch");
+    azInit("azSarfList","azSarfDetail",AZ_SARF,"azSarfSearch");
+    renderSeegha();
+    renderLibChips(); renderLib();
+    runFinder();
+    </script>
+  </body>
+</html>
